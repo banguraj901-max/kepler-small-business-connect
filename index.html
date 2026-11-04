@@ -1,0 +1,1974 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kepler Small Business Connect SL</title>
+
+<meta name="description" content="Discover fashion, local products, phone accessories, repairs and guesthouses across Sierra Leone.">
+
+<style>
+
+/* =========================
+   1. GENERAL DESIGN
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+:root {
+    --green: #075e43;
+    --dark-green: #03432f;
+    --gold: #f5c542;
+    --light-green: #e8f5ec;
+    --white: #ffffff;
+    --gray: #64748b;
+}
+
+
+/* =========================
+   2. HEADER
+========================= */
+
+header {
+    background: var(--green);
+    color: white;
+    padding: 18px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    background:
+        linear-gradient(90deg, rgba(3,60,40,0.88), rgba(3,60,40,0.5)),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=70");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 85px 0;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.hero-highlight {
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn-green {
+    background: var(--green);
+    color: white;
+}
+
+.btn-green:hover {
+    background: var(--dark-green);
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #172015;
+}
+
+.btn-white {
+    background: white;
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.btn-call {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* =========================
+   4. GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--gray);
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+
+/* =========================
+   5. CATEGORY CARDS
+========================= */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.category-content {
+    padding: 18px;
+}
+
+.category-content h3 {
+    color: var(--green);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.category-content p {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   6. PRODUCT COLLECTIONS
+========================= */
+
+.collection-section {
+    background: #f0f7f2;
+    scroll-margin-top: 20px;
+}
+
+.collection-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.collection-heading h2 {
+    color: var(--green);
+    font-size: 28px;
+}
+
+.collection-heading p {
+    color: var(--gray);
+}
+
+.collection-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.collection-controls input,
+.collection-controls select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+}
+
+.collection-controls input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #e2e8f0;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.product-category {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--green);
+    margin: 10px 0;
+}
+
+.product-location {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.product-info .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   7. BUSINESS DETAILS
+========================= */
+
+.business-info {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.business-info h3 {
+    color: var(--green);
+    margin-bottom: 12px;
+}
+
+.business-info p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.business-info .contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   8. ABOUT SECTION
+========================= */
+
+.about-section {
+    background: white;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 750px;
+    margin: auto;
+    color: #475569;
+}
+
+
+/* =========================
+   9. CONTACT SECTION
+========================= */
+
+.contact-section {
+    background: var(--light-green);
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   10. FOOTER
+========================= */
+
+footer {
+    background: #022c22;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--gold);
+}
+
+
+/* =========================
+   11. MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 950px) {
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card img {
+        height: 230px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card img {
+        height: 160px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+
+    .collection-heading h2 {
+        font-size: 23px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container header-content">
+
+        <div class="logo">
+            Kepler <span>Connect SL</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#businesses">Businesses</a>
+            <a href="#fashion">Fashion</a>
+            <a href="#salone-products">Local Products</a>
+            <a href="#phone-repair">Phone Repair</a>
+            <a href="#guesthouses">Guesthouses</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO / HOMEPAGE
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <h1>
+            Discover <span class="hero-highlight">Salone</span>
+            Businesses in One Place
+        </h1>
+
+        <p>
+            From beautiful African fashion to fresh local products,
+            phone accessories, and comfortable accommodation.
+            Discover local businesses and connect directly with them.
+        </p>
+
+        <a href="#businesses" class="btn btn-gold">
+            Explore Businesses
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOUR BUSINESS CATEGORIES
+========================= -->
+
+<section id="businesses">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Explore Our Businesses
+        </h2>
+
+        <p class="section-description">
+            Supporting local entrepreneurs and businesses
+            across Sierra Leone.
+        </p>
+
+
+        <div class="categories">
+
+            <div class="category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=65"
+                    alt="Beautiful African women's fashion"
+                    loading="lazy"
+                >
+
+                <div class="category-content">
+
+                    <h3>Kepler Fashion & Tailoring</h3>
+
+                    <p>
+                        Men's, women's, and children's outfits
+                        in different styles and designs.
+                    </p>
+
+                    <a href="#fashion" class="btn btn-green">
+                        View Products
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=600&q=65"
+                    alt="Fresh local vegetables and agricultural products"
+                    loading="lazy"
+                >
+
+                <div class="category-content">
+
+                    <h3>Salone Products</h3>
+
+                    <p>
+                        Palm oil, gari, yam, cassava, beans,
+                        bananas, vegetables, and more.
+                    </p>
+
+                    <a href="#salone-products" class="btn btn-green">
+                        View Products
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=65"
+                    alt="Smartphone and mobile phone accessories"
+                    loading="lazy"
+                >
+
+                <div class="category-content">
+
+                    <h3>Kepler Phone Repair</h3>
+
+                    <p>
+                        Phones, chargers, cables, earphones,
+                        accessories, and repair services.
+                    </p>
+
+                    <a href="#phone-repair" class="btn btn-green">
+                        View Accessories
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=65"
+                    alt="Comfortable guesthouse accommodation"
+                    loading="lazy"
+                >
+
+                <div class="category-content">
+
+                    <h3>Kepler Guesthouses</h3>
+
+                    <p>
+                        Explore comfortable accommodation
+                        in different locations across Salone.
+                    </p>
+
+                    <a href="#guesthouses" class="btn btn-green">
+                        View Rooms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FASHION COLLECTION
+========================= -->
+
+<section class="collection-section" id="fashion">
+
+    <div class="container">
+
+        <div class="collection-heading">
+
+            <div>
+                <h2>Kepler Fashion & Tailoring</h2>
+
+                <p>Find your style. Na your style, na we dae sew!</p>
+            </div>
+
+        </div>
+
+
+        <div class="collection-controls">
+
+            <input
+                type="search"
+                id="fashionSearch"
+                placeholder="Search clothing..."
+            >
+
+            <select id="fashionCategory">
+
+                <option value="all">All Clothing</option>
+                <option value="Men">Men's Fashion</option>
+                <option value="Women">Women's Fashion</option>
+                <option value="Children">Children's Fashion</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-grid" id="fashionProducts"></div>
+
+
+        <div class="business-info">
+
+            <h3>Kepler Fashion & Tailoring</h3>
+
+            <p><strong>Location:</strong> Lumley, Freetown, near Lumley Market (sample)</p>
+
+            <p><strong>Opening Hours:</strong> Monday – Saturday, 8:00 AM – 6:00 PM</p>
+
+            <p><strong>Payment:</strong> Orange Money, Afrimoney, Cash</p>
+
+            <div class="contact-buttons">
+
+                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20am%20interested%20in%20your%20fashion%20products."
+                   target="_blank"
+                   class="btn btn-whatsapp">
+                    WhatsApp
+                </a>
+
+                <a href="tel:+23299619224" class="btn btn-call">
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SALONE LOCAL PRODUCTS
+========================= -->
+
+<section class="collection-section" id="salone-products">
+
+    <div class="container">
+
+        <div class="collection-heading">
+
+            <div>
+                <h2>Salone Local Products</h2>
+
+                <p>From our farms and markets to your home.</p>
+            </div>
+
+        </div>
+
+
+        <div class="collection-controls">
+
+            <input
+                type="search"
+                id="foodSearch"
+                placeholder="Search local products..."
+            >
+
+            <select id="foodCategory">
+
+                <option value="all">All Products</option>
+                <option value="Food">Food & Grains</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Oils">Oils</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-grid" id="foodProducts"></div>
+
+
+        <div class="business-info">
+
+            <h3>Salone Products Trading</h3>
+
+            <p><strong>Location:</strong> Bo Town Market, near Bo Clock Tower (sample)</p>
+
+            <p><strong>Opening Hours:</strong> Monday – Saturday, 7:00 AM – 5:00 PM</p>
+
+            <p><strong>Payment:</strong> Orange Money, Afrimoney, Cash</p>
+
+            <div class="contact-buttons">
+
+                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20want%20to%20order%20local%20products."
+                   target="_blank"
+                   class="btn btn-whatsapp">
+                    WhatsApp to Order
+                </a>
+
+                <a href="tel:+23299619224" class="btn btn-call">
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHONE ACCESSORIES
+========================= -->
+
+<section class="collection-section" id="phone-repair">
+
+    <div class="container">
+
+        <div class="collection-heading">
+
+            <div>
+                <h2>Kepler Phone Repair & Accessories</h2>
+
+                <p>Accessories, repairs, and mobile solutions.</p>
+            </div>
+
+        </div>
+
+
+        <div class="collection-controls">
+
+            <input
+                type="search"
+                id="phoneSearch"
+                placeholder="Search accessories..."
+            >
+
+            <select id="phoneCategory">
+
+                <option value="all">All Accessories</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Chargers">Chargers & Cables</option>
+                <option value="Audio">Audio Products</option>
+                <option value="Repairs">Repair Services</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-grid" id="phoneProducts"></div>
+
+
+        <div class="business-info">
+
+            <h3>Kepler Phone Repair</h3>
+
+            <p><strong>Location:</strong> Makeni Town, near the main market (sample)</p>
+
+            <p><strong>Opening Hours:</strong> Monday – Saturday, 8:30 AM – 6:00 PM</p>
+
+            <p><strong>Payment:</strong> Orange Money, Afrimoney, Cash</p>
+
+            <div class="contact-buttons">
+
+                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20need%20phone%20accessories%20or%20repair%20services."
+                   target="_blank"
+                   class="btn btn-whatsapp">
+                    WhatsApp
+                </a>
+
+                <a href="tel:+23299619224" class="btn btn-call">
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GUESTHOUSES
+========================= -->
+
+<section class="collection-section" id="guesthouses">
+
+    <div class="container">
+
+        <div class="collection-heading">
+
+            <div>
+                <h2>Guesthouses Across Sierra Leone</h2>
+
+                <p>Find a place to stay in different parts of Salone.</p>
+            </div>
+
+        </div>
+
+
+        <div class="collection-controls">
+
+            <input
+                type="search"
+                id="guestSearch"
+                placeholder="Search by guesthouse or location..."
+            >
+
+            <select id="guestCategory">
+
+                <option value="all">All Locations</option>
+                <option value="Freetown">Freetown</option>
+                <option value="Bo">Bo</option>
+                <option value="Kenema">Kenema</option>
+                <option value="Makeni">Makeni</option>
+                <option value="Kabala">Kabala</option>
+                <option value="River No. 2">River No. 2</option>
+                <option value="Tokeh">Tokeh</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-grid" id="guestProducts"></div>
+
+
+        <div class="business-info">
+
+            <h3>Guesthouse Reservations</h3>
+
+            <p>
+                Looking for accommodation? Contact the guesthouse
+                directly to confirm room availability and prices.
+            </p>
+
+            <p><strong>Payment:</strong> Confirm accepted payment methods with the property.</p>
+
+            <div class="contact-buttons">
+
+                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20am%20looking%20for%20guesthouse%20accommodation."
+                   target="_blank"
+                   class="btn btn-whatsapp">
+                    WhatsApp
+                </a>
+
+                <a href="tel:+23299619224" class="btn btn-call">
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about-section" id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Kepler Small Business Connect SL
+        </h2>
+
+        <p class="about-text">
+
+            Kepler Small Business Connect SL is a digital initiative
+            designed to promote small businesses across Sierra Leone.
+
+            Our goal is to help local entrepreneurs showcase their
+            products and services, connect with customers, and
+            establish a strong online presence.
+
+            We believe every small business deserves an opportunity
+            to grow and reach more people.
+
+            <br><br>
+
+            <strong>Make we support Salone business dem!</strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact Kepler Connect SL
+        </h2>
+
+        <p>
+            Interested in our project or want your business featured?
+            Contact us today.
+        </p>
+
+        <a href="https://wa.me/23299619224?text=Hello%2C%20I%20want%20to%20contact%20Kepler%20Small%20Business%20Connect."
+           target="_blank"
+           class="btn btn-green">
+            Contact Us on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p><strong>Kepler Small Business Connect SL</strong></p>
+
+        <p>Connecting local businesses to more customers.</p>
+
+        <p>© 2026 Kepler Small Business Connect SL</p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+     PRODUCTS AND SEARCH
+========================= -->
+
+<script>
+
+/* =================================
+   1. FASHION COLLECTION
+
+   Different designs for men,
+   women, and children.
+================================= */
+
+const fashion = [
+
+    {
+        name: "Classic Men's Suit",
+        category: "Men",
+        price: 1200,
+        image: "photo-1594938298603-c8148c4dae35"
+    },
+
+    {
+        name: "African Print Men's Outfit",
+        category: "Men",
+        price: 850,
+        image: "photo-1617137968427-85924c800a22"
+    },
+
+    {
+        name: "Men's Traditional Wear",
+        category: "Men",
+        price: 950,
+        image: "photo-1618354691373-d851c5c3a990"
+    },
+
+    {
+        name: "Men's Casual Shirt",
+        category: "Men",
+        price: 350,
+        image: "photo-1603252110481-7ba873bf42ab"
+    },
+
+    {
+        name: "Men's Senator Style",
+        category: "Men",
+        price: 1000,
+        image: "photo-1617137968427-85924c800a22"
+    },
+
+    {
+        name: "Women's Elegant Dress",
+        category: "Women",
+        price: 750,
+        image: "photo-1539109136881-3be0616acf4b"
+    },
+
+    {
+        name: "African Print Women's Dress",
+        category: "Women",
+        price: 900,
+        image: "photo-1610030469983-98e550d6193c"
+    },
+
+    {
+        name: "Women's Party Gown",
+        category: "Women",
+        price: 1500,
+        image: "photo-1566174053879-31528523f8ae"
+    },
+
+    {
+        name: "Women's Casual Outfit",
+        category: "Women",
+        price: 600,
+        image: "photo-1483985988355-763728e1935b"
+    },
+
+    {
+        name: "Traditional African Wrapper Set",
+        category: "Women",
+        price: 1100,
+        image: "photo-1539109136881-3be0616acf4b"
+    },
+
+    {
+        name: "Children's Party Dress",
+        category: "Children",
+        price: 450,
+        image: "photo-1519238263530-99bdd11df2ea"
+    },
+
+    {
+        name: "Children's African Outfit",
+        category: "Children",
+        price: 500,
+        image: "photo-1519238263530-99bdd11df2ea"
+    },
+
+    {
+        name: "Boys' Traditional Wear",
+        category: "Children",
+        price: 550,
+        image: "photo-1519238263530-99bdd11df2ea"
+    },
+
+    {
+        name: "Children's Casual Clothing",
+        category: "Children",
+        price: 300,
+        image: "photo-1519238263530-99bdd11df2ea"
+    }
+
+];
+
+
+/* =================================
+   2. SALONE LOCAL PRODUCTS
+
+   Local food, farm produce,
+   fruits, and vegetables.
+================================= */
+
+const food = [
+
+    {
+        name: "Fresh Palm Oil",
+        category: "Oils",
+        price: 60,
+        unit: "per litre",
+        image: "photo-1474979266404-7eaacbcdcc1a"
+    },
+
+    {
+        name: "Quality Gari",
+        category: "Food",
+        price: 25,
+        unit: "per cup",
+        image: "photo-1604719312566-8912e9c8a213"
+    },
+
+    {
+        name: "Fresh Cassava",
+        category: "Food",
+        price: 30,
+        unit: "per bundle",
+        image: "photo-1597362925123-77861d3fbac5"
+    },
+
+    {
+        name: "Sweet Potatoes",
+        category: "Food",
+        price: 40,
+        unit: "per bundle",
+        image: "photo-1518977676601-b53f82aba655"
+    },
+
+    {
+        name: "Fresh Yam",
+        category: "Food",
+        price: 100,
+        unit: "per tuber",
+        image: "photo-1518977676601-b53f82aba655"
+    },
+
+    {
+        name: "Dry Beans",
+        category: "Food",
+        price: 35,
+        unit: "per cup",
+        image: "photo-1515543904379-3d757afe72e4"
+    },
+
+    {
+        name: "Fresh Okra",
+        category: "Vegetables",
+        price: 20,
+        unit: "per bundle",
+        image: "photo-1425543103986-22abb8a0d0f7"
+    },
+
+    {
+        name: "Fresh Bananas",
+        category: "Fruits",
+        price: 50,
+        unit: "per bunch",
+        image: "photo-1571771894821-ce9b6c11b08e"
+    },
+
+    {
+        name: "Fresh Plantain",
+        category: "Fruits",
+        price: 60,
+        unit: "per bunch",
+        image: "photo-1603833665858-e61d17a86224"
+    },
+
+    {
+        name: "Fresh Cocoyam",
+        category: "Food",
+        price: 70,
+        unit: "per bundle",
+        image: "photo-1518977676601-b53f82aba655"
+    },
+
+    {
+        name: "Fresh Pepper",
+        category: "Vegetables",
+        price: 25,
+        unit: "per cup",
+        image: "photo-1588252303782-cb80119abd6d"
+    },
+
+    {
+        name: "Fresh Tomatoes",
+        category: "Vegetables",
+        price: 40,
+        unit: "per bundle",
+        image: "photo-1546094096-0df4bcaaa337"
+    },
+
+    {
+        name: "Fresh Onions",
+        category: "Vegetables",
+        price: 30,
+        unit: "per bundle",
+        image: "photo-1508747703725-719777637510"
+    },
+
+    {
+        name: "Groundnuts",
+        category: "Food",
+        price: 50,
+        unit: "per cup",
+        image: "photo-1567892737951-30c8f2a6e3a7"
+    },
+
+    {
+        name: "Fresh Sweet Corn",
+        category: "Food",
+        price: 40,
+        unit: "per cob",
+        image: "photo-1551754655-cd27e38d207"
+    },
+
+    {
+        name: "Fresh Cabbage",
+        category: "Vegetables",
+        price: 80,
+        unit: "per head",
+        image: "photo-1594282486552-05b4d80fbb9f"
+    },
+
+    {
+        name: "Fresh Carrots",
+        category: "Vegetables",
+        price: 40,
+        unit: "per bundle",
+        image: "photo-1445282768818-728615cc910a"
+    },
+
+    {
+        name: "Fresh Cucumber",
+        category: "Vegetables",
+        price: 40,
+        unit: "per bundle",
+        image: "photo-1604977042946-1eecc30f269e"
+    },
+
+    {
+        name: "Fresh Mangoes",
+        category: "Fruits",
+        price: 50,
+        unit: "per bundle",
+        image: "photo-1553279768-865429fa0078"
+    },
+
+    {
+        name: "Fresh Pineapple",
+        category: "Fruits",
+        price: 100,
+        unit: "per fruit",
+        image: "photo-1550258987-190a2d41a8ba"
+    },
+
+    {
+        name: "Fresh Watermelon",
+        category: "Fruits",
+        price: 150,
+        unit: "per fruit",
+        image: "photo-1587049352846-4a222e784d38"
+    },
+
+    {
+        name: "Local Rice",
+        category: "Food",
+        price: 40,
+        unit: "per cup",
+        image: "photo-1586201375761-83865001e31c"
+    },
+
+    {
+        name: "Fresh Lemons",
+        category: "Fruits",
+        price: 30,
+        unit: "per bundle",
+        image: "photo-1518977676601-b53f82aba655"
+    },
+
+    {
+        name: "Fresh Ginger",
+        category: "Vegetables",
+        price: 30,
+        unit: "per bundle",
+        image: "photo-1615485290382-441e4d049cb5"
+    }
+
+];
+
+
+/* =================================
+   3. PHONE ACCESSORIES
+
+   Accessories and repair services.
+================================= */
+
+const phoneProducts = [
+
+    {
+        name: "USB-C Fast Charger",
+        category: "Chargers",
+        price: 150,
+        image: "photo-1583863788434-e58a36330cf0"
+    },
+
+    {
+        name: "Phone Charging Cable",
+        category: "Chargers",
+        price: 80,
+        image: "photo-1583394838336-acd977736f90"
+    },
+
+    {
+        name: "Wireless Earbuds",
+        category: "Audio",
+        price: 250,
+        image: "photo-1590658268037-6bf12165a8df"
+    },
+
+    {
+        name: "Wired Earphones",
+        category: "Audio",
+        price: 100,
+        image: "photo-1590658268037-6bf12165a8df"
+    },
+
+    {
+        name: "Bluetooth Speaker",
+        category: "Audio",
+        price: 350,
+        image: "photo-1608043152269-423dbba4e7e1"
+    },
+
+    {
+        name: "Phone Power Bank",
+        category: "Accessories",
+        price: 400,
+        image: "photo-1609091839311-d5365f9ff1c9"
+    },
+
+    {
+        name: "Phone Protective Case",
+        category: "Accessories",
+        price: 100,
+        image: "photo-1601593346740-925612772d4e"
+    },
+
+    {
+        name: "Screen Protector",
+        category: "Accessories",
+        price: 70,
+        image: "photo-1511707171634-5f897ff02aa9"
+    },
+
+    {
+        name: "Phone Holder",
+        category: "Accessories",
+        price: 120,
+        image: "photo-1523206489230-c012c64b2b48"
+    },
+
+    {
+        name: "Memory Card",
+        category: "Accessories",
+        price: 180,
+        image: "photo-1531492746076-161ca9bcad58"
+    },
+
+    {
+        name: "Phone Screen Replacement",
+        category: "Repairs",
+        price: 350,
+        image: "photo-1511707171634-5f897ff02aa9"
+    },
+
+    {
+        name: "Charging Port Repair",
+        category: "Repairs",
+        price: 200,
+        image: "photo-1511707171634-5f897ff02aa9"
+    },
+
+    {
+        name: "Phone Battery Replacement",
+        category: "Repairs",
+        price: 300,
+        image: "photo-1511707171634-5f897ff02aa9"
+    },
+
+    {
+        name: "Phone Software Repair",
+        category: "Repairs",
+        price: 150,
+        image: "photo-1511707171634-5f897ff02aa9"
+    }
+
+];
+
+
+/* =================================
+   4. GUESTHOUSES
+
+   Demonstration listings from
+   different parts of Sierra Leone.
+
+   Names and prices are examples,
+   not verified businesses.
+================================= */
+
+const guesthouses = [
+
+    {
+        name: "Freetown Comfort Stay",
+        category: "Freetown",
+        price: 500,
+        unit: "per night",
+        location: "Freetown",
+        image: "photo-1566073771259-6a8506099945"
+    },
+
+    {
+        name: "Lumley Guest Retreat",
+        category: "Freetown",
+        price: 650,
+        unit: "per night",
+        location: "Lumley, Freetown",
+        image: "photo-1611892440504-42a792e24d32"
+    },
+
+    {
+        name: "Bo City Guesthouse",
+        category: "Bo",
+        price: 400,
+        unit: "per night",
+        location: "Bo City",
+        image: "photo-1566073771259-6a8506099945"
+    },
+
+    {
+        name: "Kenema Comfort Lodge",
+        category: "Kenema",
+        price: 450,
+        unit: "per night",
+        location: "Kenema",
+        image: "photo-1566665797739-1674de7a421a"
+    },
+
+    {
+        name: "Makeni City Stay",
+        category: "Makeni",
+        price: 400,
+        unit: "per night",
+        location: "Makeni",
+        image: "photo-1566073771259-6a8506099945"
+    },
+
+    {
+        name: "Kabala Guest Lodge",
+        category: "Kabala",
+        price: 350,
+        unit: "per night",
+        location: "Kabala",
+        image: "photo-1566665797739-1674de7a421a"
+    },
+
+    {
+        name: "River No. 2 Beach Stay",
+        category: "River No. 2",
+        price: 900,
+        unit: "per night",
+        location: "River No. 2",
+        image: "photo-1499793983690-e29da59ef1c2"
+    },
+
+    {
+        name: "Tokeh Beach Retreat",
+        category: "Tokeh",
+        price: 1200,
+        unit: "per night",
+        location: "Tokeh",
+        image: "photo-1571896349842-33c89424de2d"
+    },
+
+    {
+        name: "Western Area Guest Lodge",
+        category: "Freetown",
+        price: 700,
+        unit: "per night",
+        location: "Western Area",
+        image: "photo-1611892440504-42a792e24d32"
+    },
+
+    {
+        name: "Bo Relaxation Lodge",
+        category: "Bo",
+        price: 550,
+        unit: "per night",
+        location: "Bo",
+        image: "photo-1566665797739-1674de7a421a"
+    }
+
+];
+
+
+/* =================================
+   5. IMAGE GENERATOR
+
+   Optimizes external image loading.
+================================= */
+
+function getImage(imageID, width = 500) {
+
+    return `https://images.unsplash.com/${imageID}?auto=format&fit=crop&w=${width}&q=65`;
+
+}
+
+
+/* =================================
+   6. PRODUCT CARD GENERATOR
+================================= */
+
+function createProductCard(product, businessType) {
+
+    let message = "";
+
+    if (businessType === "fashion") {
+
+        message = `Hello, I am interested in ${product.name}.`;
+
+    } else if (businessType === "food") {
+
+        message = `Hello, I want to order ${product.name}.`;
+
+    } else if (businessType === "phone") {
+
+        message = `Hello, I am interested in ${product.name}.`;
+
+    } else {
+
+        message = `Hello, I want to enquire about ${product.name} at ${product.location}.`;
+
+    }
+
+    const whatsappLink =
+        "https://wa.me/23299619224?text=" +
+        encodeURIComponent(message);
+
+    const unit = product.unit ? " " + product.unit : "";
+
+    const location = product.location
+        ? `<p class="product-location">📍 ${product.location}</p>`
+        : "";
+
+    return `
+
+        <div class="product-card">
+
+            <img
+                src="${getImage(product.image)}"
+                alt="${product.name}"
+                loading="lazy"
+            >
+
+            <div class="product-info">
+
+                <h3>${product.name}</h3>
+
+                <p class="product-category">${product.category}</p>
+
+                <div class="product-price">
+                    SLE ${Number(product.price).toLocaleString()}
+                    ${unit}
+                </div>
+
+                ${location}
+
+                <a
+                    href="${whatsappLink}"
+                    target="_blank"
+                    class="btn btn-whatsapp"
+                >
+                    Enquire on WhatsApp
+                </a>
+
+            </div>
+
+            </div>
+
+    `;
+
+}
+
+
+/* =================================
+   7. DISPLAY FASHION PRODUCTS
+================================= */
+
+function displayFashion() {
+
+    const search =
+        document.getElementById("fashionSearch")
+        .value.toLowerCase();
+
+    const category =
+        document.getElementById("fashionCategory").value;
+
+    const filtered = fashion.filter(product => {
+
+        const matchesSearch =
+            product.name.toLowerCase().includes(search);
+
+        const matchesCategory =
+            category === "all" || product.category === category;
+
+        return matchesSearch && matchesCategory;
+
+    });
+
+    const container =
+        document.getElementById("fashionProducts");
+
+    container.innerHTML = "";
+
+    filtered.forEach(product => {
+
+        container.innerHTML +=
+            createProductCard(product, "fashion");
+
+    });
+
+    if (filtered.length === 0) {
+
+        container.innerHTML =
+            "<p>No clothing products found.</p>";
+
+    }
+
+}
+
+
+/* =================================
+   8. DISPLAY LOCAL FOOD PRODUCTS
+================================= */
+
+function displayFood() {
+
+    const search =
+        document.getElementById("foodSearch")
+        .value.toLowerCase();
+
+    const category =
+        document.getElementById("foodCategory").value;
+
+    const filtered = food.filter(product => {
+
+        const matchesSearch =
+            product.name.toLowerCase().includes(search);
+
+        const matchesCategory =
+            category === "all" || product.category === category;
+
+        return matchesSearch && matchesCategory;
+
+    });
+
+    const container =
+        document.getElementById("foodProducts");
+
+    container.innerHTML = "";
+
+    filtered.forEach(product => {
+
+        container.innerHTML +=
+            createProductCard(product, "food");
+
+    });
+
+    if (filtered.length === 0) {
+
+        container.innerHTML =
+            "<p>No local products found.</p>";
+
+    }
+
+}
+
+
+/* =================================
+   9. DISPLAY PHONE ACCESSORIES
+================================= */
+
+function displayPhones() {
+
+    const search =
+        document.getElementById("phoneSearch")
+        .value.toLowerCase();
+
+    const category =
+        document.getElementById("phoneCategory").value;
+
+    const filtered = phoneProducts.filter(product => {
+
+        const matchesSearch =
+            product.name.toLowerCase().includes(search);
+
+        const matchesCategory =
+            category === "all" || product.category === category;
+
+        return matchesSearch && matchesCategory;
+
+    });
+
+    const container =
+        document.getElementById("phoneProducts");
+
+    container.innerHTML = "";
+
+    filtered.forEach(product => {
+
+        container.innerHTML +=
+            createProductCard(product, "phone");
+
+    });
+
+    if (filtered.length === 0) {
+
+        container.innerHTML =
+            "<p>No accessories found.</p>";
+
+    }
+
+}
+
+
+/* =================================
+   10. DISPLAY GUESTHOUSES
+================================= */
+
+function displayGuesthouses() {
+
+    const search =
+        document.getElementById("guestSearch")
+        .value.toLowerCase();
+
+    const category =
+        document.getElementById("guestCategory").value;
+
+    const filtered = guesthouses.filter(place => {
+
+        const matchesSearch =
+            place.name.toLowerCase().includes(search) ||
+            place.location.toLowerCase().includes(search);
+
+        const matchesCategory =
+            category === "all" || place.category === category;
+
+        return matchesSearch && matchesCategory;
+
+    });
+
+    const container =
+        document.getElementById("guestProducts");
+
+    container.innerHTML = "";
+
+    filtered.forEach(place => {
+
+        container.innerHTML +=
+            createProductCard(place, "guesthouse");
+
+    });
+
+    if (filtered.length === 0) {
+
+        container.innerHTML =
+            "<p>No guesthouses found in this location.</p>";
+
+    }
+
+}
+
+
+/* =================================
+   11. SEARCH EVENT LISTENERS
+
+   These update the products when
+   someone searches or selects
+   a category.
+================================= */
+
+document.getElementById("fashionSearch")
+.addEventListener("input", displayFashion);
+
+document.getElementById("fashionCategory")
+.addEventListener("change", displayFashion);
+
+
+document.getElementById("foodSearch")
+.addEventListener("input", displayFood);
+
+document.getElementById("foodCategory")
+.addEventListener("change", displayFood);
+
+
+document.getElementById("phoneSearch")
+.addEventListener("input", displayPhones);
+
+document.getElementById("phoneCategory")
+.addEventListener("change", displayPhones);
+
+
+document.getElementById("guestSearch")
+.addEventListener("input", displayGuesthouses);
+
+document.getElementById("guestCategory")
+.addEventListener("change", displayGuesthouses);
+
+
+/* =================================
+   12. INITIAL DISPLAY
+
+   Show all products when the
+   website first opens.
+================================= */
+
+displayFashion();
+
+displayFood();
+
+displayPhones();
+
+displayGuesthouses();
+
+
+</script>
+
+</body>
+</html>
