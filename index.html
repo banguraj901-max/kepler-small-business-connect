@@ -4,1971 +4,1746 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Kepler Small Business Connect SL</title>
 
-<meta name="description" content="Discover fashion, local products, phone accessories, repairs and guesthouses across Sierra Leone.">
-
 <style>
-
-/* =========================
-   1. GENERAL DESIGN
-========================= */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
+  background: #f5f6f8;
+  color: #222;
 }
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-    font-family: inherit;
-}
-
-.container {
-    width: 92%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-:root {
-    --green: #075e43;
-    --dark-green: #03432f;
-    --gold: #f5c542;
-    --light-green: #e8f5ec;
-    --white: #ffffff;
-    --gray: #64748b;
-}
-
-
-/* =========================
-   2. HEADER
-========================= */
 
 header {
-    background: var(--green);
-    color: white;
-    padding: 18px 0;
+  background: #075c3b;
+  color: white;
+  padding: 22px 15px;
+  text-align: center;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: var(--gold);
+header h1 {
+  margin-bottom: 8px;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+  background: #06472f;
+  padding: 13px;
+  text-align: center;
 }
 
 nav a {
-    color: white;
-    font-size: 14px;
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
 }
-
-nav a:hover {
-    color: var(--gold);
-}
-
-
-/* =========================
-   3. HERO SECTION
-========================= */
 
 .hero {
-    background:
-        linear-gradient(90deg, rgba(3,60,40,0.88), rgba(3,60,40,0.5)),
-        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=70");
-
-    background-size: cover;
-    background-position: center;
-
-    padding: 85px 0;
-    color: white;
+  background: #e1f3e9;
+  text-align: center;
+  padding: 35px 15px;
 }
 
-.hero-content {
-    max-width: 700px;
-}
-
-.hero h1 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+.hero h2 {
+  color: #075c3b;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 17px;
-    margin-bottom: 25px;
-}
-
-.hero-highlight {
-    color: var(--gold);
-}
-
-.btn {
-    display: inline-block;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 14px;
-}
-
-.btn-green {
-    background: var(--green);
-    color: white;
-}
-
-.btn-green:hover {
-    background: var(--dark-green);
-}
-
-.btn-gold {
-    background: var(--gold);
-    color: #172015;
-}
-
-.btn-white {
-    background: white;
-    color: var(--green);
-    border: 1px solid var(--green);
-}
-
-.btn-whatsapp {
-    background: #25d366;
-    color: white;
-}
-
-.btn-call {
-    background: #2563eb;
-    color: white;
-}
-
-
-/* =========================
-   4. GENERAL SECTIONS
-========================= */
-
-section {
-    padding: 60px 0;
+  margin: 7px 0;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 30px;
-    color: var(--green);
-    margin-bottom: 10px;
+  text-align: center;
+  margin: 30px 10px 20px;
+  color: #075c3b;
 }
-
-.section-description {
-    text-align: center;
-    color: var(--gray);
-    max-width: 700px;
-    margin: 0 auto 35px;
-}
-
-
-/* =========================
-   5. CATEGORY CARDS
-========================= */
 
 .categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
 }
 
-.category-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform 0.2s;
+.category {
+  background: white;
+  padding: 25px 15px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px #00000010;
+  transition: 0.2s;
 }
 
-.category-card:hover {
-    transform: translateY(-5px);
+.category:hover {
+  background: #075c3b;
+  color: white;
+  transform: translateY(-3px);
 }
 
-.category-card img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
+.category h3 {
+  margin-bottom: 10px;
 }
 
-.category-content {
-    padding: 18px;
+.category p {
+  font-size: 14px;
 }
 
-.category-content h3 {
-    color: var(--green);
-    font-size: 18px;
-    margin-bottom: 8px;
+.category-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
 }
 
-.category-content p {
-    font-size: 14px;
-    color: var(--gray);
-    margin-bottom: 15px;
+.hidden {
+  display: none !important;
 }
 
-
-/* =========================
-   6. PRODUCT COLLECTIONS
-========================= */
-
-.collection-section {
-    background: #f0f7f2;
-    scroll-margin-top: 20px;
+.shop-area {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
 }
 
-.collection-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 25px;
+.shop-heading {
+  text-align: center;
+  margin: 20px 0;
 }
 
-.collection-heading h2 {
-    color: var(--green);
-    font-size: 28px;
+.shop-heading h2 {
+  color: #075c3b;
+  margin-bottom: 8px;
 }
 
-.collection-heading p {
-    color: var(--gray);
+.search-area {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
-.collection-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 25px;
+input, select, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  width: 100%;
+  font-size: 15px;
 }
 
-.collection-controls input,
-.collection-controls select {
-    padding: 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    background: white;
-    font-size: 14px;
+.search-area input,
+.search-area select {
+  flex: 1;
+  min-width: 180px;
 }
 
-.collection-controls input {
-    flex: 1;
-    min-width: 200px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
 }
 
 .product-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #e2e8f0;
-    transition: box-shadow 0.2s;
-}
-
-.product-card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #00000012;
 }
 
 .product-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    background: #e2e8f0;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background: #ddd;
 }
 
 .product-info {
-    padding: 15px;
+  padding: 14px;
 }
 
 .product-info h3 {
-    font-size: 16px;
-    margin-bottom: 6px;
-    color: #1e293b;
+  margin-bottom: 8px;
 }
 
-.product-category {
-    font-size: 12px;
-    color: var(--gray);
+.price {
+  color: #075c3b;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 8px 0;
 }
 
-.product-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--green);
-    margin: 10px 0;
+.small-detail {
+  color: #666;
+  font-size: 13px;
+  margin: 5px 0;
 }
 
-.product-location {
-    font-size: 12px;
-    color: #64748b;
-    margin-bottom: 12px;
+button {
+  border: none;
+  padding: 11px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.product-info .btn {
-    width: 100%;
-    margin-top: 5px;
+button:hover {
+  opacity: 0.9;
 }
 
-.view-all {
-    text-align: center;
-    margin-top: 30px;
+.primary-btn {
+  background: #075c3b;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
 }
 
-
-/* =========================
-   7. BUSINESS DETAILS
-========================= */
-
-.business-info {
-    background: white;
-    border-radius: 10px;
-    padding: 25px;
-    margin-top: 30px;
-    border: 1px solid #e2e8f0;
+.back-btn {
+  background: #555;
+  color: white;
+  padding: 12px 18px;
+  margin: 10px 0;
 }
 
-.business-info h3 {
-    color: var(--green);
-    margin-bottom: 12px;
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+  width: 100%;
+  margin-top: 8px;
 }
 
-.business-info p {
-    margin: 8px 0;
-    font-size: 14px;
+.call-btn {
+  background: #1769aa;
+  color: white;
+  width: 100%;
+  margin-top: 8px;
 }
 
-.business-info .contact-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
+.services-banner {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 25px;
+  background: #e1f3e9;
+  border-radius: 12px;
+  text-align: center;
 }
 
-
-/* =========================
-   8. ABOUT SECTION
-========================= */
-
-.about-section {
-    background: white;
-    text-align: center;
+.services-banner h2 {
+  color: #075c3b;
+  margin-bottom: 10px;
 }
 
-.about-text {
-    max-width: 750px;
-    margin: auto;
-    color: #475569;
+.services-banner button {
+  max-width: 250px;
 }
 
-
-/* =========================
-   9. CONTACT SECTION
-========================= */
-
-.contact-section {
-    background: var(--light-green);
-    text-align: center;
+.service-card {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #00000012;
 }
 
-.contact-section p {
-    margin-bottom: 20px;
+.service-icon {
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
+.service-card h3 {
+  margin-bottom: 8px;
+}
 
-/* =========================
-   10. FOOTER
-========================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: #0009;
+  overflow-y: auto;
+  padding: 20px 10px;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 22px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 27px;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal-content h2 {
+  color: #075c3b;
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 13px 0 6px;
+  font-weight: bold;
+}
+
+.modal-content img.product-large {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.seller-box,
+.payment-box,
+.success-box {
+  background: #f0f8f3;
+  border: 1px solid #cce5d5;
+  padding: 13px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.payment-box {
+  background: #fff8e6;
+  border-color: #f0dfad;
+}
+
+.preview-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-top: 10px;
+  display: none;
+}
+
+.notice {
+  color: #765400;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
 
 footer {
-    background: #022c22;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
+  background: #06472f;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 35px;
+  line-height: 1.8;
 }
 
-footer p {
-    font-size: 14px;
-    margin: 5px 0;
+@media (max-width: 600px) {
+  nav a {
+    display: inline-block;
+    margin: 6px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .product-card img {
+    height: 135px;
+  }
+
+  .product-info {
+    padding: 10px;
+  }
+
+  .product-info h3 {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
 }
 
-footer a {
-    color: var(--gold);
+@media (max-width: 360px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
 }
-
-
-/* =========================
-   11. MOBILE RESPONSIVENESS
-========================= */
-
-@media (max-width: 950px) {
-
-    .categories {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-}
-
-@media (max-width: 650px) {
-
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        justify-content: center;
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
-
-    .hero {
-        padding: 55px 0;
-    }
-
-    .hero h1 {
-        font-size: 29px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .categories {
-        grid-template-columns: 1fr;
-    }
-
-    .category-card img {
-        height: 230px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .product-card img {
-        height: 160px;
-    }
-
-    .product-info {
-        padding: 10px;
-    }
-
-    .product-info h3 {
-        font-size: 14px;
-    }
-
-    .product-price {
-        font-size: 16px;
-    }
-
-    .collection-heading h2 {
-        font-size: 23px;
-    }
-
-    section {
-        padding: 40px 0;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-}
-
 </style>
 </head>
 
-
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
-    <div class="container header-content">
-
-        <div class="logo">
-            Kepler <span>Connect SL</span>
-        </div>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#businesses">Businesses</a>
-            <a href="#fashion">Fashion</a>
-            <a href="#salone-products">Local Products</a>
-            <a href="#phone-repair">Phone Repair</a>
-            <a href="#guesthouses">Guesthouses</a>
-            <a href="#about">About</a>
-        </nav>
-
-    </div>
-
+  <h1>Kepler Small Business Connect SL</h1>
+  <p>Connecting buyers and sellers across Sierra Leone</p>
 </header>
 
-
-<!-- =========================
-     HERO / HOMEPAGE
-========================= -->
+<nav>
+  <a href="#home" onclick="showCategories()">Home</a>
+  <a href="#categories" onclick="showCategories()">Categories</a>
+  <a href="#services" onclick="showServices()">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <section class="hero" id="home">
+  <h2>Welcome to Kepler Small Business Connect SL</h2>
+  <p>Find products and services from businesses across Sierra Leone.</p>
+  <p>Buy locally. Support local businesses.</p>
+</section>
 
-    <div class="container hero-content">
+<!-- MAIN CATEGORY PAGE -->
+<section id="categoryPage">
 
-        <h1>
-            Discover <span class="hero-highlight">Salone</span>
-            Businesses in One Place
-        </h1>
+  <h2 class="section-title" id="categories">
+    Explore Our Product Categories
+  </h2>
 
-        <p>
-            From beautiful African fashion to fresh local products,
-            phone accessories, and comfortable accommodation.
-            Discover local businesses and connect directly with them.
+  <div class="categories" id="categoryContainer"></div>
+
+  <div class="services-banner">
+    <h2>Looking for a Service?</h2>
+    <p>
+      Find skilled people offering services in your community.
+      Mechanics, electricians, plumbers, photographers and more.
+    </p>
+    <button class="primary-btn" onclick="showServices()">
+      Explore Services
+    </button>
+  </div>
+
+</section>
+
+<!-- PRODUCT SHOP -->
+<section id="shopPage" class="shop-area hidden">
+
+  <button class="back-btn" onclick="showCategories()">
+    ← Back to Categories
+  </button>
+
+  <div class="shop-heading">
+    <h2 id="selectedCategoryTitle"></h2>
+    <p id="categoryDescription"></p>
+  </div>
+
+  <div class="search-area">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search in this category..."
+      oninput="displayProducts()"
+    >
+
+    <select id="locationFilter" onchange="displayProducts()">
+      <option value="">All locations</option>
+      <option value="Freetown">Freetown</option>
+      <option value="Bo">Bo</option>
+      <option value="Kenema">Kenema</option>
+      <option value="Makeni">Makeni</option>
+      <option value="Mile 91">Mile 91</option>
+      <option value="Kono">Kono</option>
+    </select>
+  </div>
+
+  <div class="products" id="productContainer"></div>
+
+  <button class="back-btn" onclick="showCategories()">
+    ← Back to Categories
+  </button>
+
+</section>
+
+<!-- SERVICES PAGE -->
+<section id="servicesPage" class="shop-area hidden">
+
+  <button class="back-btn" onclick="showCategories()">
+    ← Back to Categories
+  </button>
+
+  <div class="shop-heading">
+    <h2>Services Across Sierra Leone</h2>
+    <p>
+      Find skilled workers and people offering services in your area.
+    </p>
+  </div>
+
+  <div class="search-area">
+    <input
+      type="text"
+      id="serviceSearch"
+      placeholder="Search for a service..."
+      oninput="displayServices()"
+    >
+
+    <select id="serviceLocationFilter" onchange="displayServices()">
+      <option value="">All locations</option>
+      <option value="Freetown">Freetown</option>
+      <option value="Bo">Bo</option>
+      <option value="Kenema">Kenema</option>
+      <option value="Makeni">Makeni</option>
+      <option value="Mile 91">Mile 91</option>
+      <option value="Kono">Kono</option>
+    </select>
+  </div>
+
+  <div class="products" id="serviceContainer"></div>
+
+  <button class="back-btn" onclick="showCategories()">
+    ← Back to Categories
+  </button>
+
+</section>
+
+<!-- PRODUCT DETAILS -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('productModal')">&times;</span>
+    <div id="productDetails"></div>
+  </div>
+</div>
+
+<!-- SERVICE DETAILS -->
+<div class="modal" id="serviceModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('serviceModal')">&times;</span>
+    <div id="serviceDetails"></div>
+  </div>
+</div>
+
+<!-- ORDER FORM -->
+<div class="modal" id="orderModal">
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal('orderModal')">&times;</span>
+
+    <h2>Place Your Order</h2>
+
+    <form id="orderForm">
+
+      <div id="selectedProductInfo" class="seller-box"></div>
+
+      <label>Your Full Name</label>
+      <input type="text" id="buyerName" required placeholder="Enter your name">
+
+      <label>Your Phone Number</label>
+      <input type="tel" id="buyerPhone" required placeholder="+232...">
+
+      <label>Quantity</label>
+      <input type="number" id="quantity" min="1" value="1"
+        required oninput="updateTotal()">
+
+      <p class="price" id="orderTotal">Total: NLe 0</p>
+
+      <label>Delivery Option</label>
+      <select id="deliveryOption" required onchange="showDeliveryFields()">
+        <option value="">Choose delivery option</option>
+        <option value="Collect from seller">Collect from seller</option>
+        <option value="Doorstep delivery">Doorstep delivery</option>
+        <option value="Agreed pickup location">Agreed pickup location</option>
+      </select>
+
+      <div id="addressFields" class="hidden">
+        <label>Delivery or Pickup Address</label>
+        <textarea id="deliveryAddress" rows="3"
+          placeholder="Enter your address or agreed pickup location"></textarea>
+      </div>
+
+      <div id="locationFields" class="hidden">
+        <label>Your Location</label>
+
+        <button type="button" class="call-btn"
+          onclick="getBuyerLocation()">
+          Share My Current Location
+        </button>
+
+        <p id="locationStatus" class="small-detail">
+          Location has not been shared.
         </p>
+      </div>
 
-        <a href="#businesses" class="btn btn-gold">
-            Explore Businesses
-        </a>
+      <label>Payment Method</label>
 
-    </div>
+      <select id="paymentMethod" required onchange="showPaymentDetails()">
+        <option value="">Choose payment method</option>
+        <option value="Afrimoney">Afrimoney</option>
+        <option value="Orange Money">Orange Money</option>
+        <option value="Cash">Cash</option>
+      </select>
 
-</section>
+      <div id="receivingDetails" class="payment-box hidden"></div>
 
+      <div id="senderNumberFields" class="hidden">
+        <label>Your Payment Number (Sender Number)</label>
+        <input type="tel" id="senderNumber"
+          placeholder="Enter the number you used to pay">
+      </div>
 
-<!-- =========================
-     FOUR BUSINESS CATEGORIES
-========================= -->
+      <div id="screenshotFields" class="hidden">
+        <label>Upload Payment Screenshot</label>
 
-<section id="businesses">
+        <input type="file" id="paymentScreenshot"
+          accept="image/png,image/jpeg,image/webp"
+          onchange="previewScreenshot()">
 
-    <div class="container">
+        <img id="screenshotPreview" class="preview-image"
+          alt="Payment screenshot preview">
 
-        <h2 class="section-title">
-            Explore Our Businesses
-        </h2>
-
-        <p class="section-description">
-            Supporting local entrepreneurs and businesses
-            across Sierra Leone.
+        <p class="notice">
+          Upload your transaction screenshot. Your order will remain
+          pending verification until payment is checked.
         </p>
+      </div>
 
+      <button type="submit" class="primary-btn">
+        Submit Order
+      </button>
 
-        <div class="categories">
+    </form>
+  </div>
+</div>
 
-            <div class="category-card">
+<!-- ORDER SUCCESS -->
+<div class="modal" id="successModal">
+  <div class="modal-content">
 
-                <img
-                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=65"
-                    alt="Beautiful African women's fashion"
-                    loading="lazy"
-                >
+    <h2>Order Submitted!</h2>
 
-                <div class="category-content">
+    <div class="success-box">
+      <h3>Thank you for your order.</h3>
+      <p id="successReference"></p>
+      <p id="successPaymentStatus"></p>
 
-                    <h3>Kepler Fashion & Tailoring</h3>
-
-                    <p>
-                        Men's, women's, and children's outfits
-                        in different styles and designs.
-                    </p>
-
-                    <a href="#fashion" class="btn btn-green">
-                        View Products
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="category-card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=600&q=65"
-                    alt="Fresh local vegetables and agricultural products"
-                    loading="lazy"
-                >
-
-                <div class="category-content">
-
-                    <h3>Salone Products</h3>
-
-                    <p>
-                        Palm oil, gari, yam, cassava, beans,
-                        bananas, vegetables, and more.
-                    </p>
-
-                    <a href="#salone-products" class="btn btn-green">
-                        View Products
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="category-card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=65"
-                    alt="Smartphone and mobile phone accessories"
-                    loading="lazy"
-                >
-
-                <div class="category-content">
-
-                    <h3>Kepler Phone Repair</h3>
-
-                    <p>
-                        Phones, chargers, cables, earphones,
-                        accessories, and repair services.
-                    </p>
-
-                    <a href="#phone-repair" class="btn btn-green">
-                        View Accessories
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="category-card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=65"
-                    alt="Comfortable guesthouse accommodation"
-                    loading="lazy"
-                >
-
-                <div class="category-content">
-
-                    <h3>Kepler Guesthouses</h3>
-
-                    <p>
-                        Explore comfortable accommodation
-                        in different locations across Salone.
-                    </p>
-
-                    <a href="#guesthouses" class="btn btn-green">
-                        View Rooms
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
+      <p class="notice">
+        This confirms submission only. It does not mean payment has
+        been received or verified.
+      </p>
     </div>
 
-</section>
-
-
-<!-- =========================
-     FASHION COLLECTION
-========================= -->
-
-<section class="collection-section" id="fashion">
-
-    <div class="container">
-
-        <div class="collection-heading">
-
-            <div>
-                <h2>Kepler Fashion & Tailoring</h2>
-
-                <p>Find your style. Na your style, na we dae sew!</p>
-            </div>
-
-        </div>
-
-
-        <div class="collection-controls">
-
-            <input
-                type="search"
-                id="fashionSearch"
-                placeholder="Search clothing..."
-            >
-
-            <select id="fashionCategory">
-
-                <option value="all">All Clothing</option>
-                <option value="Men">Men's Fashion</option>
-                <option value="Women">Women's Fashion</option>
-                <option value="Children">Children's Fashion</option>
-
-            </select>
-
-        </div>
-
-
-        <div class="product-grid" id="fashionProducts"></div>
-
-
-        <div class="business-info">
-
-            <h3>Kepler Fashion & Tailoring</h3>
-
-            <p><strong>Location:</strong> Lumley, Freetown, near Lumley Market (sample)</p>
-
-            <p><strong>Opening Hours:</strong> Monday – Saturday, 8:00 AM – 6:00 PM</p>
-
-            <p><strong>Payment:</strong> Orange Money, Afrimoney, Cash</p>
-
-            <div class="contact-buttons">
-
-                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20am%20interested%20in%20your%20fashion%20products."
-                   target="_blank"
-                   class="btn btn-whatsapp">
-                    WhatsApp
-                </a>
-
-                <a href="tel:+23299619224" class="btn btn-call">
-                    Call Now
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     SALONE LOCAL PRODUCTS
-========================= -->
-
-<section class="collection-section" id="salone-products">
-
-    <div class="container">
-
-        <div class="collection-heading">
-
-            <div>
-                <h2>Salone Local Products</h2>
-
-                <p>From our farms and markets to your home.</p>
-            </div>
-
-        </div>
-
-
-        <div class="collection-controls">
-
-            <input
-                type="search"
-                id="foodSearch"
-                placeholder="Search local products..."
-            >
-
-            <select id="foodCategory">
-
-                <option value="all">All Products</option>
-                <option value="Food">Food & Grains</option>
-                <option value="Vegetables">Vegetables</option>
-                <option value="Fruits">Fruits</option>
-                <option value="Oils">Oils</option>
-
-            </select>
-
-        </div>
-
-
-        <div class="product-grid" id="foodProducts"></div>
-
-
-        <div class="business-info">
-
-            <h3>Salone Products Trading</h3>
-
-            <p><strong>Location:</strong> Bo Town Market, near Bo Clock Tower (sample)</p>
-
-            <p><strong>Opening Hours:</strong> Monday – Saturday, 7:00 AM – 5:00 PM</p>
-
-            <p><strong>Payment:</strong> Orange Money, Afrimoney, Cash</p>
-
-            <div class="contact-buttons">
-
-                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20want%20to%20order%20local%20products."
-                   target="_blank"
-                   class="btn btn-whatsapp">
-                    WhatsApp to Order
-                </a>
-
-                <a href="tel:+23299619224" class="btn btn-call">
-                    Call Now
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PHONE ACCESSORIES
-========================= -->
-
-<section class="collection-section" id="phone-repair">
-
-    <div class="container">
-
-        <div class="collection-heading">
-
-            <div>
-                <h2>Kepler Phone Repair & Accessories</h2>
-
-                <p>Accessories, repairs, and mobile solutions.</p>
-            </div>
-
-        </div>
-
-
-        <div class="collection-controls">
-
-            <input
-                type="search"
-                id="phoneSearch"
-                placeholder="Search accessories..."
-            >
-
-            <select id="phoneCategory">
-
-                <option value="all">All Accessories</option>
-                <option value="Accessories">Accessories</option>
-                <option value="Chargers">Chargers & Cables</option>
-                <option value="Audio">Audio Products</option>
-                <option value="Repairs">Repair Services</option>
-
-            </select>
-
-        </div>
-
-
-        <div class="product-grid" id="phoneProducts"></div>
-
-
-        <div class="business-info">
-
-            <h3>Kepler Phone Repair</h3>
-
-            <p><strong>Location:</strong> Makeni Town, near the main market (sample)</p>
-
-            <p><strong>Opening Hours:</strong> Monday – Saturday, 8:30 AM – 6:00 PM</p>
-
-            <p><strong>Payment:</strong> Orange Money, Afrimoney, Cash</p>
-
-            <div class="contact-buttons">
-
-                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20need%20phone%20accessories%20or%20repair%20services."
-                   target="_blank"
-                   class="btn btn-whatsapp">
-                    WhatsApp
-                </a>
-
-                <a href="tel:+23299619224" class="btn btn-call">
-                    Call Now
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     GUESTHOUSES
-========================= -->
-
-<section class="collection-section" id="guesthouses">
-
-    <div class="container">
-
-        <div class="collection-heading">
-
-            <div>
-                <h2>Guesthouses Across Sierra Leone</h2>
-
-                <p>Find a place to stay in different parts of Salone.</p>
-            </div>
-
-        </div>
-
-
-        <div class="collection-controls">
-
-            <input
-                type="search"
-                id="guestSearch"
-                placeholder="Search by guesthouse or location..."
-            >
-
-            <select id="guestCategory">
-
-                <option value="all">All Locations</option>
-                <option value="Freetown">Freetown</option>
-                <option value="Bo">Bo</option>
-                <option value="Kenema">Kenema</option>
-                <option value="Makeni">Makeni</option>
-                <option value="Kabala">Kabala</option>
-                <option value="River No. 2">River No. 2</option>
-                <option value="Tokeh">Tokeh</option>
-
-            </select>
-
-        </div>
-
-
-        <div class="product-grid" id="guestProducts"></div>
-
-
-        <div class="business-info">
-
-            <h3>Guesthouse Reservations</h3>
-
-            <p>
-                Looking for accommodation? Contact the guesthouse
-                directly to confirm room availability and prices.
-            </p>
-
-            <p><strong>Payment:</strong> Confirm accepted payment methods with the property.</p>
-
-            <div class="contact-buttons">
-
-                <a href="https://wa.me/23299619224?text=Hello%2C%20I%20am%20looking%20for%20guesthouse%20accommodation."
-                   target="_blank"
-                   class="btn btn-whatsapp">
-                    WhatsApp
-                </a>
-
-                <a href="tel:+23299619224" class="btn btn-call">
-                    Call Now
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section class="about-section" id="about">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            About Kepler Small Business Connect SL
-        </h2>
-
-        <p class="about-text">
-
-            Kepler Small Business Connect SL is a digital initiative
-            designed to promote small businesses across Sierra Leone.
-
-            Our goal is to help local entrepreneurs showcase their
-            products and services, connect with customers, and
-            establish a strong online presence.
-
-            We believe every small business deserves an opportunity
-            to grow and reach more people.
-
-            <br><br>
-
-            <strong>Make we support Salone business dem!</strong>
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact-section" id="contact">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Contact Kepler Connect SL
-        </h2>
-
-        <p>
-            Interested in our project or want your business featured?
-            Contact us today.
-        </p>
-
-        <a href="https://wa.me/23299619224?text=Hello%2C%20I%20want%20to%20contact%20Kepler%20Small%20Business%20Connect."
-           target="_blank"
-           class="btn btn-green">
-            Contact Us on WhatsApp
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <div class="container">
-
-        <p><strong>Kepler Small Business Connect SL</strong></p>
-
-        <p>Connecting local businesses to more customers.</p>
-
-        <p>© 2026 Kepler Small Business Connect SL</p>
-
-    </div>
-
+    <button class="primary-btn" onclick="closeModal('successModal')">
+      Continue Shopping
+    </button>
+
+  </div>
+</div>
+
+<footer id="contact">
+  <h2>Kepler Small Business Connect SL</h2>
+  <p>Connecting buyers and sellers across Sierra Leone.</p>
+  <p>Platform Contact: +232 996 19224</p>
+  <p>WhatsApp: +232 996 19224</p>
+  <p>&copy; 2026 Kepler Small Business Connect SL</p>
 </footer>
-
-
-<!-- =========================
-     JAVASCRIPT
-     PRODUCTS AND SEARCH
-========================= -->
 
 <script>
 
-/* =================================
-   1. FASHION COLLECTION
+// PLATFORM CONTACT NUMBER
+const PLATFORM_PHONE = "23299619224";
 
-   Different designs for men,
-   women, and children.
-================================= */
+// PAYMENT RECEIVING NUMBERS
+// Replace these placeholders with your confirmed numbers.
+const PAYMENT_ACCOUNTS = {
+  "Afrimoney": {
+    name: "Kepler Small Business Connect SL",
+    number: "ADD_YOUR_AFRIMONEY_NUMBER"
+  },
 
-const fashion = [
+  "Orange Money": {
+    name: "Kepler Small Business Connect SL",
+    number: "ADD_YOUR_ORANGE_MONEY_NUMBER"
+  }
+};
 
-    {
-        name: "Classic Men's Suit",
-        category: "Men",
-        price: 1200,
-        image: "photo-1594938298603-c8148c4dae35"
-    },
+let selectedCategory = "";
+let selectedProduct = null;
+let buyerLatitude = "";
+let buyerLongitude = "";
 
-    {
-        name: "African Print Men's Outfit",
-        category: "Men",
-        price: 850,
-        image: "photo-1617137968427-85924c800a22"
-    },
+// CATEGORY INFORMATION AND PRODUCTS
+// Each category contains exactly 10 sample products.
 
-    {
-        name: "Men's Traditional Wear",
-        category: "Men",
-        price: 950,
-        image: "photo-1618354691373-d851c5c3a990"
-    },
+const productData = [
 
-    {
-        name: "Men's Casual Shirt",
-        category: "Men",
-        price: 350,
-        image: "photo-1603252110481-7ba873bf42ab"
-    },
+  {
+    category: "Fashion & Tailoring",
+    icon: "👗",
+    description: "Clothes, tailoring and fashion items.",
+    items: [
+      ["Ladies Dress", 250, "Freetown"],
+      ["Men's Shirt", 180, "Bo"],
+      ["School Uniform", 220, "Makeni"],
+      ["African Print Dress", 300, "Kenema"],
+      ["Men's Traditional Wear", 350, "Freetown"],
+      ["Ladies Skirt", 150, "Mile 91"],
+      ["Children's Clothes", 120, "Bo"],
+      ["Tailoring Service", 200, "Freetown"],
+      ["Ladies Blouse", 180, "Makeni"],
+      ["Traditional Outfit", 400, "Kenema"]
+    ]
+  },
 
-    {
-        name: "Men's Senator Style",
-        category: "Men",
-        price: 1000,
-        image: "photo-1617137968427-85924c800a22"
-    },
+  {
+    category: "Agriculture & Local Products",
+    icon: "🌾",
+    description: "Rice, cassava, palm oil and local produce.",
+    items: [
+      ["Fresh Rice", 250, "Bo"],
+      ["Cassava", 80, "Mile 91"],
+      ["Palm Oil", 150, "Kenema"],
+      ["Groundnuts", 100, "Makeni"],
+      ["Fresh Sweet Potatoes", 90, "Bo"],
+      ["Local Pepper", 40, "Freetown"],
+      ["Cocoa", 300, "Kenema"],
+      ["Fresh Tomatoes", 70, "Mile 91"],
+      ["Gari", 100, "Bo"],
+      ["Fresh Vegetables", 60, "Freetown"]
+    ]
+  },
 
-    {
-        name: "Women's Elegant Dress",
-        category: "Women",
-        price: 750,
-        image: "photo-1539109136881-3be0616acf4b"
-    },
+  {
+    category: "Phones & Accessories",
+    icon: "📱",
+    description: "Phones, chargers and electronic accessories.",
+    items: [
+      ["Android Smartphone", 2500, "Freetown"],
+      ["Phone Charger", 120, "Bo"],
+      ["Power Bank", 350, "Makeni"],
+      ["Phone Earphones", 100, "Kenema"],
+      ["Phone Cover", 80, "Freetown"],
+      ["Bluetooth Speaker", 400, "Bo"],
+      ["Memory Card", 150, "Mile 91"],
+      ["USB Cable", 60, "Makeni"],
+      ["Smart Watch", 500, "Freetown"],
+      ["Phone Screen Protector", 50, "Kenema"]
+    ]
+  },
 
-    {
-        name: "African Print Women's Dress",
-        category: "Women",
-        price: 900,
-        image: "photo-1610030469983-98e550d6193c"
-    },
+  {
+    category: "Accommodation",
+    icon: "🏠",
+    description: "Rooms, apartments and guest houses.",
+    items: [
+      ["Single Room", 800, "Freetown"],
+      ["Self-Contained Room", 1500, "Bo"],
+      ["Two-Bedroom Apartment", 3500, "Makeni"],
+      ["Guest House Room", 600, "Kenema"],
+      ["Family Apartment", 4000, "Freetown"],
+      ["Student Accommodation", 700, "Mile 91"],
+      ["Short-Stay Room", 500, "Bo"],
+      ["Lodge Room", 900, "Makeni"],
+      ["One-Bedroom Apartment", 2000, "Kenema"],
+      ["Guest House Apartment", 2500, "Freetown"]
+    ]
+  },
 
-    {
-        name: "Women's Party Gown",
-        category: "Women",
-        price: 1500,
-        image: "photo-1566174053879-31528523f8ae"
-    },
+  {
+    category: "Food & Groceries",
+    icon: "🛒",
+    description: "Food, groceries and everyday household supplies.",
+    items: [
+      ["Bag of Rice", 650, "Freetown"],
+      ["Cooking Oil", 180, "Bo"],
+      ["Fresh Fish", 120, "Kenema"],
+      ["Frozen Chicken", 250, "Makeni"],
+      ["Onions", 80, "Mile 91"],
+      ["Sugar", 100, "Freetown"],
+      ["Milk Powder", 150, "Bo"],
+      ["Eggs", 120, "Kenema"],
+      ["Spaghetti", 90, "Makeni"],
+      ["Tomato Paste", 70, "Mile 91"]
+    ]
+  },
 
-    {
-        name: "Women's Casual Outfit",
-        category: "Women",
-        price: 600,
-        image: "photo-1483985988355-763728e1935b"
-    },
+  {
+    category: "Beauty & Personal Care",
+    icon: "💄",
+    description: "Skincare, makeup, hair products and toiletries.",
+    items: [
+      ["Body Lotion", 120, "Freetown"],
+      ["Face Cream", 100, "Bo"],
+      ["Hair Shampoo", 90, "Kenema"],
+      ["Conditioner", 110, "Makeni"],
+      ["Perfume", 250, "Freetown"],
+      ["Makeup Kit", 300, "Bo"],
+      ["Hair Attachment", 180, "Mile 91"],
+      ["Bathing Soap", 40, "Kenema"],
+      ["Hair Dryer", 450, "Makeni"],
+      ["Skin Care Set", 350, "Freetown"]
+    ]
+  },
 
-    {
-        name: "Traditional African Wrapper Set",
-        category: "Women",
-        price: 1100,
-        image: "photo-1539109136881-3be0616acf4b"
-    },
+  {
+    category: "Furniture & Home Appliances",
+    icon: "🛋️",
+    description: "Furniture and household appliances.",
+    items: [
+      ["Plastic Chair", 150, "Freetown"],
+      ["Wooden Table", 600, "Bo"],
+      ["Bed Frame", 1200, "Makeni"],
+      ["Mattress", 900, "Kenema"],
+      ["Standing Fan", 500, "Freetown"],
+      ["Electric Kettle", 250, "Bo"],
+      ["Refrigerator", 4500, "Makeni"],
+      ["Wardrobe", 1800, "Kenema"],
+      ["Television Stand", 700, "Mile 91"],
+      ["Dining Table", 1500, "Freetown"]
+    ]
+  },
 
-    {
-        name: "Children's Party Dress",
-        category: "Children",
-        price: 450,
-        image: "photo-1519238263530-99bdd11df2ea"
-    },
+  {
+    category: "Building Materials",
+    icon: "🧱",
+    description: "Cement, roofing sheets, paint and construction supplies.",
+    items: [
+      ["Bag of Cement", 120, "Freetown"],
+      ["Roofing Sheets", 180, "Bo"],
+      ["Wall Paint", 350, "Kenema"],
+      ["Building Blocks", 15, "Makeni"],
+      ["Iron Rods", 100, "Mile 91"],
+      ["Ceiling Boards", 250, "Freetown"],
+      ["Floor Tiles", 300, "Bo"],
+      ["Plumbing Pipes", 120, "Kenema"],
+      ["Nails", 50, "Makeni"],
+      ["Electrical Wires", 200, "Freetown"]
+    ]
+  },
 
-    {
-        name: "Children's African Outfit",
-        category: "Children",
-        price: 500,
-        image: "photo-1519238263530-99bdd11df2ea"
-    },
+  {
+    category: "Vehicles & Spare Parts",
+    icon: "🏍️",
+    description: "Motorcycles, car parts, tyres and accessories.",
+    items: [
+      ["Motorcycle Tyre", 350, "Freetown"],
+      ["Motorcycle Battery", 500, "Bo"],
+      ["Car Battery", 900, "Kenema"],
+      ["Engine Oil", 180, "Makeni"],
+      ["Motorcycle Helmet", 250, "Mile 91"],
+      ["Car Tyre", 1200, "Freetown"],
+      ["Brake Pads", 300, "Bo"],
+      ["Motorcycle Chain", 220, "Kenema"],
+      ["Car Headlight", 450, "Makeni"],
+      ["Motorcycle Spare Parts", 400, "Freetown"]
+    ]
+  },
 
-    {
-        name: "Boys' Traditional Wear",
-        category: "Children",
-        price: 550,
-        image: "photo-1519238263530-99bdd11df2ea"
-    },
-
-    {
-        name: "Children's Casual Clothing",
-        category: "Children",
-        price: 300,
-        image: "photo-1519238263530-99bdd11df2ea"
-    }
-
-];
-
-
-/* =================================
-   2. SALONE LOCAL PRODUCTS
-
-   Local food, farm produce,
-   fruits, and vegetables.
-================================= */
-
-const food = [
-
-    {
-        name: "Fresh Palm Oil",
-        category: "Oils",
-        price: 60,
-        unit: "per litre",
-        image: "photo-1474979266404-7eaacbcdcc1a"
-    },
-
-    {
-        name: "Quality Gari",
-        category: "Food",
-        price: 25,
-        unit: "per cup",
-        image: "photo-1604719312566-8912e9c8a213"
-    },
-
-    {
-        name: "Fresh Cassava",
-        category: "Food",
-        price: 30,
-        unit: "per bundle",
-        image: "photo-1597362925123-77861d3fbac5"
-    },
-
-    {
-        name: "Sweet Potatoes",
-        category: "Food",
-        price: 40,
-        unit: "per bundle",
-        image: "photo-1518977676601-b53f82aba655"
-    },
-
-    {
-        name: "Fresh Yam",
-        category: "Food",
-        price: 100,
-        unit: "per tuber",
-        image: "photo-1518977676601-b53f82aba655"
-    },
-
-    {
-        name: "Dry Beans",
-        category: "Food",
-        price: 35,
-        unit: "per cup",
-        image: "photo-1515543904379-3d757afe72e4"
-    },
-
-    {
-        name: "Fresh Okra",
-        category: "Vegetables",
-        price: 20,
-        unit: "per bundle",
-        image: "photo-1425543103986-22abb8a0d0f7"
-    },
-
-    {
-        name: "Fresh Bananas",
-        category: "Fruits",
-        price: 50,
-        unit: "per bunch",
-        image: "photo-1571771894821-ce9b6c11b08e"
-    },
-
-    {
-        name: "Fresh Plantain",
-        category: "Fruits",
-        price: 60,
-        unit: "per bunch",
-        image: "photo-1603833665858-e61d17a86224"
-    },
-
-    {
-        name: "Fresh Cocoyam",
-        category: "Food",
-        price: 70,
-        unit: "per bundle",
-        image: "photo-1518977676601-b53f82aba655"
-    },
-
-    {
-        name: "Fresh Pepper",
-        category: "Vegetables",
-        price: 25,
-        unit: "per cup",
-        image: "photo-1588252303782-cb80119abd6d"
-    },
-
-    {
-        name: "Fresh Tomatoes",
-        category: "Vegetables",
-        price: 40,
-        unit: "per bundle",
-        image: "photo-1546094096-0df4bcaaa337"
-    },
-
-    {
-        name: "Fresh Onions",
-        category: "Vegetables",
-        price: 30,
-        unit: "per bundle",
-        image: "photo-1508747703725-719777637510"
-    },
-
-    {
-        name: "Groundnuts",
-        category: "Food",
-        price: 50,
-        unit: "per cup",
-        image: "photo-1567892737951-30c8f2a6e3a7"
-    },
-
-    {
-        name: "Fresh Sweet Corn",
-        category: "Food",
-        price: 40,
-        unit: "per cob",
-        image: "photo-1551754655-cd27e38d207"
-    },
-
-    {
-        name: "Fresh Cabbage",
-        category: "Vegetables",
-        price: 80,
-        unit: "per head",
-        image: "photo-1594282486552-05b4d80fbb9f"
-    },
-
-    {
-        name: "Fresh Carrots",
-        category: "Vegetables",
-        price: 40,
-        unit: "per bundle",
-        image: "photo-1445282768818-728615cc910a"
-    },
-
-    {
-        name: "Fresh Cucumber",
-        category: "Vegetables",
-        price: 40,
-        unit: "per bundle",
-        image: "photo-1604977042946-1eecc30f269e"
-    },
-
-    {
-        name: "Fresh Mangoes",
-        category: "Fruits",
-        price: 50,
-        unit: "per bundle",
-        image: "photo-1553279768-865429fa0078"
-    },
-
-    {
-        name: "Fresh Pineapple",
-        category: "Fruits",
-        price: 100,
-        unit: "per fruit",
-        image: "photo-1550258987-190a2d41a8ba"
-    },
-
-    {
-        name: "Fresh Watermelon",
-        category: "Fruits",
-        price: 150,
-        unit: "per fruit",
-        image: "photo-1587049352846-4a222e784d38"
-    },
-
-    {
-        name: "Local Rice",
-        category: "Food",
-        price: 40,
-        unit: "per cup",
-        image: "photo-1586201375761-83865001e31c"
-    },
-
-    {
-        name: "Fresh Lemons",
-        category: "Fruits",
-        price: 30,
-        unit: "per bundle",
-        image: "photo-1518977676601-b53f82aba655"
-    },
-
-    {
-        name: "Fresh Ginger",
-        category: "Vegetables",
-        price: 30,
-        unit: "per bundle",
-        image: "photo-1615485290382-441e4d049cb5"
-    }
+  {
+    category: "Computers & Office Equipment",
+    icon: "💻",
+    description: "Laptops, printers, office supplies and accessories.",
+    items: [
+      ["Laptop Computer", 4500, "Freetown"],
+      ["Desktop Computer", 5000, "Bo"],
+      ["Computer Mouse", 120, "Kenema"],
+      ["Computer Keyboard", 180, "Makeni"],
+      ["Printer", 1600, "Freetown"],
+      ["Laptop Charger", 250, "Bo"],
+      ["USB Flash Drive", 100, "Mile 91"],
+      ["Computer Monitor", 1200, "Kenema"],
+      ["Office Chair", 800, "Makeni"],
+      ["Printer Paper", 90, "Freetown"]
+    ]
+  }
 
 ];
 
+// CREATE CATEGORY CARDS
+function createCategories() {
 
-/* =================================
-   3. PHONE ACCESSORIES
+  const container = document.getElementById("categoryContainer");
 
-   Accessories and repair services.
-================================= */
+  container.innerHTML = "";
 
-const phoneProducts = [
+  productData.forEach(group => {
 
-    {
-        name: "USB-C Fast Charger",
-        category: "Chargers",
-        price: 150,
-        image: "photo-1583863788434-e58a36330cf0"
-    },
+    const card = document.createElement("div");
 
-    {
-        name: "Phone Charging Cable",
-        category: "Chargers",
-        price: 80,
-        image: "photo-1583394838336-acd977736f90"
-    },
+    card.className = "category";
 
-    {
-        name: "Wireless Earbuds",
-        category: "Audio",
-        price: 250,
-        image: "photo-1590658268037-6bf12165a8df"
-    },
+    const icon = document.createElement("div");
+    icon.className = "category-icon";
+    icon.textContent = group.icon;
 
-    {
-        name: "Wired Earphones",
-        category: "Audio",
-        price: 100,
-        image: "photo-1590658268037-6bf12165a8df"
-    },
+    const title = document.createElement("h3");
+    title.textContent = group.category;
 
-    {
-        name: "Bluetooth Speaker",
-        category: "Audio",
-        price: 350,
-        image: "photo-1608043152269-423dbba4e7e1"
-    },
+    const description = document.createElement("p");
+    description.textContent = group.description;
 
-    {
-        name: "Phone Power Bank",
-        category: "Accessories",
-        price: 400,
-        image: "photo-1609091839311-d5365f9ff1c9"
-    },
+    card.appendChild(icon);
+    card.appendChild(title);
+    card.appendChild(description);
 
-    {
-        name: "Phone Protective Case",
-        category: "Accessories",
-        price: 100,
-        image: "photo-1601593346740-925612772d4e"
-    },
+    card.onclick = () => openCategory(group.category);
 
-    {
-        name: "Screen Protector",
-        category: "Accessories",
-        price: 70,
-        image: "photo-1511707171634-5f897ff02aa9"
-    },
+    container.appendChild(card);
 
-    {
-        name: "Phone Holder",
-        category: "Accessories",
-        price: 120,
-        image: "photo-1523206489230-c012c64b2b48"
-    },
-
-    {
-        name: "Memory Card",
-        category: "Accessories",
-        price: 180,
-        image: "photo-1531492746076-161ca9bcad58"
-    },
-
-    {
-        name: "Phone Screen Replacement",
-        category: "Repairs",
-        price: 350,
-        image: "photo-1511707171634-5f897ff02aa9"
-    },
-
-    {
-        name: "Charging Port Repair",
-        category: "Repairs",
-        price: 200,
-        image: "photo-1511707171634-5f897ff02aa9"
-    },
-
-    {
-        name: "Phone Battery Replacement",
-        category: "Repairs",
-        price: 300,
-        image: "photo-1511707171634-5f897ff02aa9"
-    },
-
-    {
-        name: "Phone Software Repair",
-        category: "Repairs",
-        price: 150,
-        image: "photo-1511707171634-5f897ff02aa9"
-    }
-
-];
-
-
-/* =================================
-   4. GUESTHOUSES
-
-   Demonstration listings from
-   different parts of Sierra Leone.
-
-   Names and prices are examples,
-   not verified businesses.
-================================= */
-
-const guesthouses = [
-
-    {
-        name: "Freetown Comfort Stay",
-        category: "Freetown",
-        price: 500,
-        unit: "per night",
-        location: "Freetown",
-        image: "photo-1566073771259-6a8506099945"
-    },
-
-    {
-        name: "Lumley Guest Retreat",
-        category: "Freetown",
-        price: 650,
-        unit: "per night",
-        location: "Lumley, Freetown",
-        image: "photo-1611892440504-42a792e24d32"
-    },
-
-    {
-        name: "Bo City Guesthouse",
-        category: "Bo",
-        price: 400,
-        unit: "per night",
-        location: "Bo City",
-        image: "photo-1566073771259-6a8506099945"
-    },
-
-    {
-        name: "Kenema Comfort Lodge",
-        category: "Kenema",
-        price: 450,
-        unit: "per night",
-        location: "Kenema",
-        image: "photo-1566665797739-1674de7a421a"
-    },
-
-    {
-        name: "Makeni City Stay",
-        category: "Makeni",
-        price: 400,
-        unit: "per night",
-        location: "Makeni",
-        image: "photo-1566073771259-6a8506099945"
-    },
-
-    {
-        name: "Kabala Guest Lodge",
-        category: "Kabala",
-        price: 350,
-        unit: "per night",
-        location: "Kabala",
-        image: "photo-1566665797739-1674de7a421a"
-    },
-
-    {
-        name: "River No. 2 Beach Stay",
-        category: "River No. 2",
-        price: 900,
-        unit: "per night",
-        location: "River No. 2",
-        image: "photo-1499793983690-e29da59ef1c2"
-    },
-
-    {
-        name: "Tokeh Beach Retreat",
-        category: "Tokeh",
-        price: 1200,
-        unit: "per night",
-        location: "Tokeh",
-        image: "photo-1571896349842-33c89424de2d"
-    },
-
-    {
-        name: "Western Area Guest Lodge",
-        category: "Freetown",
-        price: 700,
-        unit: "per night",
-        location: "Western Area",
-        image: "photo-1611892440504-42a792e24d32"
-    },
-
-    {
-        name: "Bo Relaxation Lodge",
-        category: "Bo",
-        price: 550,
-        unit: "per night",
-        location: "Bo",
-        image: "photo-1566665797739-1674de7a421a"
-    }
-
-];
-
-
-/* =================================
-   5. IMAGE GENERATOR
-
-   Optimizes external image loading.
-================================= */
-
-function getImage(imageID, width = 500) {
-
-    return `https://images.unsplash.com/${imageID}?auto=format&fit=crop&w=${width}&q=65`;
+  });
 
 }
 
+// GENERATE THE 100 PRODUCTS
+const products = [];
+let productNumber = 1;
 
-/* =================================
-   6. PRODUCT CARD GENERATOR
-================================= */
+productData.forEach(group => {
 
-function createProductCard(product, businessType) {
+  group.items.forEach(item => {
 
-    let message = "";
+    const slug = item[0].toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-");
 
-    if (businessType === "fashion") {
+    products.push({
+      id: productNumber++,
+      name: item[0],
+      price: item[1],
+      location: item[2],
+      category: group.category,
+      image: `https://picsum.photos/seed/kepler-${slug}/600/400`,
+      seller: "Sample Seller",
+      phone: PLATFORM_PHONE,
+      description: `Contact the seller for more information about ${item[0]}.`
+    });
 
-        message = `Hello, I am interested in ${product.name}.`;
+  });
 
-    } else if (businessType === "food") {
+});
 
-        message = `Hello, I want to order ${product.name}.`;
+// OPEN A CATEGORY
+function openCategory(category) {
 
-    } else if (businessType === "phone") {
+  selectedCategory = category;
 
-        message = `Hello, I am interested in ${product.name}.`;
+  document.getElementById("categoryPage").classList.add("hidden");
+  document.getElementById("shopPage").classList.remove("hidden");
+  document.getElementById("servicesPage").classList.add("hidden");
 
-    } else {
+  document.getElementById("selectedCategoryTitle").textContent = category;
 
-        message = `Hello, I want to enquire about ${product.name} at ${product.location}.`;
+  const group = productData.find(item => item.category === category);
+
+  document.getElementById("categoryDescription").textContent =
+    group ? group.description : "";
+
+  document.getElementById("searchInput").value = "";
+  document.getElementById("locationFilter").value = "";
+
+  displayProducts();
+
+  document.getElementById("shopPage").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+// RETURN TO CATEGORY PAGE
+function showCategories() {
+
+  selectedCategory = "";
+
+  document.getElementById("categoryPage").classList.remove("hidden");
+  document.getElementById("shopPage").classList.add("hidden");
+  document.getElementById("servicesPage").classList.add("hidden");
+
+  document.getElementById("searchInput").value = "";
+  document.getElementById("locationFilter").value = "";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+// DISPLAY PRODUCTS FROM SELECTED CATEGORY
+function displayProducts() {
+
+  const container = document.getElementById("productContainer");
+  const search = document.getElementById("searchInput").value.toLowerCase();
+  const location = document.getElementById("locationFilter").value;
+
+  container.innerHTML = "";
+
+  if (!selectedCategory) return;
+
+  const filtered = products.filter(product => {
+
+    const matchesCategory = product.category === selectedCategory;
+
+    const matchesSearch =
+      product.name.toLowerCase().includes(search) ||
+      product.category.toLowerCase().includes(search);
+
+    const matchesLocation =
+      location === "" || product.location === location;
+
+    return matchesCategory && matchesSearch && matchesLocation;
+
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = "<p>No products found in this category.</p>";
+    return;
+  }
+
+  filtered.forEach(product => {
+
+    const card = document.createElement("div");
+    card.className = "product-card";
+
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}"
+        onerror="this.src='https://placehold.co/600x400?text=Product+Photo'">
+
+      <div class="product-info">
+
+        <h3>${product.name}</h3>
+
+        <p class="small-detail">${product.category}</p>
+
+        <p class="price">NLe ${product.price.toLocaleString()}</p>
+
+        <p class="small-detail">Location: ${product.location}</p>
+
+        <p class="small-detail">Seller: ${product.seller}</p>
+
+        <p class="small-detail">Phone: ${product.phone}</p>
+
+        <button class="primary-btn"
+          onclick="showProduct(${product.id})">
+          View Product
+        </button>
+
+        <button class="whatsapp-btn"
+          onclick="contactSeller(${product.id})">
+          WhatsApp Seller
+        </button>
+
+        <button class="call-btn"
+          onclick="callSeller(${product.id})">
+          Call Seller
+        </button>
+
+      </div>
+    `;
+
+    container.appendChild(card);
+
+  });
+
+}
+
+// FIND PRODUCT
+function findProduct(id) {
+  return products.find(product => product.id === id);
+}
+
+// OPEN PRODUCT DETAILS
+function showProduct(id) {
+
+  const product = findProduct(id);
+
+  if (!product) return;
+
+  selectedProduct = product;
+
+  document.getElementById("productDetails").innerHTML = `
+
+    <h2>${product.name}</h2>
+
+    <img class="product-large"
+      src="${product.image}"
+      alt="${product.name}"
+      onerror="this.src='https://placehold.co/600x400?text=Product+Photo'">
+
+    <p class="price">NLe ${product.price.toLocaleString()}</p>
+
+    <p><strong>Category:</strong> ${product.category}</p>
+
+    <p><strong>Location:</strong> ${product.location}</p>
+
+    <p><strong>Description:</strong> ${product.description}</p>
+
+    <div class="seller-box">
+
+      <h3>Seller Contact Details</h3>
+
+      <p><strong>Seller:</strong> ${product.seller}</p>
+
+      <p><strong>Phone:</strong> ${product.phone}</p>
+
+      <button class="whatsapp-btn"
+        onclick="contactSeller(${product.id})">
+        WhatsApp Seller
+      </button>
+
+      <button class="call-btn"
+        onclick="callSeller(${product.id})">
+        Call Seller
+      </button>
+
+    </div>
+
+    <button class="primary-btn"
+      onclick="openOrder(${product.id})">
+      Place an Order
+    </button>
+
+  `;
+
+  document.getElementById("productModal").style.display = "block";
+
+}
+
+// WHATSAPP SELLER
+function contactSeller(id) {
+
+  const product = findProduct(id);
+
+  if (!product) return;
+
+  const message =
+    `Hello ${product.seller}, I am interested in your ${product.name}. Please provide more details.`;
+
+  window.open(
+    `https://wa.me/${product.phone}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+
+}
+
+// CALL SELLER
+function callSeller(id) {
+
+  const product = findProduct(id);
+
+  if (!product) return;
+
+  window.location.href = `tel:${product.phone}`;
+
+}
+
+// SERVICES INFORMATION
+const serviceData = [
+
+  ["Electrical Services", "💡", "Freetown", "Electrical installation and repairs."],
+  ["Plumbing Services", "🚰", "Bo", "Water pipes, taps and plumbing repairs."],
+  ["Motorcycle Mechanic", "🏍️", "Mile 91", "Motorcycle repairs and maintenance."],
+  ["Car Mechanic", "🚗", "Kenema", "Vehicle inspection and mechanical repairs."],
+  ["Photography", "📸", "Freetown", "Events, portraits and professional photography."],
+  ["Graphic Design", "🎨", "Makeni", "Logos, posters, banners and graphic design."],
+  ["Hairdressing", "💇", "Bo", "Hair styling, braiding and hair treatment."],
+  ["Cleaning Services", "🧹", "Freetown", "Home and office cleaning services."],
+  ["Construction Services", "🏗️", "Kenema", "Building and construction work."],
+  ["Transport Services", "🚕", "Makeni", "Local transport and delivery services."]
+];
+
+const services = serviceData.map((item, index) => ({
+  id: index + 1,
+  name: item[0],
+  icon: item[1],
+  location: item[2],
+  description: item[3],
+  provider: "Sample Service Provider",
+  phone: PLATFORM_PHONE
+}));
+
+// OPEN SERVICES PAGE
+function showServices() {
+
+  document.getElementById("categoryPage").classList.add("hidden");
+  document.getElementById("shopPage").classList.add("hidden");
+  document.getElementById("servicesPage").classList.remove("hidden");
+
+  document.getElementById("serviceSearch").value = "";
+  document.getElementById("serviceLocationFilter").value = "";
+
+  displayServices();
+
+  document.getElementById("servicesPage").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+// DISPLAY SERVICES
+function displayServices() {
+
+  const container = document.getElementById("serviceContainer");
+
+  const search =
+    document.getElementById("serviceSearch").value.toLowerCase();
+
+  const location =
+    document.getElementById("serviceLocationFilter").value;
+
+  container.innerHTML = "";
+
+  const filtered = services.filter(service => {
+
+    const matchesSearch =
+      service.name.toLowerCase().includes(search) ||
+      service.description.toLowerCase().includes(search);
+
+    const matchesLocation =
+      location === "" || service.location === location;
+
+    return matchesSearch && matchesLocation;
+
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = "<p>No services found.</p>";
+    return;
+  }
+
+  filtered.forEach(service => {
+
+    const card = document.createElement("div");
+
+    card.className = "service-card";
+
+    card.innerHTML = `
+      <div class="service-icon">${service.icon}</div>
+
+      <h3>${service.name}</h3>
+
+      <p class="small-detail">${service.description}</p>
+
+      <p class="small-detail">Location: ${service.location}</p>
+
+      <p class="small-detail">Provider: ${service.provider}</p>
+
+      <button class="primary-btn"
+        onclick="showServiceDetails(${service.id})">
+        View Service
+      </button>
+
+      <button class="whatsapp-btn"
+        onclick="contactService(${service.id})">
+        WhatsApp Provider
+      </button>
+
+      <button class="call-btn"
+        onclick="callService(${service.id})">
+        Call Provider
+      </button>
+    `;
+
+    container.appendChild(card);
+
+  });
+
+}
+
+// FIND SERVICE
+function findService(id) {
+  return services.find(service => service.id === id);
+}
+
+// SERVICE DETAILS
+function showServiceDetails(id) {
+
+  const service = findService(id);
+
+  if (!service) return;
+
+  document.getElementById("serviceDetails").innerHTML = `
+
+    <h2>${service.icon} ${service.name}</h2>
+
+    <div class="seller-box">
+      <p><strong>Description:</strong> ${service.description}</p>
+      <p><strong>Location:</strong> ${service.location}</p>
+      <p><strong>Provider:</strong> ${service.provider}</p>
+      <p><strong>Phone:</strong> ${service.phone}</p>
+    </div>
+
+    <p>Contact the service provider to discuss the work and price.</p>
+
+    <button class="whatsapp-btn"
+      onclick="contactService(${service.id})">
+      WhatsApp Provider
+    </button>
+
+    <button class="call-btn"
+      onclick="callService(${service.id})">
+      Call Provider
+    </button>
+
+  `;
+
+  document.getElementById("serviceModal").style.display = "block";
+
+}
+
+// CONTACT SERVICE PROVIDER
+function contactService(id) {
+
+  const service = findService(id);
+
+  if (!service) return;
+
+  const message =
+    `Hello, I am interested in your ${service.name}. Please provide more details.`;
+
+  window.open(
+    `https://wa.me/${service.phone}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+
+}
+
+function callService(id) {
+
+  const service = findService(id);
+
+  if (!service) return;
+
+  window.location.href = `tel:${service.phone}`;
+
+}
+
+// OPEN ORDER FORM
+function openOrder(id) {
+
+  selectedProduct = findProduct(id);
+
+  if (!selectedProduct) return;
+
+  document.getElementById("orderForm").reset();
+
+  document.getElementById("selectedProductInfo").innerHTML = `
+    <h3>${selectedProduct.name}</h3>
+    <p>Seller: ${selectedProduct.seller}</p>
+    <p>Seller phone: ${selectedProduct.phone}</p>
+    <p>Location: ${selectedProduct.location}</p>
+    <p>Price: NLe ${selectedProduct.price.toLocaleString()}</p>
+  `;
+
+  document.getElementById("quantity").value = 1;
+
+  document.getElementById("screenshotPreview").style.display = "none";
+  document.getElementById("screenshotPreview").src = "";
+
+  document.getElementById("locationStatus").textContent =
+    "Location has not been shared.";
+
+  buyerLatitude = "";
+  buyerLongitude = "";
+
+  showDeliveryFields();
+  showPaymentDetails();
+  updateTotal();
+
+  closeModal("productModal");
+
+  document.getElementById("orderModal").style.display = "block";
+
+}
+
+// CALCULATE TOTAL
+function updateTotal() {
+
+  if (!selectedProduct) return;
+
+  let quantity = Number(document.getElementById("quantity").value);
+
+  if (!Number.isFinite(quantity) || quantity < 1) {
+    quantity = 1;
+  }
+
+  const total = selectedProduct.price * quantity;
+
+  document.getElementById("orderTotal").textContent =
+    `Total: NLe ${total.toLocaleString()}`;
+
+}
+
+// DELIVERY OPTIONS
+function showDeliveryFields() {
+
+  const option = document.getElementById("deliveryOption").value;
+
+  const addressFields = document.getElementById("addressFields");
+  const locationFields = document.getElementById("locationFields");
+  const addressInput = document.getElementById("deliveryAddress");
+
+  addressFields.classList.add("hidden");
+  locationFields.classList.add("hidden");
+
+  addressInput.required = false;
+
+  if (
+    option === "Doorstep delivery" ||
+    option === "Agreed pickup location"
+  ) {
+
+    addressFields.classList.remove("hidden");
+    locationFields.classList.remove("hidden");
+
+    addressInput.required = true;
+
+  }
+
+}
+
+// SHARE BUYER LOCATION
+function getBuyerLocation() {
+
+  const status = document.getElementById("locationStatus");
+
+  if (!navigator.geolocation) {
+
+    status.textContent =
+      "Your browser does not support location sharing.";
+
+    return;
+
+  }
+
+  status.textContent = "Getting your location...";
+
+  navigator.geolocation.getCurrentPosition(
+
+    position => {
+
+      buyerLatitude = position.coords.latitude;
+      buyerLongitude = position.coords.longitude;
+
+      status.textContent =
+        "Location captured successfully.";
+
+    },
+
+    error => {
+
+      status.textContent =
+        "Could not get your location. Please allow location permission.";
 
     }
 
-    const whatsappLink =
-        "https://wa.me/23299619224?text=" +
-        encodeURIComponent(message);
+  );
 
-    const unit = product.unit ? " " + product.unit : "";
+}
 
-    const location = product.location
-        ? `<p class="product-location">📍 ${product.location}</p>`
-        : "";
+// PAYMENT DETAILS
+function showPaymentDetails() {
 
-    return `
+  const method = document.getElementById("paymentMethod").value;
 
-        <div class="product-card">
+  const receivingDetails = document.getElementById("receivingDetails");
+  const senderFields = document.getElementById("senderNumberFields");
+  const screenshotFields = document.getElementById("screenshotFields");
 
-            <img
-                src="${getImage(product.image)}"
-                alt="${product.name}"
-                loading="lazy"
-            >
+  receivingDetails.classList.add("hidden");
+  senderFields.classList.add("hidden");
+  screenshotFields.classList.add("hidden");
 
-            <div class="product-info">
+  document.getElementById("senderNumber").required = false;
+  document.getElementById("paymentScreenshot").required = false;
 
-                <h3>${product.name}</h3>
+  if (method === "Afrimoney" || method === "Orange Money") {
 
-                <p class="product-category">${product.category}</p>
+    const account = PAYMENT_ACCOUNTS[method];
 
-                <div class="product-price">
-                    SLE ${Number(product.price).toLocaleString()}
-                    ${unit}
-                </div>
+    receivingDetails.classList.remove("hidden");
+    senderFields.classList.remove("hidden");
+    screenshotFields.classList.remove("hidden");
 
-                ${location}
+    document.getElementById("senderNumber").required = true;
+    document.getElementById("paymentScreenshot").required = true;
 
-                <a
-                    href="${whatsappLink}"
-                    target="_blank"
-                    class="btn btn-whatsapp"
-                >
-                    Enquire on WhatsApp
-                </a>
+    receivingDetails.innerHTML = `
 
-            </div>
+      <h3>${method} Payment Details</h3>
 
-            </div>
+      <p><strong>Send payment to:</strong> ${account.name}</p>
+
+      <p><strong>Receiving Network:</strong> ${method}</p>
+
+      <p><strong>Receiving Number:</strong> ${account.number}</p>
+
+      <p class="notice">
+        Check the receiving number before sending money.
+        Enter your own sender number below and upload your screenshot.
+      </p>
 
     `;
 
+  }
+
+  if (method === "Cash") {
+
+    receivingDetails.classList.remove("hidden");
+
+    receivingDetails.innerHTML = `
+
+      <h3>Cash Payment</h3>
+
+      <p>You selected cash payment.</p>
+
+      <p>Arrange payment with the seller when collecting your order
+      or receiving delivery.</p>
+
+    `;
+
+  }
+
 }
 
+// SCREENSHOT PREVIEW
+function previewScreenshot() {
 
-/* =================================
-   7. DISPLAY FASHION PRODUCTS
-================================= */
+  const file = document.getElementById("paymentScreenshot").files[0];
+  const preview = document.getElementById("screenshotPreview");
 
-function displayFashion() {
+  preview.style.display = "none";
+  preview.src = "";
 
-    const search =
-        document.getElementById("fashionSearch")
-        .value.toLowerCase();
+  if (!file) return;
 
-    const category =
-        document.getElementById("fashionCategory").value;
+  const allowedTypes = [
+    "image/jpeg",
+    "image/png",
+    "image/webp"
+  ];
 
-    const filtered = fashion.filter(product => {
+  if (!allowedTypes.includes(file.type)) {
 
-        const matchesSearch =
-            product.name.toLowerCase().includes(search);
+    alert("Please upload a JPG, PNG or WEBP image.");
 
-        const matchesCategory =
-            category === "all" || product.category === category;
+    document.getElementById("paymentScreenshot").value = "";
 
-        return matchesSearch && matchesCategory;
+    return;
 
-    });
+  }
 
-    const container =
-        document.getElementById("fashionProducts");
+  if (file.size > 5 * 1024 * 1024) {
 
-    container.innerHTML = "";
+    alert("Your screenshot must be 5 MB or smaller.");
 
-    filtered.forEach(product => {
+    document.getElementById("paymentScreenshot").value = "";
 
-        container.innerHTML +=
-            createProductCard(product, "fashion");
+    return;
 
-    });
+  }
 
-    if (filtered.length === 0) {
+  const reader = new FileReader();
 
-        container.innerHTML =
-            "<p>No clothing products found.</p>";
+  reader.onload = function(event) {
+
+    preview.src = event.target.result;
+    preview.style.display = "block";
+
+  };
+
+  reader.readAsDataURL(file);
+
+}
+
+// SUBMIT ORDER
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  if (!selectedProduct) {
+
+    alert("Please select a product first.");
+
+    return;
+
+  }
+
+  const buyerName =
+    document.getElementById("buyerName").value.trim();
+
+  const buyerPhone =
+    document.getElementById("buyerPhone").value.trim();
+
+  const quantity =
+    Number(document.getElementById("quantity").value);
+
+  const delivery =
+    document.getElementById("deliveryOption").value;
+
+  const address =
+    document.getElementById("deliveryAddress").value.trim();
+
+  const payment =
+    document.getElementById("paymentMethod").value;
+
+  const senderNumber =
+    document.getElementById("senderNumber").value.trim();
+
+  const screenshot =
+    document.getElementById("paymentScreenshot").files[0];
+
+  if (!buyerName || !buyerPhone || !delivery || !payment ||
+      !Number.isInteger(quantity) || quantity < 1) {
+
+    alert("Please complete all required fields.");
+
+    return;
+
+  }
+
+  if (
+    (delivery === "Doorstep delivery" ||
+     delivery === "Agreed pickup location") &&
+    !address
+  ) {
+
+    alert("Please enter your delivery or pickup address.");
+
+    return;
+
+  }
+
+  if (
+    payment === "Afrimoney" ||
+    payment === "Orange Money"
+  ) {
+
+    if (!senderNumber || !screenshot) {
+
+      alert("Please enter your payment number and upload your screenshot.");
+
+      return;
 
     }
 
+  }
+
+  const total = selectedProduct.price * quantity;
+
+  const reference =
+    "KSC" + Date.now().toString().slice(-8);
+
+  let paymentStatus = "Payment pending verification";
+  let receivingMessage = "";
+
+  if (payment === "Afrimoney" || payment === "Orange Money") {
+
+    const account = PAYMENT_ACCOUNTS[payment];
+
+    receivingMessage =
+      `Receiving Network: ${payment}\n` +
+      `Receiving Account: ${account.name}\n` +
+      `Receiving Number: ${account.number}\n` +
+      `Buyer's Sender Number: ${senderNumber}\n` +
+      `Screenshot Filename: ${screenshot.name}\n`;
+
+  } else {
+
+    paymentStatus =
+      "Cash payment selected - payment not yet received";
+
+  }
+
+  let locationMessage = "Location not shared.";
+
+  if (buyerLatitude && buyerLongitude) {
+
+    locationMessage =
+      `https://www.google.com/maps?q=${buyerLatitude},${buyerLongitude}`;
+
+  }
+
+  const message =
+
+    `NEW ORDER - KEPLER SMALL BUSINESS CONNECT SL\n\n` +
+
+    `Reference: ${reference}\n` +
+
+    `Buyer: ${buyerName}\n` +
+
+    `Buyer Phone: ${buyerPhone}\n\n` +
+
+    `Product: ${selectedProduct.name}\n` +
+
+    `Seller: ${selectedProduct.seller}\n` +
+
+    `Seller Phone: ${selectedProduct.phone}\n` +
+
+    `Quantity: ${quantity}\n` +
+
+    `Unit Price: NLe ${selectedProduct.price}\n` +
+
+    `TOTAL: NLe ${total}\n\n` +
+
+    `Delivery: ${delivery}\n` +
+
+    `Address: ${address || "Collect from seller"}\n` +
+
+    `Buyer Location: ${locationMessage}\n\n` +
+
+    `Payment Method: ${payment}\n` +
+
+    receivingMessage +
+
+    `Payment Status: ${paymentStatus}`;
+
+  document.getElementById("successReference").textContent =
+    "Order Reference: " + reference;
+
+  document.getElementById("successPaymentStatus").textContent =
+    paymentStatus;
+
+  closeModal("orderModal");
+
+  document.getElementById("successModal").style.display = "block";
+
+  window.open(
+    `https://wa.me/${PLATFORM_PHONE}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+
+  this.reset();
+
+  showPaymentDetails();
+  showDeliveryFields();
+
+});
+
+// CLOSE MODALS
+function closeModal(id) {
+
+  document.getElementById(id).style.display = "none";
+
 }
 
+// CLOSE MODAL WHEN CLICKING OUTSIDE
+window.addEventListener("click", function(event) {
 
-/* =================================
-   8. DISPLAY LOCAL FOOD PRODUCTS
-================================= */
+  ["productModal", "serviceModal", "orderModal", "successModal"].forEach(id => {
 
-function displayFood() {
+    const modal = document.getElementById(id);
 
-    const search =
-        document.getElementById("foodSearch")
-        .value.toLowerCase();
-
-    const category =
-        document.getElementById("foodCategory").value;
-
-    const filtered = food.filter(product => {
-
-        const matchesSearch =
-            product.name.toLowerCase().includes(search);
-
-        const matchesCategory =
-            category === "all" || product.category === category;
-
-        return matchesSearch && matchesCategory;
-
-    });
-
-    const container =
-        document.getElementById("foodProducts");
-
-    container.innerHTML = "";
-
-    filtered.forEach(product => {
-
-        container.innerHTML +=
-            createProductCard(product, "food");
-
-    });
-
-    if (filtered.length === 0) {
-
-        container.innerHTML =
-            "<p>No local products found.</p>";
-
+    if (event.target === modal) {
+      modal.style.display = "none";
     }
 
-}
+  });
 
+});
 
-/* =================================
-   9. DISPLAY PHONE ACCESSORIES
-================================= */
-
-function displayPhones() {
-
-    const search =
-        document.getElementById("phoneSearch")
-        .value.toLowerCase();
-
-    const category =
-        document.getElementById("phoneCategory").value;
-
-    const filtered = phoneProducts.filter(product => {
-
-        const matchesSearch =
-            product.name.toLowerCase().includes(search);
-
-        const matchesCategory =
-            category === "all" || product.category === category;
-
-        return matchesSearch && matchesCategory;
-
-    });
-
-    const container =
-        document.getElementById("phoneProducts");
-
-    container.innerHTML = "";
-
-    filtered.forEach(product => {
-
-        container.innerHTML +=
-            createProductCard(product, "phone");
-
-    });
-
-    if (filtered.length === 0) {
-
-        container.innerHTML =
-            "<p>No accessories found.</p>";
-
-    }
-
-}
-
-
-/* =================================
-   10. DISPLAY GUESTHOUSES
-================================= */
-
-function displayGuesthouses() {
-
-    const search =
-        document.getElementById("guestSearch")
-        .value.toLowerCase();
-
-    const category =
-        document.getElementById("guestCategory").value;
-
-    const filtered = guesthouses.filter(place => {
-
-        const matchesSearch =
-            place.name.toLowerCase().includes(search) ||
-            place.location.toLowerCase().includes(search);
-
-        const matchesCategory =
-            category === "all" || place.category === category;
-
-        return matchesSearch && matchesCategory;
-
-    });
-
-    const container =
-        document.getElementById("guestProducts");
-
-    container.innerHTML = "";
-
-    filtered.forEach(place => {
-
-        container.innerHTML +=
-            createProductCard(place, "guesthouse");
-
-    });
-
-    if (filtered.length === 0) {
-
-        container.innerHTML =
-            "<p>No guesthouses found in this location.</p>";
-
-    }
-
-}
-
-
-/* =================================
-   11. SEARCH EVENT LISTENERS
-
-   These update the products when
-   someone searches or selects
-   a category.
-================================= */
-
-document.getElementById("fashionSearch")
-.addEventListener("input", displayFashion);
-
-document.getElementById("fashionCategory")
-.addEventListener("change", displayFashion);
-
-
-document.getElementById("foodSearch")
-.addEventListener("input", displayFood);
-
-document.getElementById("foodCategory")
-.addEventListener("change", displayFood);
-
-
-document.getElementById("phoneSearch")
-.addEventListener("input", displayPhones);
-
-document.getElementById("phoneCategory")
-.addEventListener("change", displayPhones);
-
-
-document.getElementById("guestSearch")
-.addEventListener("input", displayGuesthouses);
-
-document.getElementById("guestCategory")
-.addEventListener("change", displayGuesthouses);
-
-
-/* =================================
-   12. INITIAL DISPLAY
-
-   Show all products when the
-   website first opens.
-================================= */
-
-displayFashion();
-
-displayFood();
-
-displayPhones();
-
-displayGuesthouses();
-
+// LOAD CATEGORY CARDS WHEN WEBSITE OPENS
+createCategories();
 
 </script>
 
 </body>
 </html>
+
+
