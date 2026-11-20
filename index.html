@@ -15,10 +15,17 @@
 }
 
 body {
-  background: #f5f6f8;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)),
+    url("images/kepler-alusine.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   color: #222;
 }
-
 header {
   background: #075c3b;
   color: white;
@@ -381,12 +388,31 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.moving-text {
+  white-space: nowrap;
+  animation: moveRight 10s linear infinite;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
+  <div class="moving-text">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      Welcome to Kepler Small Business Connect SL - Connecting buyers and sellers across Sierra Leone!
+    </marquee>
+  </div>
   <h1>Kepler Small Business Connect SL</h1>
   <p>Connecting buyers and sellers across Sierra Leone</p>
 </header>
@@ -401,7 +427,7 @@ footer {
 <section class="hero" id="home">
   <h2>Welcome to Kepler Small Business Connect SL</h2>
   <p>Find products and services from businesses across Sierra Leone.</p>
-  <p>Buy locally. Support local businesses.</p>
+  <p>Buy let us buy together.Support local businesses.</p>
 </section>
 
 <!-- MAIN CATEGORY PAGE -->
@@ -466,7 +492,7 @@ footer {
 </section>
 
 <!-- SERVICES PAGE -->
-<section id="servicesPage" class="shop-area hidden">
+<!-- <section id="servicesPage" class="shop-area hidden">
 
   <button class="back-btn" onclick="showCategories()">
     ← Back to Categories
@@ -487,8 +513,8 @@ footer {
       oninput="displayServices()"
     >
 
-    <select id="serviceLocationFilter" onchange="displayServices()">
-      <option value="">All locations</option>
+    <select id="serviceLocationFilter" onchange="displayServices()"> -->
+     <!-- <option v alue="">All locations</option>
       <option value="Freetown">Freetown</option>
       <option value="Bo">Bo</option>
       <option value="Kenema">Kenema</option>
@@ -504,6 +530,76 @@ footer {
     ← Back to Categories
   </button>
 
+</section> -->
+
+<section id="servicesPage" class="hidden">
+  <button onclick="showServices()">Services</button>
+  <h2>Our Services</h2>
+  <p>Find skilled service providers in your community across Sierra Leone.</p>
+
+  <div class="services-container">
+
+    <div class="service-card">
+      <img src="images/plumbing.jpg" alt="Plumbing services">
+      <h3>Plumbing Services</h3>
+      <p>Professional plumbing, pipe installation and repairs.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/electrical.jpg" alt="Electrical services">
+      <h3>Electrical Services</h3>
+      <p>Electrical installation, wiring and repairs.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/mechanic.jpg" alt="Car mechanic">
+      <h3>Car Mechanics</h3>
+      <p>Vehicle servicing, maintenance and repairs.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/carpentry.jpg" alt="Carpentry services">
+      <h3>Carpentry</h3>
+      <p>Furniture making, woodwork and repairs.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/painting.jpg" alt="Painting services">
+      <h3>Painting Services</h3>
+      <p>House painting and professional decoration.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/photography.jpg" alt="Photography services">
+      <h3>Photography</h3>
+      <p>Events, weddings and professional photography.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/barber.jpg" alt="Barber services">
+      <h3>Barbering Services</h3>
+      <p>Haircuts, grooming and styling.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/phone-repair.jpg" alt="Phone repair services">
+      <h3>Phone Repairs</h3>
+      <p>Mobile phone repairs and troubleshooting.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/construction.jpg" alt="Building and construction">
+      <h3>Building & Construction</h3>
+      <p>Building, renovation and construction work.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/welding.jpg" alt="Welding services">
+      <h3>Welding Services</h3>
+      <p>Metal fabrication, gates and welding repairs.</p>
+    </div>
+
+  </div>
 </section>
 
 <!-- PRODUCT DETAILS -->
@@ -680,16 +776,16 @@ const productData = [
     icon: "👗",
     description: "Clothes, tailoring and fashion items.",
     items: [
-      ["Ladies Dress", 250, "Freetown"],
-      ["Men's Shirt", 180, "Bo"],
-      ["School Uniform", 220, "Makeni"],
-      ["African Print Dress", 300, "Kenema"],
-      ["Men's Traditional Wear", 350, "Freetown"],
-      ["Ladies Skirt", 150, "Mile 91"],
-      ["Children's Clothes", 120, "Bo"],
-      ["Tailoring Service", 200, "Freetown"],
-      ["Ladies Blouse", 180, "Makeni"],
-      ["Traditional Outfit", 400, "Kenema"]
+      ["Ladies Dress", 250, "Freetown", "images/woman-dress1.png"],
+      ["Men's Shirt", 250, "Freetown", "images/mens-shirt.png"],
+      ["School Uniform", 220, "Makeni", "images/school-uniform.png"],
+      ["African Print Dress", 300, "Kenema", "images/african-print-dress.png"],
+      ["Men's Traditional Wear", 350, "Freetown", "images/mens-traditional-wear.png"],
+      ["Ladies Skirt", 150, "Mile 91", "images/ladies-skirt.png"],
+      ["Children's Clothes", 120, "Bo", "images/children-clothes.png"],
+      ["Tailoring Service", 200, "Freetown", "images/tailoring-service.png"],
+      ["Ladies Blouse", 180, "Makeni", "images/ladies-blouse.png"],
+      ["Traditional Outfit", 400, "Kenema", "images/traditional-outfit.png"]
     ]
   },
 
@@ -698,16 +794,16 @@ const productData = [
     icon: "🌾",
     description: "Rice, cassava, palm oil and local produce.",
     items: [
-      ["Fresh Rice", 250, "Bo"],
-      ["Cassava", 80, "Mile 91"],
-      ["Palm Oil", 150, "Kenema"],
-      ["Groundnuts", 100, "Makeni"],
-      ["Fresh Sweet Potatoes", 90, "Bo"],
-      ["Local Pepper", 40, "Freetown"],
-      ["Cocoa", 300, "Kenema"],
-      ["Fresh Tomatoes", 70, "Mile 91"],
-      ["Gari", 100, "Bo"],
-      ["Fresh Vegetables", 60, "Freetown"]
+      ["Fresh Rice", 250, "Bo", "images/fresh-rice.png"],
+      ["Cassava", 80, "Mile 91", "images/cassava.png"],
+      ["Palm Oil", 150, "Kenema", "images/palm-oil.png"],
+      ["Groundnuts", 100, "Makeni", "images/groundnuts.png"],
+      ["Fresh Sweet Potatoes", 90, "Bo", "images/fresh-sweet-potatoes.png"],
+      ["Local Pepper", 40, "Freetown", "images/local-pepper.png"],
+      ["Cocoa", 300, "Kenema", "images/cocoa.png"],
+      ["Fresh Tomatoes", 70, "Mile 91", "images/fresh-tomatoes.png"],
+      ["Gari", 100, "Bo", "images/gari.png"],
+      ["Fresh Vegetables", 60, "Freetown", "images/fresh-vegetables.png"]
     ]
   },
 
@@ -716,16 +812,16 @@ const productData = [
     icon: "📱",
     description: "Phones, chargers and electronic accessories.",
     items: [
-      ["Android Smartphone", 2500, "Freetown"],
-      ["Phone Charger", 120, "Bo"],
-      ["Power Bank", 350, "Makeni"],
-      ["Phone Earphones", 100, "Kenema"],
-      ["Phone Cover", 80, "Freetown"],
-      ["Bluetooth Speaker", 400, "Bo"],
-      ["Memory Card", 150, "Mile 91"],
-      ["USB Cable", 60, "Makeni"],
-      ["Smart Watch", 500, "Freetown"],
-      ["Phone Screen Protector", 50, "Kenema"]
+      ["Android Smartphone", 2500, "Freetown", "images/android-smartphone.png"],
+      ["Phone Charger", 120, "Bo", "images/phone-charger.png"],
+      ["Power Bank", 350, "Makeni", "images/power-bank.png"],
+      ["Phone Earphones", 100, "Kenema", "images/phone-earphones.png"],
+      ["Phone Cover", 80, "Freetown", "images/phone-cover.png"],
+      ["Bluetooth Speaker", 400, "Bo", "images/bluetooth-speaker.png"],
+      ["Memory Card", 150, "Mile 91", "images/memory-card.png"],
+      ["USB Cable", 60, "Makeni", "images/usb-cable.png"],
+      ["Smart Watch", 500, "Freetown", "images/smart-watch.png"],
+      ["Phone Screen Protector", 50, "Kenema", "images/phone-screen-protector.png"]
     ]
   },
 
@@ -734,16 +830,16 @@ const productData = [
     icon: "🏠",
     description: "Rooms, apartments and guest houses.",
     items: [
-      ["Single Room", 800, "Freetown"],
-      ["Self-Contained Room", 1500, "Bo"],
-      ["Two-Bedroom Apartment", 3500, "Makeni"],
-      ["Guest House Room", 600, "Kenema"],
-      ["Family Apartment", 4000, "Freetown"],
-      ["Student Accommodation", 700, "Mile 91"],
-      ["Short-Stay Room", 500, "Bo"],
-      ["Lodge Room", 900, "Makeni"],
-      ["One-Bedroom Apartment", 2000, "Kenema"],
-      ["Guest House Apartment", 2500, "Freetown"]
+      ["Single Room", 800, "Freetown", "images/single-room.png"],
+      ["Self-Contained Room", 1500, "Bo", "images/self-contained-room.png"],
+      ["Two-Bedroom Apartment", 3500, "Makeni", "images/two-bedroom-apartment.png"],
+      ["Guest House Room", 600, "Kenema", "images/guest-house-room.png"],
+      ["Family Apartment", 4000, "Freetown", "images/family-apartment.png"],
+      ["Student Accommodation", 700, "Mile 91", "images/student-accommodation.png"],
+      ["Short-Stay Room", 500, "Bo", "images/short-stay-room.png"],
+      ["Lodge Room", 900, "Makeni", "images/lodge-room.png"],
+      ["One-Bedroom Apartment", 2000, "Kenema", "images/one-bedroom-apartment.png"],
+      ["Guest House Apartment", 2500, "Freetown", "images/guest-house-apartment.png"]
     ]
   },
 
@@ -752,16 +848,16 @@ const productData = [
     icon: "🛒",
     description: "Food, groceries and everyday household supplies.",
     items: [
-      ["Bag of Rice", 650, "Freetown"],
-      ["Cooking Oil", 180, "Bo"],
-      ["Fresh Fish", 120, "Kenema"],
-      ["Frozen Chicken", 250, "Makeni"],
-      ["Onions", 80, "Mile 91"],
-      ["Sugar", 100, "Freetown"],
-      ["Milk Powder", 150, "Bo"],
-      ["Eggs", 120, "Kenema"],
-      ["Spaghetti", 90, "Makeni"],
-      ["Tomato Paste", 70, "Mile 91"]
+      ["Bag of Rice", 650, "Freetown", "images/bag-of-rice.png"],
+      ["Cooking Oil", 180, "Bo", "images/cooking-oil.png"],
+      ["Fresh Fish", 120, "Kenema", "images/fresh-fish.png"],
+      ["Frozen Chicken", 250, "Makeni", "images/frozen-chicken.png"],
+      ["Onions", 80, "Mile 91", "images/onions.png"],
+      ["Sugar", 100, "Freetown", "images/sugar.png"],
+      ["Milk Powder", 150, "Bo", "images/milk-powder.png"],
+      ["Eggs", 120, "Kenema", "images/eggs.png"],
+      ["Spaghetti", 90, "Makeni", "images/spaghetti.png"],
+      ["Tomato Paste", 70, "Mile 91", "images/tomato-paste.png"]
     ]
   },
 
@@ -770,34 +866,34 @@ const productData = [
     icon: "💄",
     description: "Skincare, makeup, hair products and toiletries.",
     items: [
-      ["Body Lotion", 120, "Freetown"],
-      ["Face Cream", 100, "Bo"],
-      ["Hair Shampoo", 90, "Kenema"],
-      ["Conditioner", 110, "Makeni"],
-      ["Perfume", 250, "Freetown"],
-      ["Makeup Kit", 300, "Bo"],
-      ["Hair Attachment", 180, "Mile 91"],
-      ["Bathing Soap", 40, "Kenema"],
-      ["Hair Dryer", 450, "Makeni"],
-      ["Skin Care Set", 350, "Freetown"]
+      ["Body Lotion", 120, "Freetown", "images/body-lotion.png"],
+      ["Face Cream", 100, "Bo", "images/face-cream.png"],
+      ["Hair Shampoo", 90, "Kenema", "images/hair-shampoo.png"],
+      ["Conditioner", 110, "Makeni", "images/conditioner.png"],
+      ["Perfume", 250, "Freetown", "images/perfume.png"],
+      ["Makeup Kit", 300, "Bo", "images/makeup-kit.png"],
+      ["Hair Attachment", 180, "Mile 91", "images/hair-attachment.png"],
+      ["Bathing Soap", 40, "Kenema", "images/bathing-soap.png"],
+      ["Hair Dryer", 450, "Makeni", "images/hair-dryer.png"],
+      ["Skin Care Set", 350, "Freetown", "images/skin-care-set.png"]
     ]
-  },
+  }, 
 
   {
     category: "Furniture & Home Appliances",
     icon: "🛋️",
     description: "Furniture and household appliances.",
     items: [
-      ["Plastic Chair", 150, "Freetown"],
-      ["Wooden Table", 600, "Bo"],
-      ["Bed Frame", 1200, "Makeni"],
-      ["Mattress", 900, "Kenema"],
-      ["Standing Fan", 500, "Freetown"],
-      ["Electric Kettle", 250, "Bo"],
-      ["Refrigerator", 4500, "Makeni"],
-      ["Wardrobe", 1800, "Kenema"],
-      ["Television Stand", 700, "Mile 91"],
-      ["Dining Table", 1500, "Freetown"]
+      ["Plastic Chair", 150, "Freetown", "images/plastic-chair.png"],
+      ["Wooden Table", 600, "Bo", "images/wooden-table.png"],
+      ["Bed Frame", 1200, "Makeni", "images/bed-frame.png"],
+      ["Mattress", 900, "Kenema", "images/mattress.png"],
+      ["Standing Fan", 500, "Freetown", "images/standing-fan.png"],
+      ["Electric Kettle", 250, "Bo", "images/electric-kettle.png"],
+      ["Refrigerator", 4500, "Makeni", "images/refrigerator.png"],
+      ["Wardrobe", 1800, "Kenema", "images/wardrobe.png"],
+      ["Television Stand", 700, "Mile 91", "images/television-stand.png"],
+      ["Dining Table", 1500, "Freetown", "images/dining-table.png"]
     ]
   },
 
@@ -806,16 +902,16 @@ const productData = [
     icon: "🧱",
     description: "Cement, roofing sheets, paint and construction supplies.",
     items: [
-      ["Bag of Cement", 120, "Freetown"],
-      ["Roofing Sheets", 180, "Bo"],
-      ["Wall Paint", 350, "Kenema"],
-      ["Building Blocks", 15, "Makeni"],
-      ["Iron Rods", 100, "Mile 91"],
-      ["Ceiling Boards", 250, "Freetown"],
-      ["Floor Tiles", 300, "Bo"],
-      ["Plumbing Pipes", 120, "Kenema"],
-      ["Nails", 50, "Makeni"],
-      ["Electrical Wires", 200, "Freetown"]
+      ["Bag of Cement", 120, "Freetown", "images/bag-of-cement.png"],
+      ["Roofing Sheets", 180, "Bo", "images/roofing-sheets.png"],
+      ["Wall Paint", 350, "Kenema", "images/wall-paint.png"],
+      ["Building Blocks", 15, "Makeni", "images/building-blocks.png"],
+      ["Iron Rods", 100, "Mile 91", "images/iron-rods.png"],
+      ["Ceiling Boards", 250, "Freetown", "images/ceiling-boards.png"],
+      ["Floor Tiles", 300, "Bo", "images/floor-tiles.png"],
+      ["Plumbing Pipes", 120, "Kenema", "images/plumbing-pipes.png"],
+      ["Nails", 50, "Makeni", "images/nails.png"],
+      ["Electrical Wires", 200, "Freetown", "images/electrical-wires.png"]
     ]
   },
 
@@ -824,16 +920,16 @@ const productData = [
     icon: "🏍️",
     description: "Motorcycles, car parts, tyres and accessories.",
     items: [
-      ["Motorcycle Tyre", 350, "Freetown"],
-      ["Motorcycle Battery", 500, "Bo"],
-      ["Car Battery", 900, "Kenema"],
-      ["Engine Oil", 180, "Makeni"],
-      ["Motorcycle Helmet", 250, "Mile 91"],
-      ["Car Tyre", 1200, "Freetown"],
-      ["Brake Pads", 300, "Bo"],
-      ["Motorcycle Chain", 220, "Kenema"],
-      ["Car Headlight", 450, "Makeni"],
-      ["Motorcycle Spare Parts", 400, "Freetown"]
+      ["Motorcycle Tyre", 350, "Freetown", "images/motorcycle-tyre.png"],
+      ["Motorcycle Battery", 500, "Bo", "images/motorcycle-battery.png"],
+      ["Car Battery", 900, "Kenema", "images/car-battery.png"],
+      ["Engine Oil", 180, "Makeni", "images/engine-oil.png"],
+      ["Motorcycle Helmet", 250, "Mile 91", "images/motorcycle-helmet.png"],
+      ["Car Tyre", 1200, "Freetown", "images/car-tyre.png"],
+      ["Brake Pads", 300, "Bo", "images/brake-pads.png" ],
+      ["Motorcycle Chain", 220, "Kenema", "images/motorcycle-chain.png"],
+      ["Car Headlight", 450, "Makeni", "images/car-headlight.png"],
+      ["Motorcycle Spare Parts", 400, "Freetown", "images/motorcycle-spare-parts.png"]
     ]
   },
 
@@ -842,16 +938,16 @@ const productData = [
     icon: "💻",
     description: "Laptops, printers, office supplies and accessories.",
     items: [
-      ["Laptop Computer", 4500, "Freetown"],
-      ["Desktop Computer", 5000, "Bo"],
-      ["Computer Mouse", 120, "Kenema"],
-      ["Computer Keyboard", 180, "Makeni"],
-      ["Printer", 1600, "Freetown"],
-      ["Laptop Charger", 250, "Bo"],
-      ["USB Flash Drive", 100, "Mile 91"],
-      ["Computer Monitor", 1200, "Kenema"],
-      ["Office Chair", 800, "Makeni"],
-      ["Printer Paper", 90, "Freetown"]
+      ["Laptop Computer", 4500, "Freetown", "images/laptop-computer.png"],
+      ["Desktop Computer", 5000, "Bo", "images/desktop-computer.png"],
+      ["Computer Mouse", 120, "Kenema", "images/computer-mouse.png"],
+      ["Computer Keyboard", 180, "Makeni", "images/computer-keyboard.png"],
+      ["Printer", 1600, "Freetown", "images/printer.png"],
+      ["Laptop Charger", 250, "Bo", "images/laptop-charger.png"],
+      ["USB Flash Drive", 100, "Mile 91", "images/usb-flash-drive.png"],
+      ["Computer Monitor", 1200, "Kenema", "images/computer-monitor.png"],
+      ["Office Chair", 800, "Makeni", "images/office-chair.png"],
+      ["Printer Paper", 90, "Freetown", "images/printer-paper.png"  ]
     ]
   }
 
@@ -909,13 +1005,13 @@ productData.forEach(group => {
       price: item[1],
       location: item[2],
       category: group.category,
-      image: `https://picsum.photos/seed/kepler-${slug}/600/400`,
+      image: item[3] || "https://placehold.co/600x400?text=Product+Photo",
       seller: "Sample Seller",
       phone: PLATFORM_PHONE,
       description: `Contact the seller for more information about ${item[0]}.`
     });
 
-  });
+  }); 
 
 });
 
