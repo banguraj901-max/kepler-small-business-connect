@@ -31,16 +31,16 @@ const productData = [
     icon: "👗",
     description: "Clothes, tailoring and fashion items.",
     items: [
-      ["Ladies Dress", 250, "Freetown"],
-      ["Men's Shirt", 180, "Bo"],
-      ["School Uniform", 220, "Makeni"],
-      ["African Print Dress", 300, "Kenema"],
-      ["Men's Traditional Wear", 350, "Freetown"],
-      ["Ladies Skirt", 150, "Mile 91"],
-      ["Children's Clothes", 120, "Bo"],
-      ["Tailoring Service", 200, "Freetown"],
-      ["Ladies Blouse", 180, "Makeni"],
-      ["Traditional Outfit", 400, "Kenema"]
+      ["Ladies Dress", 250, "Freetown", "images/ladies-dress.png"],
+      ["Men's Shirt", 180, "Bo", "images/mens-shirt.png"],
+      ["School Uniform", 220, "Makeni", "images/school-uniform.png"],
+      ["African Print Dress", 300, "Kenema", "images/african-print-dress.png"],
+      ["Men's Traditional Wear", 350, "Freetown", "images/mens-traditional-wear.png"],
+      ["Ladies Skirt", 150, "Mile 91", "images/ladies-skirt.png"],
+      ["Children's Clothes", 120, "Bo", "images/childrens-clothes.png"],
+      ["Tailoring Service", 200, "Freetown", "images/tailoring-service.png"],
+      ["Ladies Blouse", 180, "Makeni", "images/ladies-blouse.png"],
+      ["Traditional Outfit", 400, "Kenema", "images/traditional-outfit.png"]
     ]
   },
 
@@ -49,16 +49,16 @@ const productData = [
     icon: "🌾",
     description: "Rice, cassava, palm oil and local produce.",
     items: [
-      ["Fresh Rice", 250, "Bo"],
-      ["Cassava", 80, "Mile 91"],
-      ["Palm Oil", 150, "Kenema"],
-      ["Groundnuts", 100, "Makeni"],
-      ["Fresh Sweet Potatoes", 90, "Bo"],
-      ["Local Pepper", 40, "Freetown"],
-      ["Cocoa", 300, "Kenema"],
-      ["Fresh Tomatoes", 70, "Mile 91"],
-      ["Gari", 100, "Bo"],
-      ["Fresh Vegetables", 60, "Freetown"]
+      ["Fresh Rice", 250, "Bo","images/fresh-rice.png"],
+      ["Cassava", 80, "Mile 91","images/cassava.png"],
+      ["Palm Oil", 150, "Kenema","images/palm-oil.png"],
+      ["Groundnuts", 100, "Makeni","images/groundnuts.png"],
+      ["Fresh Sweet Potatoes", 90, "Bo","images/fresh-sweet-potatoes.png"],
+      ["Local Pepper", 40, "Freetown","images/local-pepper.png"],
+      ["Cocoa", 300, "Kenema","images/cocoa.png"],
+      ["Fresh Tomatoes", 70, "Mile 91","images/fresh-tomatoes.png"],
+      ["Gari", 100, "Bo","images/gari.png"],
+      ["Fresh Vegetables", 60, "Freetown","images/fresh-vegetables.png"]
     ]
   },
 
@@ -67,16 +67,16 @@ const productData = [
     icon: "📱",
     description: "Phones, chargers and electronic accessories.",
     items: [
-      ["Android Smartphone", 2500, "Freetown"],
-      ["Phone Charger", 120, "Bo"],
-      ["Power Bank", 350, "Makeni"],
-      ["Phone Earphones", 100, "Kenema"],
-      ["Phone Cover", 80, "Freetown"],
-      ["Bluetooth Speaker", 400, "Bo"],
-      ["Memory Card", 150, "Mile 91"],
-      ["USB Cable", 60, "Makeni"],
-      ["Smart Watch", 500, "Freetown"],
-      ["Phone Screen Protector", 50, "Kenema"]
+      ["Android Smartphone", 2500, "Freetown","images/android-smartphone.png"],
+      ["Phone Charger", 120, "Bo","images/phone-charger.png"],
+      ["Power Bank", 350, "Makeni","images/power-bank.png"],
+      ["Phone Earphones", 100, "Kenema","images/phone-earphones.png"],
+      ["Phone Cover", 80, "Freetown","images/phone-cover.png"],
+      ["Bluetooth Speaker", 400, "Bo","images/bluetooth-speaker.png"],
+      ["Memory Card", 150, "Mile 91","images/memory-card.png"],
+      ["USB Cable", 60, "Makeni","images/usb-cable.png"],
+      ["Smart Watch", 500, "Freetown","images/smart-watch.png"],
+      ["Phone Screen Protector", 50, "Kenema","images/phone-screen-protector.png"]
     ]
   },
 
@@ -85,16 +85,16 @@ const productData = [
     icon: "🏠",
     description: "Rooms, apartments and guest houses.",
     items: [
-      ["Single Room", 800, "Freetown"],
-      ["Self-Contained Room", 1500, "Bo"],
-      ["Two-Bedroom Apartment", 3500, "Makeni"],
-      ["Guest House Room", 600, "Kenema"],
-      ["Family Apartment", 4000, "Freetown"],
-      ["Student Accommodation", 700, "Mile 91"],
-      ["Short-Stay Room", 500, "Bo"],
-      ["Lodge Room", 900, "Makeni"],
-      ["One-Bedroom Apartment", 2000, "Kenema"],
-      ["Guest House Apartment", 2500, "Freetown"]
+      ["Single Room", 800, "Freetown","images/single-room.png"],
+      ["Self-Contained Room", 1500, "Bo","images/self-contained-room.png"],
+      ["Two-Bedroom Apartment", 3500, "Makeni","images/two-bedroom-apartment.png"],
+      ["Guest House Room", 600, "Kenema","images/guest-house-room.png"],
+      ["Family Apartment", 4000, "Freetown","images/family-apartment.png"],
+      ["Student Accommodation", 700, "Mile 91","images/student-accommodation.png"],
+      ["Short-Stay Room", 500, "Bo","images/short-stay-room.png"],
+      ["Lodge Room", 900, "Makeni","images/lodge-room.png"],
+      ["One-Bedroom Apartment", 2000, "Kenema","images/one-bedroom-apartment.png"],
+      ["Guest House Apartment", 2500, "Freetown","images/guest-house-apartment.png"]
     ]
   },
 
@@ -103,16 +103,16 @@ const productData = [
     icon: "🛒",
     description: "Food, groceries and everyday household supplies.",
     items: [
-      ["Bag of Rice", 650, "Freetown"],
-      ["Cooking Oil", 180, "Bo"],
-      ["Fresh Fish", 120, "Kenema"],
-      ["Frozen Chicken", 250, "Makeni"],
-      ["Onions", 80, "Mile 91"],
-      ["Sugar", 100, "Freetown"],
-      ["Milk Powder", 150, "Bo"],
-      ["Eggs", 120, "Kenema"],
-      ["Spaghetti", 90, "Makeni"],
-      ["Tomato Paste", 70, "Mile 91"]
+      ["Bag of Rice", 650, "Freetown", "images/bag-of-rice.png"],
+      ["Cooking Oil", 180, "Bo", "images/cooking-oil.png"],
+      ["Fresh Fish", 120, "Kenema", "images/fresh-fish.png"],
+      ["Frozen Chicken", 250, "Makeni", "images/frozen-chicken.png"],
+      ["Onions", 80, "Mile 91", "images/onions.png"],
+      ["Sugar", 100, "Freetown", "images/sugar.png"],
+      ["Milk Powder", 150, "Bo", "images/milk-powder.png"],
+      ["Eggs", 120, "Kenema", "images/eggs.png"],
+      ["Spaghetti", 90, "Makeni", "images/spaghetti.png"],
+      ["Tomato Paste", 70, "Mile 91", "images/tomato-paste.png"]
     ]
   },
 
@@ -121,16 +121,16 @@ const productData = [
     icon: "💄",
     description: "Skincare, makeup, hair products and toiletries.",
     items: [
-      ["Body Lotion", 120, "Freetown"],
-      ["Face Cream", 100, "Bo"],
-      ["Hair Shampoo", 90, "Kenema"],
-      ["Conditioner", 110, "Makeni"],
-      ["Perfume", 250, "Freetown"],
-      ["Makeup Kit", 300, "Bo"],
-      ["Hair Attachment", 180, "Mile 91"],
-      ["Bathing Soap", 40, "Kenema"],
-      ["Hair Dryer", 450, "Makeni"],
-      ["Skin Care Set", 350, "Freetown"]
+      ["Body Lotion", 120, "Freetown","images/body-lotion.png"],
+      ["Face Cream", 100, "Bo","images/face-cream.png"],
+      ["Hair Shampoo", 90, "Kenema","images/hair-shampoo.png"],
+      ["Conditioner", 110, "Makeni","images/conditioner.png"],
+      ["Perfume", 250, "Freetown","images/perfume.png"],
+      ["Makeup Kit", 300, "Bo","images/makeup-kit.png"],
+      ["Hair Attachment", 180, "Mile 91","images/hair-attachment.png"],
+      ["Bathing Soap", 40, "Kenema","images/bathing-soap.png"],
+      ["Hair Dryer", 450, "Makeni","images/hair-dryer.png"],
+      ["Skin Care Set", 350, "Freetown","images/skin-care-set.png"]
     ]
   },
 
@@ -139,16 +139,16 @@ const productData = [
     icon: "🛋️",
     description: "Furniture and household appliances.",
     items: [
-      ["Plastic Chair", 150, "Freetown"],
-      ["Wooden Table", 600, "Bo"],
-      ["Bed Frame", 1200, "Makeni"],
-      ["Mattress", 900, "Kenema"],
-      ["Standing Fan", 500, "Freetown"],
-      ["Electric Kettle", 250, "Bo"],
-      ["Refrigerator", 4500, "Makeni"],
-      ["Wardrobe", 1800, "Kenema"],
-      ["Television Stand", 700, "Mile 91"],
-      ["Dining Table", 1500, "Freetown"]
+      ["Plastic Chair", 150, "Freetown","images/plastic-chair.png"],
+      ["Wooden Table", 600, "Bo","images/wooden-table.png"],
+      ["Bed Frame", 1200, "Makeni","images/bed-frame.png"],
+      ["Mattress", 900, "Kenema","images/mattress.png"],
+      ["Standing Fan", 500, "Freetown","images/standing-fan.png"],
+      ["Electric Kettle", 250, "Bo","images/electric-kettle.png"],
+      ["Refrigerator", 4500, "Makeni","images/refrigerator.png"],
+      ["Wardrobe", 1800, "Kenema","images/wardrobe.png"],
+      ["Television Stand", 700, "Mile 91","images/television-stand.png"],
+      ["Dining Table", 1500, "Freetown","images/dining-table.png"]
     ]
   },
 
@@ -157,16 +157,16 @@ const productData = [
     icon: "🧱",
     description: "Cement, roofing sheets, paint and construction supplies.",
     items: [
-      ["Bag of Cement", 120, "Freetown"],
-      ["Roofing Sheets", 180, "Bo"],
-      ["Wall Paint", 350, "Kenema"],
-      ["Building Blocks", 15, "Makeni"],
-      ["Iron Rods", 100, "Mile 91"],
-      ["Ceiling Boards", 250, "Freetown"],
-      ["Floor Tiles", 300, "Bo"],
-      ["Plumbing Pipes", 120, "Kenema"],
-      ["Nails", 50, "Makeni"],
-      ["Electrical Wires", 200, "Freetown"]
+      ["Bag of Cement", 120, "Freetown","images/bag-of-cement.png"],
+      ["Roofing Sheets", 180, "Bo","images/roofing-sheets.png"],
+      ["Wall Paint", 350, "Kenema","images/wall-paint.png"],
+      ["Building Blocks", 15, "Makeni","images/building-blocks.png"],
+      ["Iron Rods", 100, "Mile 91","images/iron-rods.png"],
+      ["Ceiling Boards", 250, "Freetown","images/ceiling-boards.png"],
+      ["Floor Tiles", 300, "Bo","images/floor-tiles.png"],
+      ["Plumbing Pipes", 120, "Kenema","images/plumbing-pipes.png"],
+      ["Nails", 50, "Makeni","images/nails.png"],
+      ["Electrical Wires", 200, "Freetown","images/electrical-wires.png"]
     ]
   },
 
@@ -175,16 +175,16 @@ const productData = [
     icon: "🏍️",
     description: "Motorcycles, car parts, tyres and accessories.",
     items: [
-      ["Motorcycle Tyre", 350, "Freetown"],
-      ["Motorcycle Battery", 500, "Bo"],
-      ["Car Battery", 900, "Kenema"],
-      ["Engine Oil", 180, "Makeni"],
-      ["Motorcycle Helmet", 250, "Mile 91"],
-      ["Car Tyre", 1200, "Freetown"],
-      ["Brake Pads", 300, "Bo"],
-      ["Motorcycle Chain", 220, "Kenema"],
-      ["Car Headlight", 450, "Makeni"],
-      ["Motorcycle Spare Parts", 400, "Freetown"]
+      ["Motorcycle Tyre", 350, "Freetown","images/motorcycle-tyre.png"],
+      ["Motorcycle Battery", 500, "Bo","images/motorcycle-battery.png"],
+      ["Car Battery", 900, "Kenema","images/car-battery.png"],
+      ["Engine Oil", 180, "Makeni","images/engine-oil.png"],
+      ["Motorcycle Helmet", 250, "Mile 91","images/motorcycle-helmet.png"],
+      ["Car Tyre", 1200, "Freetown","images/car-tyre.png"],
+      ["Brake Pads", 300, "Bo","images/brake-pads.png"],
+      ["Motorcycle Chain", 220, "Kenema","images/motorcycle-chain.png"],
+      ["Car Headlight", 450, "Makeni","images/car-headlight.png"],
+      ["Motorcycle Spare Parts", 400, "Freetown","images/motorcycle-spare-parts.png"]
     ]
   },
 
@@ -193,16 +193,16 @@ const productData = [
     icon: "💻",
     description: "Laptops, printers, office supplies and accessories.",
     items: [
-      ["Laptop Computer", 4500, "Freetown"],
-      ["Desktop Computer", 5000, "Bo"],
-      ["Computer Mouse", 120, "Kenema"],
-      ["Computer Keyboard", 180, "Makeni"],
-      ["Printer", 1600, "Freetown"],
-      ["Laptop Charger", 250, "Bo"],
-      ["USB Flash Drive", 100, "Mile 91"],
-      ["Computer Monitor", 1200, "Kenema"],
-      ["Office Chair", 800, "Makeni"],
-      ["Printer Paper", 90, "Freetown"]
+      ["Laptop Computer", 4500, "Freetown","images/laptop-computer.png"],
+      ["Desktop Computer", 5000, "Bo","images/desktop-computer.png"],
+      ["Computer Mouse", 120, "Kenema","images/computer-mouse.png"],
+      ["Computer Keyboard", 180, "Makeni","images/computer-keyboard.png"],
+      ["Printer", 1600, "Freetown","images/printer.png"],
+      ["Laptop Charger", 250, "Bo","images/laptop-charger.png"],
+      ["USB Flash Drive", 100, "Mile 91","images/flash-drive.png"],
+      ["Computer Monitor", 1200, "Kenema","images/monitor.png"],
+      ["Office Chair", 800, "Makeni","images/chair.png"],
+      ["Printer Paper", 90, "Freetown","images/paper.png"]
     ]
   }
 
@@ -258,9 +258,8 @@ productData.forEach(group => {
       id: productNumber++,
       name: item[0],
       price: item[1],
-      location: item[2],
+      location: item[3],
       category: group.category,
-      image: `https://picsum.photos/seed/kepler-${slug}/600/400`,
       seller: "Sample Seller",
       phone: PLATFORM_PHONE,
       description: `Contact the seller for more information about ${item[0]}.`
@@ -499,16 +498,28 @@ const serviceData = [
   ["Transport Services", "🚕", "Makeni", "Local transport and delivery services."]
 ];
 
-const services = serviceData.map((item, index) => ({
-  id: index + 1,
+// const services = serviceData.map((item, index) => ({
+//   id: index + 1,
+//   name: item[0],
+//   price: item[1],
+//   location: item[2],
+//   image: item[3],
+//   category: group.category,
+//   seller: "sample seller",
+//   phone: PLATFORM_PHONE,
+//   description:'contact the seller for more information about ' + item[0]
+// }));
+products.push({
+  id: productNumber++,
   name: item[0],
-  icon: item[1],
+  price: item[1],
   location: item[2],
-  description: item[3],
-  provider: "Sample Service Provider",
-  phone: PLATFORM_PHONE
-}));
-
+  image: item[3],
+  category: group.category,
+  seller: "Sample Seller",
+  phone: PLATFORM_PHONE,
+  description: `Contact the seller for more information about ${item[0]}.`
+});
 // OPEN SERVICES PAGE
 function showServices() {
 
