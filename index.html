@@ -2,1845 +2,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>Kepler Small Business Connect SL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Kepler Small Business Connect SL</title>
 
-<<<<<<< HEAD
-body {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)),
-    url("images/kepler-alusine.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  color: #222;
-}
-header {
-  background: #075c3b;
-  color: white;
-  padding: 22px 15px;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 8px;
-}
-
-nav {
-  background: #06472f;
-  padding: 13px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
-}
-
-.hero {
-  background: #e1f3e9;
-  text-align: center;
-  padding: 35px 15px;
-}
-
-.hero h2 {
-  color: #075c3b;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  margin: 7px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin: 30px 10px 20px;
-  color: #075c3b;
-}
-
-.categories {
-  max-width: 1100px;
-  margin: 25px auto;
-  padding: 15px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.category {
-  background: white;
-  padding: 25px 15px;
-  border-radius: 12px;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px #00000010;
-  transition: 0.2s;
-}
-
-.category:hover {
-  background: #075c3b;
-  color: white;
-  transform: translateY(-3px);
-}
-
-.category h3 {
-  margin-bottom: 10px;
-}
-
-.category p {
-  font-size: 14px;
-}
-
-.category-icon {
-  font-size: 35px;
-  margin-bottom: 12px;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.shop-area {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px;
-}
-
-.shop-heading {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.shop-heading h2 {
-  color: #075c3b;
-  margin-bottom: 8px;
-}
-
-.search-area {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-input, select, textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  width: 100%;
-  font-size: 15px;
-}
-
-.search-area input,
-.search-area select {
-  flex: 1;
-  min-width: 180px;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-}
-
-.product-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px #00000012;
-}
-
-.product-card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  background: #ddd;
-}
-
-.product-info {
-  padding: 14px;
-}
-
-.product-info h3 {
-  margin-bottom: 8px;
-}
-
-.price {
-  color: #075c3b;
-  font-size: 19px;
-  font-weight: bold;
-  margin: 8px 0;
-}
-
-.small-detail {
-  color: #666;
-  font-size: 13px;
-  margin: 5px 0;
-}
-
-button {
-  border: none;
-  padding: 11px 14px;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-.primary-btn {
-  background: #075c3b;
-  color: white;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.back-btn {
-  background: #555;
-  color: white;
-  padding: 12px 18px;
-  margin: 10px 0;
-}
-
-.whatsapp-btn {
-  background: #25d366;
-  color: white;
-  width: 100%;
-  margin-top: 8px;
-}
-
-.call-btn {
-  background: #1769aa;
-  color: white;
-  width: 100%;
-  margin-top: 8px;
-}
-
-.services-banner {
-  max-width: 1100px;
-  margin: 25px auto;
-  padding: 25px;
-  background: #e1f3e9;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.services-banner h2 {
-  color: #075c3b;
-  margin-bottom: 10px;
-}
-
-.services-banner button {
-  max-width: 250px;
-}
-
-.service-card {
-  background: white;
-  padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px #00000012;
-}
-
-.service-icon {
-  font-size: 35px;
-  margin-bottom: 10px;
-}
-
-.service-card h3 {
-  margin-bottom: 8px;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background: #0009;
-  overflow-y: auto;
-  padding: 20px 10px;
-}
-
-.modal-content {
-  background: white;
-  width: 100%;
-  max-width: 550px;
-  margin: 20px auto;
-  padding: 22px;
-  border-radius: 12px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 15px;
-  top: 12px;
-  font-size: 27px;
-  cursor: pointer;
-  color: #555;
-}
-
-.modal-content h2 {
-  color: #075c3b;
-  margin-bottom: 15px;
-}
-
-.modal-content label {
-  display: block;
-  margin: 13px 0 6px;
-  font-weight: bold;
-}
-
-.modal-content img.product-large {
-  width: 100%;
-  max-height: 260px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 10px 0;
-}
-
-.seller-box,
-.payment-box,
-.success-box {
-  background: #f0f8f3;
-  border: 1px solid #cce5d5;
-  padding: 13px;
-  border-radius: 8px;
-  margin: 12px 0;
-}
-
-.payment-box {
-  background: #fff8e6;
-  border-color: #f0dfad;
-}
-
-.preview-image {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  margin-top: 10px;
-  display: none;
-}
-
-.notice {
-  color: #765400;
-  font-size: 13px;
-  line-height: 1.5;
-  margin-top: 8px;
-}
-
-footer {
-  background: #06472f;
-  color: white;
-  text-align: center;
-  padding: 25px 15px;
-  margin-top: 35px;
-  line-height: 1.8;
-}
-
-@media (max-width: 600px) {
-  nav a {
-    display: inline-block;
-    margin: 6px;
-  }
-
-  .products {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .product-card img {
-    height: 135px;
-  }
-
-  .product-info {
-    padding: 10px;
-  }
-
-  .product-info h3 {
-    font-size: 15px;
-  }
-
-  .price {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 360px) {
-  .products {
-    grid-template-columns: 1fr;
-  }
-}
-.moving-text {
-  white-space: nowrap;
-  animation: moveRight 10s linear infinite;
-}
-
-@keyframes moveRight {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(100vw);
-  }
-}
-</style>
-=======
->>>>>>> 5e9f4c83da7673f179a4b59fa067a24898bfe312
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="moving-text">
-    <marquee behavior="scroll" direction="left" scrollamount="5">
-      Welcome to Kepler Small Business Connect SL - Connecting buyers and sellers across Sierra Leone!
-    </marquee>
-  </div>
-  <h1>Kepler Small Business Connect SL</h1>
-  <p>Connecting buyers and sellers across Sierra Leone</p>
-</header>
+    <!-- WEBSITE HEADER -->
+    <header>
+        <div class="moving-text">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                Welcome to Kepler Small Business Connect SL - Connecting buyers and sellers across Sierra Leone!
+            </marquee>
+        </div>
 
-<nav>
-  <a href="#home" onclick="showCategories()">Home</a>
-  <a href="#categories" onclick="showCategories()">Categories</a>
-  <a href="#services" onclick="showServices()">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+        <h1>Kepler Small Business Connect SL</h1>
+        <p>Connecting buyers and sellers across Sierra Leone</p>
+    </header>
 
-<section class="hero" id="home">
-  <h2>Welcome to Kepler Small Business Connect SL</h2>
-  <p>Find products and services from businesses across Sierra Leone.</p>
-  <p>Buy let us buy together.Support local businesses.</p>
-</section>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home" onclick="showCategories()">Home</a>
+        <a href="#categories" onclick="showCategories()">Categories</a>
+        <a href="#services" onclick="showServices()">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<!-- MAIN CATEGORY PAGE -->
-<section id="categoryPage">
+    <!-- HOMEPAGE -->
+    <section class="hero" id="home">
+        <h2>Welcome to Kepler Small Business Connect SL</h2>
 
-  <h2 class="section-title" id="categories">
-    Explore Our Product Categories
-  </h2>
-
-  <div class="categories" id="categoryContainer"></div>
-
-  <div class="services-banner">
-    <h2>Looking for a Service?</h2>
-    <p>
-      Find skilled people offering services in your community.
-      Mechanics, electricians, plumbers, photographers and more.
-    </p>
-    <button class="primary-btn" onclick="showServices()">
-      Explore Services
-    </button>
-  </div>
-
-</section>
-
-<!-- PRODUCT SHOP -->
-<section id="shopPage" class="shop-area hidden">
-
-  <button class="back-btn" onclick="showCategories()">
-    ← Back to Categories
-  </button>
-
-  <div class="shop-heading">
-    <h2 id="selectedCategoryTitle"></h2>
-    <p id="categoryDescription"></p>
-  </div>
-
-  <div class="search-area">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search in this category..."
-      oninput="displayProducts()"
-    >
-
-    <select id="locationFilter" onchange="displayProducts()">
-      <option value="">All locations</option>
-      <option value="Freetown">Freetown</option>
-      <option value="Bo">Bo</option>
-      <option value="Kenema">Kenema</option>
-      <option value="Makeni">Makeni</option>
-      <option value="Mile 91">Mile 91</option>
-      <option value="Kono">Kono</option>
-    </select>
-  </div>
-
-  <div class="products" id="productContainer"></div>
-
-  <button class="back-btn" onclick="showCategories()">
-    ← Back to Categories
-  </button>
-
-</section>
-
-<!-- SERVICES PAGE -->
-<!-- <section id="servicesPage" class="shop-area hidden">
-
-  <button class="back-btn" onclick="showCategories()">
-    ← Back to Categories
-  </button>
-
-  <div class="shop-heading">
-    <h2>Services Across Sierra Leone</h2>
-    <p>
-      Find skilled workers and people offering services in your area.
-    </p>
-  </div>
-
-  <div class="search-area">
-    <input
-      type="text"
-      id="serviceSearch"
-      placeholder="Search for a service..."
-      oninput="displayServices()"
-    >
-
-    <select id="serviceLocationFilter" onchange="displayServices()"> -->
-     <!-- <option v alue="">All locations</option>
-      <option value="Freetown">Freetown</option>
-      <option value="Bo">Bo</option>
-      <option value="Kenema">Kenema</option>
-      <option value="Makeni">Makeni</option>
-      <option value="Mile 91">Mile 91</option>
-      <option value="Kono">Kono</option>
-    </select>
-  </div>
-
-  <div class="products" id="serviceContainer"></div>
-
-  <button class="back-btn" onclick="showCategories()">
-    ← Back to Categories
-  </button>
-
-</section> -->
-
-<section id="servicesPage" class="hidden">
-  <button onclick="showServices()">Services</button>
-  <h2>Our Services</h2>
-  <p>Find skilled service providers in your community across Sierra Leone.</p>
-
-  <div class="services-container">
-
-    <div class="service-card">
-      <img src="images/plumbing.jpg" alt="Plumbing services">
-      <h3>Plumbing Services</h3>
-      <p>Professional plumbing, pipe installation and repairs.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/electrical.jpg" alt="Electrical services">
-      <h3>Electrical Services</h3>
-      <p>Electrical installation, wiring and repairs.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/mechanic.jpg" alt="Car mechanic">
-      <h3>Car Mechanics</h3>
-      <p>Vehicle servicing, maintenance and repairs.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/carpentry.jpg" alt="Carpentry services">
-      <h3>Carpentry</h3>
-      <p>Furniture making, woodwork and repairs.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/painting.jpg" alt="Painting services">
-      <h3>Painting Services</h3>
-      <p>House painting and professional decoration.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/photography.jpg" alt="Photography services">
-      <h3>Photography</h3>
-      <p>Events, weddings and professional photography.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/barber.jpg" alt="Barber services">
-      <h3>Barbering Services</h3>
-      <p>Haircuts, grooming and styling.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/phone-repair.jpg" alt="Phone repair services">
-      <h3>Phone Repairs</h3>
-      <p>Mobile phone repairs and troubleshooting.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/construction.jpg" alt="Building and construction">
-      <h3>Building & Construction</h3>
-      <p>Building, renovation and construction work.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/welding.jpg" alt="Welding services">
-      <h3>Welding Services</h3>
-      <p>Metal fabrication, gates and welding repairs.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PRODUCT DETAILS -->
-<div class="modal" id="productModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('productModal')">&times;</span>
-    <div id="productDetails"></div>
-  </div>
-</div>
-
-<!-- SERVICE DETAILS -->
-<div class="modal" id="serviceModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('serviceModal')">&times;</span>
-    <div id="serviceDetails"></div>
-  </div>
-</div>
-
-<!-- ORDER FORM -->
-<div class="modal" id="orderModal">
-  <div class="modal-content">
-
-    <span class="close" onclick="closeModal('orderModal')">&times;</span>
-
-    <h2>Place Your Order</h2>
-
-    <form id="orderForm">
-
-      <div id="selectedProductInfo" class="seller-box"></div>
-
-      <label>Your Full Name</label>
-      <input type="text" id="buyerName" required placeholder="Enter your name">
-
-      <label>Your Phone Number</label>
-      <input type="tel" id="buyerPhone" required placeholder="+232...">
-
-      <label>Quantity</label>
-      <input type="number" id="quantity" min="1" value="1"
-        required oninput="updateTotal()">
-
-      <p class="price" id="orderTotal">Total: NLe 0</p>
-
-      <label>Delivery Option</label>
-      <select id="deliveryOption" required onchange="showDeliveryFields()">
-        <option value="">Choose delivery option</option>
-        <option value="Collect from seller">Collect from seller</option>
-        <option value="Doorstep delivery">Doorstep delivery</option>
-        <option value="Agreed pickup location">Agreed pickup location</option>
-      </select>
-
-      <div id="addressFields" class="hidden">
-        <label>Delivery or Pickup Address</label>
-        <textarea id="deliveryAddress" rows="3"
-          placeholder="Enter your address or agreed pickup location"></textarea>
-      </div>
-
-      <div id="locationFields" class="hidden">
-        <label>Your Location</label>
-
-        <button type="button" class="call-btn"
-          onclick="getBuyerLocation()">
-          Share My Current Location
-        </button>
-
-        <p id="locationStatus" class="small-detail">
-          Location has not been shared.
+        <p>
+            Find products and services from businesses across Sierra Leone.
         </p>
-      </div>
 
-      <label>Payment Method</label>
-
-      <select id="paymentMethod" required onchange="showPaymentDetails()">
-        <option value="">Choose payment method</option>
-        <option value="Afrimoney">Afrimoney</option>
-        <option value="Orange Money">Orange Money</option>
-        <option value="Cash">Cash</option>
-      </select>
-
-      <div id="receivingDetails" class="payment-box hidden"></div>
-
-      <div id="senderNumberFields" class="hidden">
-        <label>Your Payment Number (Sender Number)</label>
-        <input type="tel" id="senderNumber"
-          placeholder="Enter the number you used to pay">
-      </div>
-
-      <div id="screenshotFields" class="hidden">
-        <label>Upload Payment Screenshot</label>
-
-        <input type="file" id="paymentScreenshot"
-          accept="image/png,image/jpeg,image/webp"
-          onchange="previewScreenshot()">
-
-        <img id="screenshotPreview" class="preview-image"
-          alt="Payment screenshot preview">
-
-        <p class="notice">
-          Upload your transaction screenshot. Your order will remain
-          pending verification until payment is checked.
+        <p>
+            Buy local. Support local businesses.
         </p>
-      </div>
+    </section>
 
-      <button type="submit" class="primary-btn">
-        Submit Order
-      </button>
+    <!-- PRODUCT CATEGORY PAGE -->
+    <section id="categoryPage">
 
-    </form>
-  </div>
-</div>
+        <h2 class="section-title" id="categories">
+            Explore Our Product Categories
+        </h2>
 
-<!-- ORDER SUCCESS -->
-<div class="modal" id="successModal">
-  <div class="modal-content">
+        <!-- JavaScript will display category cards here -->
+        <div class="categories" id="categoryContainer"></div>
 
-    <h2>Order Submitted!</h2>
+        <!-- SERVICES BANNER -->
+        <div class="services-banner">
 
-    <div class="success-box">
-      <h3>Thank you for your order.</h3>
-      <p id="successReference"></p>
-      <p id="successPaymentStatus"></p>
+            <h2>Looking for a Service?</h2>
 
-      <p class="notice">
-        This confirms submission only. It does not mean payment has
-        been received or verified.
-      </p>
-    </div>
+            <p>
+                Find skilled people offering services in your community.
+                Mechanics, electricians, plumbers, photographers and more.
+            </p>
 
-    <button class="primary-btn" onclick="closeModal('successModal')">
-      Continue Shopping
-    </button>
+            <button class="primary-btn" onclick="showServices()">
+                Explore Services
+            </button>
 
-  </div>
-</div>
+        </div>
 
-<footer id="contact">
-  <h2>Kepler Small Business Connect SL</h2>
-  <p>Connecting buyers and sellers across Sierra Leone.</p>
-  <p>Platform Contact: +232 996 19224</p>
-  <p>WhatsApp: +232 996 19224</p>
-  <p>&copy; 2026 Kepler Small Business Connect SL</p>
-</footer>
+    </section>
 
-<<<<<<< HEAD
-<script>
+    <!-- PRODUCT SHOP PAGE -->
+    <section id="shopPage" class="shop-area hidden">
 
-// PLATFORM CONTACT NUMBER
-const PLATFORM_PHONE = "23299619224";
-
-// PAYMENT RECEIVING NUMBERS
-// Replace these placeholders with your confirmed numbers.
-const PAYMENT_ACCOUNTS = {
-  "Afrimoney": {
-    name: "Kepler Small Business Connect SL",
-    number: "ADD_YOUR_AFRIMONEY_NUMBER"
-  },
-
-  "Orange Money": {
-    name: "Kepler Small Business Connect SL",
-    number: "ADD_YOUR_ORANGE_MONEY_NUMBER"
-  }
-};
-
-let selectedCategory = "";
-let selectedProduct = null;
-let buyerLatitude = "";
-let buyerLongitude = "";
-
-// CATEGORY INFORMATION AND PRODUCTS
-// Each category contains exactly 10 sample products.
-
-const productData = [
-
-  {
-    category: "Fashion & Tailoring",
-    icon: "👗",
-    description: "Clothes, tailoring and fashion items.",
-    items: [
-      ["Ladies Dress", 250, "Freetown", "images/woman-dress1.png"],
-      ["Men's Shirt", 250, "Freetown", "images/mens-shirt.png"],
-      ["School Uniform", 220, "Makeni", "images/school-uniform.png"],
-      ["African Print Dress", 300, "Kenema", "images/african-print-dress.png"],
-      ["Men's Traditional Wear", 350, "Freetown", "images/mens-traditional-wear.png"],
-      ["Ladies Skirt", 150, "Mile 91", "images/ladies-skirt.png"],
-      ["Children's Clothes", 120, "Bo", "images/children-clothes.png"],
-      ["Tailoring Service", 200, "Freetown", "images/tailoring-service.png"],
-      ["Ladies Blouse", 180, "Makeni", "images/ladies-blouse.png"],
-      ["Traditional Outfit", 400, "Kenema", "images/traditional-outfit.png"]
-    ]
-  },
-
-  {
-    category: "Agriculture & Local Products",
-    icon: "🌾",
-    description: "Rice, cassava, palm oil and local produce.",
-    items: [
-      ["Fresh Rice", 250, "Bo", "images/fresh-rice.png"],
-      ["Cassava", 80, "Mile 91", "images/cassava.png"],
-      ["Palm Oil", 150, "Kenema", "images/palm-oil.png"],
-      ["Groundnuts", 100, "Makeni", "images/groundnuts.png"],
-      ["Fresh Sweet Potatoes", 90, "Bo", "images/fresh-sweet-potatoes.png"],
-      ["Local Pepper", 40, "Freetown", "images/local-pepper.png"],
-      ["Cocoa", 300, "Kenema", "images/cocoa.png"],
-      ["Fresh Tomatoes", 70, "Mile 91", "images/fresh-tomatoes.png"],
-      ["Gari", 100, "Bo", "images/gari.png"],
-      ["Fresh Vegetables", 60, "Freetown", "images/fresh-vegetables.png"]
-    ]
-  },
-
-  {
-    category: "Phones & Accessories",
-    icon: "📱",
-    description: "Phones, chargers and electronic accessories.",
-    items: [
-      ["Android Smartphone", 2500, "Freetown", "images/android-smartphone.png"],
-      ["Phone Charger", 120, "Bo", "images/phone-charger.png"],
-      ["Power Bank", 350, "Makeni", "images/power-bank.png"],
-      ["Phone Earphones", 100, "Kenema", "images/phone-earphones.png"],
-      ["Phone Cover", 80, "Freetown", "images/phone-cover.png"],
-      ["Bluetooth Speaker", 400, "Bo", "images/bluetooth-speaker.png"],
-      ["Memory Card", 150, "Mile 91", "images/memory-card.png"],
-      ["USB Cable", 60, "Makeni", "images/usb-cable.png"],
-      ["Smart Watch", 500, "Freetown", "images/smart-watch.png"],
-      ["Phone Screen Protector", 50, "Kenema", "images/phone-screen-protector.png"]
-    ]
-  },
-
-  {
-    category: "Accommodation",
-    icon: "🏠",
-    description: "Rooms, apartments and guest houses.",
-    items: [
-      ["Single Room", 800, "Freetown", "images/single-room.png"],
-      ["Self-Contained Room", 1500, "Bo", "images/self-contained-room.png"],
-      ["Two-Bedroom Apartment", 3500, "Makeni", "images/two-bedroom-apartment.png"],
-      ["Guest House Room", 600, "Kenema", "images/guest-house-room.png"],
-      ["Family Apartment", 4000, "Freetown", "images/family-apartment.png"],
-      ["Student Accommodation", 700, "Mile 91", "images/student-accommodation.png"],
-      ["Short-Stay Room", 500, "Bo", "images/short-stay-room.png"],
-      ["Lodge Room", 900, "Makeni", "images/lodge-room.png"],
-      ["One-Bedroom Apartment", 2000, "Kenema", "images/one-bedroom-apartment.png"],
-      ["Guest House Apartment", 2500, "Freetown", "images/guest-house-apartment.png"]
-    ]
-  },
-
-  {
-    category: "Food & Groceries",
-    icon: "🛒",
-    description: "Food, groceries and everyday household supplies.",
-    items: [
-      ["Bag of Rice", 650, "Freetown", "images/bag-of-rice.png"],
-      ["Cooking Oil", 180, "Bo", "images/cooking-oil.png"],
-      ["Fresh Fish", 120, "Kenema", "images/fresh-fish.png"],
-      ["Frozen Chicken", 250, "Makeni", "images/frozen-chicken.png"],
-      ["Onions", 80, "Mile 91", "images/onions.png"],
-      ["Sugar", 100, "Freetown", "images/sugar.png"],
-      ["Milk Powder", 150, "Bo", "images/milk-powder.png"],
-      ["Eggs", 120, "Kenema", "images/eggs.png"],
-      ["Spaghetti", 90, "Makeni", "images/spaghetti.png"],
-      ["Tomato Paste", 70, "Mile 91", "images/tomato-paste.png"]
-    ]
-  },
-
-  {
-    category: "Beauty & Personal Care",
-    icon: "💄",
-    description: "Skincare, makeup, hair products and toiletries.",
-    items: [
-      ["Body Lotion", 120, "Freetown", "images/body-lotion.png"],
-      ["Face Cream", 100, "Bo", "images/face-cream.png"],
-      ["Hair Shampoo", 90, "Kenema", "images/hair-shampoo.png"],
-      ["Conditioner", 110, "Makeni", "images/conditioner.png"],
-      ["Perfume", 250, "Freetown", "images/perfume.png"],
-      ["Makeup Kit", 300, "Bo", "images/makeup-kit.png"],
-      ["Hair Attachment", 180, "Mile 91", "images/hair-attachment.png"],
-      ["Bathing Soap", 40, "Kenema", "images/bathing-soap.png"],
-      ["Hair Dryer", 450, "Makeni", "images/hair-dryer.png"],
-      ["Skin Care Set", 350, "Freetown", "images/skin-care-set.png"]
-    ]
-  }, 
-
-  {
-    category: "Furniture & Home Appliances",
-    icon: "🛋️",
-    description: "Furniture and household appliances.",
-    items: [
-      ["Plastic Chair", 150, "Freetown", "images/plastic-chair.png"],
-      ["Wooden Table", 600, "Bo", "images/wooden-table.png"],
-      ["Bed Frame", 1200, "Makeni", "images/bed-frame.png"],
-      ["Mattress", 900, "Kenema", "images/mattress.png"],
-      ["Standing Fan", 500, "Freetown", "images/standing-fan.png"],
-      ["Electric Kettle", 250, "Bo", "images/electric-kettle.png"],
-      ["Refrigerator", 4500, "Makeni", "images/refrigerator.png"],
-      ["Wardrobe", 1800, "Kenema", "images/wardrobe.png"],
-      ["Television Stand", 700, "Mile 91", "images/television-stand.png"],
-      ["Dining Table", 1500, "Freetown", "images/dining-table.png"]
-    ]
-  },
-
-  {
-    category: "Building Materials",
-    icon: "🧱",
-    description: "Cement, roofing sheets, paint and construction supplies.",
-    items: [
-      ["Bag of Cement", 120, "Freetown", "images/bag-of-cement.png"],
-      ["Roofing Sheets", 180, "Bo", "images/roofing-sheets.png"],
-      ["Wall Paint", 350, "Kenema", "images/wall-paint.png"],
-      ["Building Blocks", 15, "Makeni", "images/building-blocks.png"],
-      ["Iron Rods", 100, "Mile 91", "images/iron-rods.png"],
-      ["Ceiling Boards", 250, "Freetown", "images/ceiling-boards.png"],
-      ["Floor Tiles", 300, "Bo", "images/floor-tiles.png"],
-      ["Plumbing Pipes", 120, "Kenema", "images/plumbing-pipes.png"],
-      ["Nails", 50, "Makeni", "images/nails.png"],
-      ["Electrical Wires", 200, "Freetown", "images/electrical-wires.png"]
-    ]
-  },
-
-  {
-    category: "Vehicles & Spare Parts",
-    icon: "🏍️",
-    description: "Motorcycles, car parts, tyres and accessories.",
-    items: [
-      ["Motorcycle Tyre", 350, "Freetown", "images/motorcycle-tyre.png"],
-      ["Motorcycle Battery", 500, "Bo", "images/motorcycle-battery.png"],
-      ["Car Battery", 900, "Kenema", "images/car-battery.png"],
-      ["Engine Oil", 180, "Makeni", "images/engine-oil.png"],
-      ["Motorcycle Helmet", 250, "Mile 91", "images/motorcycle-helmet.png"],
-      ["Car Tyre", 1200, "Freetown", "images/car-tyre.png"],
-      ["Brake Pads", 300, "Bo", "images/brake-pads.png" ],
-      ["Motorcycle Chain", 220, "Kenema", "images/motorcycle-chain.png"],
-      ["Car Headlight", 450, "Makeni", "images/car-headlight.png"],
-      ["Motorcycle Spare Parts", 400, "Freetown", "images/motorcycle-spare-parts.png"]
-    ]
-  },
-
-  {
-    category: "Computers & Office Equipment",
-    icon: "💻",
-    description: "Laptops, printers, office supplies and accessories.",
-    items: [
-      ["Laptop Computer", 4500, "Freetown", "images/laptop-computer.png"],
-      ["Desktop Computer", 5000, "Bo", "images/desktop-computer.png"],
-      ["Computer Mouse", 120, "Kenema", "images/computer-mouse.png"],
-      ["Computer Keyboard", 180, "Makeni", "images/computer-keyboard.png"],
-      ["Printer", 1600, "Freetown", "images/printer.png"],
-      ["Laptop Charger", 250, "Bo", "images/laptop-charger.png"],
-      ["USB Flash Drive", 100, "Mile 91", "images/usb-flash-drive.png"],
-      ["Computer Monitor", 1200, "Kenema", "images/computer-monitor.png"],
-      ["Office Chair", 800, "Makeni", "images/office-chair.png"],
-      ["Printer Paper", 90, "Freetown", "images/printer-paper.png"  ]
-    ]
-  }
-
-];
-
-// CREATE CATEGORY CARDS
-function createCategories() {
-
-  const container = document.getElementById("categoryContainer");
-
-  container.innerHTML = "";
-
-  productData.forEach(group => {
-
-    const card = document.createElement("div");
-
-    card.className = "category";
-
-    const icon = document.createElement("div");
-    icon.className = "category-icon";
-    icon.textContent = group.icon;
-
-    const title = document.createElement("h3");
-    title.textContent = group.category;
-
-    const description = document.createElement("p");
-    description.textContent = group.description;
-
-    card.appendChild(icon);
-    card.appendChild(title);
-    card.appendChild(description);
-
-    card.onclick = () => openCategory(group.category);
-
-    container.appendChild(card);
-
-  });
-
-}
-
-// GENERATE THE 100 PRODUCTS
-const products = [];
-let productNumber = 1;
-
-productData.forEach(group => {
-
-  group.items.forEach(item => {
-
-    const slug = item[0].toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-");
-
-    products.push({
-      id: productNumber++,
-      name: item[0],
-      price: item[1],
-      location: item[2],
-      category: group.category,
-      image: item[3] || "https://placehold.co/600x400?text=Product+Photo",
-      seller: "Sample Seller",
-      phone: PLATFORM_PHONE,
-      description: `Contact the seller for more information about ${item[0]}.`
-    });
-
-  }); 
-
-});
-
-// OPEN A CATEGORY
-function openCategory(category) {
-
-  selectedCategory = category;
-
-  document.getElementById("categoryPage").classList.add("hidden");
-  document.getElementById("shopPage").classList.remove("hidden");
-  document.getElementById("servicesPage").classList.add("hidden");
-
-  document.getElementById("selectedCategoryTitle").textContent = category;
-
-  const group = productData.find(item => item.category === category);
-
-  document.getElementById("categoryDescription").textContent =
-    group ? group.description : "";
-
-  document.getElementById("searchInput").value = "";
-  document.getElementById("locationFilter").value = "";
-
-  displayProducts();
-
-  document.getElementById("shopPage").scrollIntoView({
-    behavior: "smooth"
-  });
-
-}
-
-// RETURN TO CATEGORY PAGE
-function showCategories() {
-
-  selectedCategory = "";
-
-  document.getElementById("categoryPage").classList.remove("hidden");
-  document.getElementById("shopPage").classList.add("hidden");
-  document.getElementById("servicesPage").classList.add("hidden");
-
-  document.getElementById("searchInput").value = "";
-  document.getElementById("locationFilter").value = "";
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-
-}
-
-// DISPLAY PRODUCTS FROM SELECTED CATEGORY
-function displayProducts() {
-
-  const container = document.getElementById("productContainer");
-  const search = document.getElementById("searchInput").value.toLowerCase();
-  const location = document.getElementById("locationFilter").value;
-
-  container.innerHTML = "";
-
-  if (!selectedCategory) return;
-
-  const filtered = products.filter(product => {
-
-    const matchesCategory = product.category === selectedCategory;
-
-    const matchesSearch =
-      product.name.toLowerCase().includes(search) ||
-      product.category.toLowerCase().includes(search);
-
-    const matchesLocation =
-      location === "" || product.location === location;
-
-    return matchesCategory && matchesSearch && matchesLocation;
-
-  });
-
-  if (filtered.length === 0) {
-    container.innerHTML = "<p>No products found in this category.</p>";
-    return;
-  }
-
-  filtered.forEach(product => {
-
-    const card = document.createElement("div");
-    card.className = "product-card";
-
-    card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}"
-        onerror="this.src='https://placehold.co/600x400?text=Product+Photo'">
-
-      <div class="product-info">
-
-        <h3>${product.name}</h3>
-
-        <p class="small-detail">${product.category}</p>
-
-        <p class="price">NLe ${product.price.toLocaleString()}</p>
-
-        <p class="small-detail">Location: ${product.location}</p>
-
-        <p class="small-detail">Seller: ${product.seller}</p>
-
-        <p class="small-detail">Phone: ${product.phone}</p>
-
-        <button class="primary-btn"
-          onclick="showProduct(${product.id})">
-          View Product
+        <button class="back-btn" onclick="showCategories()">
+            ← Back to Categories
         </button>
 
-        <button class="whatsapp-btn"
-          onclick="contactSeller(${product.id})">
-          WhatsApp Seller
+        <div class="shop-heading">
+            <h2 id="selectedCategoryTitle"></h2>
+            <p id="categoryDescription"></p>
+        </div>
+
+        <!-- PRODUCT SEARCH AND LOCATION FILTER -->
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search in this category..."
+                oninput="displayProducts()"
+            >
+
+            <select id="locationFilter" onchange="displayProducts()">
+                <option value="">All locations</option>
+                <option value="Freetown">Freetown</option>
+                <option value="Bo">Bo</option>
+                <option value="Kenema">Kenema</option>
+                <option value="Makeni">Makeni</option>
+                <option value="Mile 91">Mile 91</option>
+                <option value="Kono">Kono</option>
+            </select>
+
+        </div>
+
+        <!-- JavaScript will display products here -->
+        <div class="products" id="productContainer"></div>
+
+        <button class="back-btn" onclick="showCategories()">
+            ← Back to Categories
         </button>
 
-        <button class="call-btn"
-          onclick="callSeller(${product.id})">
-          Call Seller
+    </section>
+
+    <!-- SERVICES PAGE -->
+    <section id="servicesPage" class="shop-area hidden">
+
+        <button class="back-btn" onclick="showCategories()">
+            ← Back to Categories
         </button>
 
-      </div>
-    `;
+        <div class="shop-heading">
+            <h2>Services Across Sierra Leone</h2>
 
-    container.appendChild(card);
+            <p>
+                Find skilled workers and people offering services
+                in your community.
+            </p>
+        </div>
 
-  });
+        <!-- SERVICE SEARCH AND LOCATION FILTER -->
+        <div class="search-area">
 
-}
+            <input
+                type="text"
+                id="serviceSearch"
+                placeholder="Search for a service..."
+                oninput="displayServices()"
+            >
 
-// FIND PRODUCT
-function findProduct(id) {
-  return products.find(product => product.id === id);
-}
+            <select
+                id="serviceLocationFilter"
+                onchange="displayServices()"
+            >
+                <option value="">All locations</option>
+                <option value="Freetown">Freetown</option>
+                <option value="Bo">Bo</option>
+                <option value="Kenema">Kenema</option>
+                <option value="Makeni">Makeni</option>
+                <option value="Mile 91">Mile 91</option>
+                <option value="Kono">Kono</option>
+            </select>
 
-// OPEN PRODUCT DETAILS
-function showProduct(id) {
+        </div>
 
-  const product = findProduct(id);
+        <!-- JavaScript will display services here -->
+        <div class="products" id="serviceContainer"></div>
 
-  if (!product) return;
+        <button class="back-btn" onclick="showCategories()">
+            ← Back to Categories
+        </button>
 
-  selectedProduct = product;
+    </section>
 
-  document.getElementById("productDetails").innerHTML = `
+    <!-- PRODUCT DETAILS MODAL -->
+    <div class="modal" id="productModal">
 
-    <h2>${product.name}</h2>
+        <div class="modal-content">
 
-    <img class="product-large"
-      src="${product.image}"
-      alt="${product.name}"
-      onerror="this.src='https://placehold.co/600x400?text=Product+Photo'">
+            <span class="close" onclick="closeModal('productModal')">
+                &times;
+            </span>
 
-    <p class="price">NLe ${product.price.toLocaleString()}</p>
+            <div id="productDetails"></div>
 
-    <p><strong>Category:</strong> ${product.category}</p>
-
-    <p><strong>Location:</strong> ${product.location}</p>
-
-    <p><strong>Description:</strong> ${product.description}</p>
-
-    <div class="seller-box">
-
-      <h3>Seller Contact Details</h3>
-
-      <p><strong>Seller:</strong> ${product.seller}</p>
-
-      <p><strong>Phone:</strong> ${product.phone}</p>
-
-      <button class="whatsapp-btn"
-        onclick="contactSeller(${product.id})">
-        WhatsApp Seller
-      </button>
-
-      <button class="call-btn"
-        onclick="callSeller(${product.id})">
-        Call Seller
-      </button>
+        </div>
 
     </div>
 
-    <button class="primary-btn"
-      onclick="openOrder(${product.id})">
-      Place an Order
-    </button>
+    <!-- SERVICE DETAILS MODAL -->
+    <div class="modal" id="serviceModal">
 
-  `;
+        <div class="modal-content">
 
-  document.getElementById("productModal").style.display = "block";
+            <span class="close" onclick="closeModal('serviceModal')">
+                &times;
+            </span>
 
-}
+            <div id="serviceDetails"></div>
 
-// WHATSAPP SELLER
-function contactSeller(id) {
+        </div>
 
-  const product = findProduct(id);
-
-  if (!product) return;
-
-  const message =
-    `Hello ${product.seller}, I am interested in your ${product.name}. Please provide more details.`;
-
-  window.open(
-    `https://wa.me/${product.phone}?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
-
-}
-
-// CALL SELLER
-function callSeller(id) {
-
-  const product = findProduct(id);
-
-  if (!product) return;
-
-  window.location.href = `tel:${product.phone}`;
-
-}
-
-// SERVICES INFORMATION
-const serviceData = [
-
-  ["Electrical Services", "💡", "Freetown", "Electrical installation and repairs."],
-  ["Plumbing Services", "🚰", "Bo", "Water pipes, taps and plumbing repairs."],
-  ["Motorcycle Mechanic", "🏍️", "Mile 91", "Motorcycle repairs and maintenance."],
-  ["Car Mechanic", "🚗", "Kenema", "Vehicle inspection and mechanical repairs."],
-  ["Photography", "📸", "Freetown", "Events, portraits and professional photography."],
-  ["Graphic Design", "🎨", "Makeni", "Logos, posters, banners and graphic design."],
-  ["Hairdressing", "💇", "Bo", "Hair styling, braiding and hair treatment."],
-  ["Cleaning Services", "🧹", "Freetown", "Home and office cleaning services."],
-  ["Construction Services", "🏗️", "Kenema", "Building and construction work."],
-  ["Transport Services", "🚕", "Makeni", "Local transport and delivery services."]
-];
-
-const services = serviceData.map((item, index) => ({
-  id: index + 1,
-  name: item[0],
-  icon: item[1],
-  location: item[2],
-  description: item[3],
-  provider: "Sample Service Provider",
-  phone: PLATFORM_PHONE
-}));
-
-// OPEN SERVICES PAGE
-function showServices() {
-
-  document.getElementById("categoryPage").classList.add("hidden");
-  document.getElementById("shopPage").classList.add("hidden");
-  document.getElementById("servicesPage").classList.remove("hidden");
-
-  document.getElementById("serviceSearch").value = "";
-  document.getElementById("serviceLocationFilter").value = "";
-
-  displayServices();
-
-  document.getElementById("servicesPage").scrollIntoView({
-    behavior: "smooth"
-  });
-
-}
-
-// DISPLAY SERVICES
-function displayServices() {
-
-  const container = document.getElementById("serviceContainer");
-
-  const search =
-    document.getElementById("serviceSearch").value.toLowerCase();
-
-  const location =
-    document.getElementById("serviceLocationFilter").value;
-
-  container.innerHTML = "";
-
-  const filtered = services.filter(service => {
-
-    const matchesSearch =
-      service.name.toLowerCase().includes(search) ||
-      service.description.toLowerCase().includes(search);
-
-    const matchesLocation =
-      location === "" || service.location === location;
-
-    return matchesSearch && matchesLocation;
-
-  });
-
-  if (filtered.length === 0) {
-    container.innerHTML = "<p>No services found.</p>";
-    return;
-  }
-
-  filtered.forEach(service => {
-
-    const card = document.createElement("div");
-
-    card.className = "service-card";
-
-    card.innerHTML = `
-      <div class="service-icon">${service.icon}</div>
-
-      <h3>${service.name}</h3>
-
-      <p class="small-detail">${service.description}</p>
-
-      <p class="small-detail">Location: ${service.location}</p>
-
-      <p class="small-detail">Provider: ${service.provider}</p>
-
-      <button class="primary-btn"
-        onclick="showServiceDetails(${service.id})">
-        View Service
-      </button>
-
-      <button class="whatsapp-btn"
-        onclick="contactService(${service.id})">
-        WhatsApp Provider
-      </button>
-
-      <button class="call-btn"
-        onclick="callService(${service.id})">
-        Call Provider
-      </button>
-    `;
-
-    container.appendChild(card);
-
-  });
-
-}
-
-// FIND SERVICE
-function findService(id) {
-  return services.find(service => service.id === id);
-}
-
-// SERVICE DETAILS
-function showServiceDetails(id) {
-
-  const service = findService(id);
-
-  if (!service) return;
-
-  document.getElementById("serviceDetails").innerHTML = `
-
-    <h2>${service.icon} ${service.name}</h2>
-
-    <div class="seller-box">
-      <p><strong>Description:</strong> ${service.description}</p>
-      <p><strong>Location:</strong> ${service.location}</p>
-      <p><strong>Provider:</strong> ${service.provider}</p>
-      <p><strong>Phone:</strong> ${service.phone}</p>
     </div>
 
-    <p>Contact the service provider to discuss the work and price.</p>
+    <!-- ORDER FORM MODAL -->
+    <div class="modal" id="orderModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('orderModal')">
+                &times;
+            </span>
+
+            <h2>Place Your Order</h2>
+
+            <form id="orderForm">
+
+                <div id="selectedProductInfo" class="seller-box"></div>
+
+                <label for="buyerName">Your Full Name</label>
+
+                <input
+                    type="text"
+                    id="buyerName"
+                    required
+                    placeholder="Enter your name"
+                >
+
+                <label for="buyerPhone">Your Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="buyerPhone"
+                    required
+                    placeholder="+232..."
+                >
+
+                <label for="quantity">Quantity</label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    min="1"
+                    value="1"
+                    required
+                    oninput="updateTotal()"
+                >
+
+                <p class="price" id="orderTotal">
+                    Total: NLe 0
+                </p>
+
+                <!-- DELIVERY OPTIONS -->
+                <label for="deliveryOption">Delivery Option</label>
+
+                <select
+                    id="deliveryOption"
+                    required
+                    onchange="showDeliveryFields()"
+                >
+                    <option value="">Choose delivery option</option>
+                    <option value="Collect from seller">
+                        Collect from seller
+                    </option>
+                    <option value="Doorstep delivery">
+                        Doorstep delivery
+                    </option>
+                    <option value="Agreed pickup location">
+                        Agreed pickup location
+                    </option>
+                </select>
+
+                <div id="addressFields" class="hidden">
+
+                    <label for="deliveryAddress">
+                        Delivery or Pickup Address
+                    </label>
+
+                    <textarea
+                        id="deliveryAddress"
+                        rows="3"
+                        placeholder="Enter your address or agreed pickup location"
+                    ></textarea>
+
+                </div>
+
+                <!-- BUYER LOCATION -->
+                <div id="locationFields" class="hidden">
 
-    <button class="whatsapp-btn"
-      onclick="contactService(${service.id})">
-      WhatsApp Provider
-    </button>
+                    <label>Your Location</label>
 
-    <button class="call-btn"
-      onclick="callService(${service.id})">
-      Call Provider
-    </button>
+                    <button
+                        type="button"
+                        class="call-btn"
+                        onclick="getBuyerLocation()"
+                    >
+                        Share My Current Location
+                    </button>
 
-  `;
+                    <p id="locationStatus" class="small-detail">
+                        Location has not been shared.
+                    </p>
 
-  document.getElementById("serviceModal").style.display = "block";
+                </div>
 
-}
+                <!-- PAYMENT METHOD -->
+                <label for="paymentMethod">Payment Method</label>
 
-// CONTACT SERVICE PROVIDER
-function contactService(id) {
+                <select
+                    id="paymentMethod"
+                    required
+                    onchange="showPaymentDetails()"
+                >
+                    <option value="">Choose payment method</option>
+                    <option value="Afrimoney">Afrimoney</option>
+                    <option value="Orange Money">Orange Money</option>
+                    <option value="Cash">Cash</option>
+                </select>
 
-  const service = findService(id);
+                <div
+                    id="receivingDetails"
+                    class="payment-box hidden"
+                ></div>
 
-  if (!service) return;
+                <!-- SENDER PAYMENT NUMBER -->
+                <div id="senderNumberFields" class="hidden">
 
-  const message =
-    `Hello, I am interested in your ${service.name}. Please provide more details.`;
+                    <label for="senderNumber">
+                        Your Payment Number (Sender Number)
+                    </label>
 
-  window.open(
-    `https://wa.me/${service.phone}?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
+                    <input
+                        type="tel"
+                        id="senderNumber"
+                        placeholder="Enter the number you used to pay"
+                    >
 
-}
+                </div>
 
-function callService(id) {
+                <!-- PAYMENT SCREENSHOT -->
+                <div id="screenshotFields" class="hidden">
 
-  const service = findService(id);
+                    <label for="paymentScreenshot">
+                        Upload Payment Screenshot
+                    </label>
 
-  if (!service) return;
+                    <input
+                        type="file"
+                        id="paymentScreenshot"
+                        accept="image/png,image/jpeg,image/webp"
+                        onchange="previewScreenshot()"
+                    >
 
-  window.location.href = `tel:${service.phone}`;
+                    <img
+                        id="screenshotPreview"
+                        class="preview-image"
+                        alt="Payment screenshot preview"
+                    >
 
-}
+                    <p class="notice">
+                        Upload your transaction screenshot.
+                        Your order will remain pending verification
+                        until payment is checked.
+                    </p>
 
-// OPEN ORDER FORM
-function openOrder(id) {
+                </div>
 
-  selectedProduct = findProduct(id);
+                <button type="submit" class="primary-btn">
+                    Submit Order
+                </button>
 
-  if (!selectedProduct) return;
+            </form>
 
-  document.getElementById("orderForm").reset();
+        </div>
 
-  document.getElementById("selectedProductInfo").innerHTML = `
-    <h3>${selectedProduct.name}</h3>
-    <p>Seller: ${selectedProduct.seller}</p>
-    <p>Seller phone: ${selectedProduct.phone}</p>
-    <p>Location: ${selectedProduct.location}</p>
-    <p>Price: NLe ${selectedProduct.price.toLocaleString()}</p>
-  `;
+    </div>
 
-  document.getElementById("quantity").value = 1;
+    <!-- ORDER SUCCESS MODAL -->
+    <div class="modal" id="successModal">
 
-  document.getElementById("screenshotPreview").style.display = "none";
-  document.getElementById("screenshotPreview").src = "";
+        <div class="modal-content">
 
-  document.getElementById("locationStatus").textContent =
-    "Location has not been shared.";
+            <h2>Order Submitted!</h2>
 
-  buyerLatitude = "";
-  buyerLongitude = "";
+            <div class="success-box">
 
-  showDeliveryFields();
-  showPaymentDetails();
-  updateTotal();
+                <h3>Thank you for your order.</h3>
 
-  closeModal("productModal");
+                <p id="successReference"></p>
 
-  document.getElementById("orderModal").style.display = "block";
+                <p id="successPaymentStatus"></p>
 
-}
+                <p class="notice">
+                    This confirms submission only. It does not mean
+                    payment has been received or verified.
+                </p>
 
-// CALCULATE TOTAL
-function updateTotal() {
+            </div>
 
-  if (!selectedProduct) return;
+            <button
+                class="primary-btn"
+                onclick="closeModal('successModal')"
+            >
+                Continue Shopping
+            </button>
 
-  let quantity = Number(document.getElementById("quantity").value);
+        </div>
 
-  if (!Number.isFinite(quantity) || quantity < 1) {
-    quantity = 1;
-  }
+    </div>
 
-  const total = selectedProduct.price * quantity;
+    <!-- WEBSITE FOOTER -->
+    <footer id="contact">
 
-  document.getElementById("orderTotal").textContent =
-    `Total: NLe ${total.toLocaleString()}`;
+        <h2>Kepler Small Business Connect SL</h2>
 
-}
+        <p>Connecting buyers and sellers across Sierra Leone.</p>
 
-// DELIVERY OPTIONS
-function showDeliveryFields() {
+        <p>Platform Contact: +232 996 19224</p>
 
-  const option = document.getElementById("deliveryOption").value;
+        <p>WhatsApp: +232 996 19224</p>
 
-  const addressFields = document.getElementById("addressFields");
-  const locationFields = document.getElementById("locationFields");
-  const addressInput = document.getElementById("deliveryAddress");
+        <p>&copy; 2026 Kepler Small Business Connect SL</p>
 
-  addressFields.classList.add("hidden");
-  locationFields.classList.add("hidden");
+    </footer>
 
-  addressInput.required = false;
-
-  if (
-    option === "Doorstep delivery" ||
-    option === "Agreed pickup location"
-  ) {
-
-    addressFields.classList.remove("hidden");
-    locationFields.classList.remove("hidden");
-
-    addressInput.required = true;
-
-  }
-
-}
-
-// SHARE BUYER LOCATION
-function getBuyerLocation() {
-
-  const status = document.getElementById("locationStatus");
-
-  if (!navigator.geolocation) {
-
-    status.textContent =
-      "Your browser does not support location sharing.";
-
-    return;
-
-  }
-
-  status.textContent = "Getting your location...";
-
-  navigator.geolocation.getCurrentPosition(
-
-    position => {
-
-      buyerLatitude = position.coords.latitude;
-      buyerLongitude = position.coords.longitude;
-
-      status.textContent =
-        "Location captured successfully.";
-
-    },
-
-    error => {
-
-      status.textContent =
-        "Could not get your location. Please allow location permission.";
-
-    }
-
-  );
-
-}
-
-// PAYMENT DETAILS
-function showPaymentDetails() {
-
-  const method = document.getElementById("paymentMethod").value;
-
-  const receivingDetails = document.getElementById("receivingDetails");
-  const senderFields = document.getElementById("senderNumberFields");
-  const screenshotFields = document.getElementById("screenshotFields");
-
-  receivingDetails.classList.add("hidden");
-  senderFields.classList.add("hidden");
-  screenshotFields.classList.add("hidden");
-
-  document.getElementById("senderNumber").required = false;
-  document.getElementById("paymentScreenshot").required = false;
-
-  if (method === "Afrimoney" || method === "Orange Money") {
-
-    const account = PAYMENT_ACCOUNTS[method];
-
-    receivingDetails.classList.remove("hidden");
-    senderFields.classList.remove("hidden");
-    screenshotFields.classList.remove("hidden");
-
-    document.getElementById("senderNumber").required = true;
-    document.getElementById("paymentScreenshot").required = true;
-
-    receivingDetails.innerHTML = `
-
-      <h3>${method} Payment Details</h3>
-
-      <p><strong>Send payment to:</strong> ${account.name}</p>
-
-      <p><strong>Receiving Network:</strong> ${method}</p>
-
-      <p><strong>Receiving Number:</strong> ${account.number}</p>
-
-      <p class="notice">
-        Check the receiving number before sending money.
-        Enter your own sender number below and upload your screenshot.
-      </p>
-
-    `;
-
-  }
-
-  if (method === "Cash") {
-
-    receivingDetails.classList.remove("hidden");
-
-    receivingDetails.innerHTML = `
-
-      <h3>Cash Payment</h3>
-
-      <p>You selected cash payment.</p>
-
-      <p>Arrange payment with the seller when collecting your order
-      or receiving delivery.</p>
-
-    `;
-
-  }
-
-}
-
-// SCREENSHOT PREVIEW
-function previewScreenshot() {
-
-  const file = document.getElementById("paymentScreenshot").files[0];
-  const preview = document.getElementById("screenshotPreview");
-
-  preview.style.display = "none";
-  preview.src = "";
-
-  if (!file) return;
-
-  const allowedTypes = [
-    "image/jpeg",
-    "image/png",
-    "image/webp"
-  ];
-
-  if (!allowedTypes.includes(file.type)) {
-
-    alert("Please upload a JPG, PNG or WEBP image.");
-
-    document.getElementById("paymentScreenshot").value = "";
-
-    return;
-
-  }
-
-  if (file.size > 5 * 1024 * 1024) {
-
-    alert("Your screenshot must be 5 MB or smaller.");
-
-    document.getElementById("paymentScreenshot").value = "";
-
-    return;
-
-  }
-
-  const reader = new FileReader();
-
-  reader.onload = function(event) {
-
-    preview.src = event.target.result;
-    preview.style.display = "block";
-
-  };
-
-  reader.readAsDataURL(file);
-
-}
-
-// SUBMIT ORDER
-document.getElementById("orderForm").addEventListener("submit", function(event) {
-
-  event.preventDefault();
-
-  if (!selectedProduct) {
-
-    alert("Please select a product first.");
-
-    return;
-
-  }
-
-  const buyerName =
-    document.getElementById("buyerName").value.trim();
-
-  const buyerPhone =
-    document.getElementById("buyerPhone").value.trim();
-
-  const quantity =
-    Number(document.getElementById("quantity").value);
-
-  const delivery =
-    document.getElementById("deliveryOption").value;
-
-  const address =
-    document.getElementById("deliveryAddress").value.trim();
-
-  const payment =
-    document.getElementById("paymentMethod").value;
-
-  const senderNumber =
-    document.getElementById("senderNumber").value.trim();
-
-  const screenshot =
-    document.getElementById("paymentScreenshot").files[0];
-
-  if (!buyerName || !buyerPhone || !delivery || !payment ||
-      !Number.isInteger(quantity) || quantity < 1) {
-
-    alert("Please complete all required fields.");
-
-    return;
-
-  }
-
-  if (
-    (delivery === "Doorstep delivery" ||
-     delivery === "Agreed pickup location") &&
-    !address
-  ) {
-
-    alert("Please enter your delivery or pickup address.");
-
-    return;
-
-  }
-
-  if (
-    payment === "Afrimoney" ||
-    payment === "Orange Money"
-  ) {
-
-    if (!senderNumber || !screenshot) {
-
-      alert("Please enter your payment number and upload your screenshot.");
-
-      return;
-
-    }
-
-  }
-
-  const total = selectedProduct.price * quantity;
-
-  const reference =
-    "KSC" + Date.now().toString().slice(-8);
-
-  let paymentStatus = "Payment pending verification";
-  let receivingMessage = "";
-
-  if (payment === "Afrimoney" || payment === "Orange Money") {
-
-    const account = PAYMENT_ACCOUNTS[payment];
-
-    receivingMessage =
-      `Receiving Network: ${payment}\n` +
-      `Receiving Account: ${account.name}\n` +
-      `Receiving Number: ${account.number}\n` +
-      `Buyer's Sender Number: ${senderNumber}\n` +
-      `Screenshot Filename: ${screenshot.name}\n`;
-
-  } else {
-
-    paymentStatus =
-      "Cash payment selected - payment not yet received";
-
-  }
-
-  let locationMessage = "Location not shared.";
-
-  if (buyerLatitude && buyerLongitude) {
-
-    locationMessage =
-      `https://www.google.com/maps?q=${buyerLatitude},${buyerLongitude}`;
-
-  }
-
-  const message =
-
-    `NEW ORDER - KEPLER SMALL BUSINESS CONNECT SL\n\n` +
-
-    `Reference: ${reference}\n` +
-
-    `Buyer: ${buyerName}\n` +
-
-    `Buyer Phone: ${buyerPhone}\n\n` +
-
-    `Product: ${selectedProduct.name}\n` +
-
-    `Seller: ${selectedProduct.seller}\n` +
-
-    `Seller Phone: ${selectedProduct.phone}\n` +
-
-    `Quantity: ${quantity}\n` +
-
-    `Unit Price: NLe ${selectedProduct.price}\n` +
-
-    `TOTAL: NLe ${total}\n\n` +
-
-    `Delivery: ${delivery}\n` +
-
-    `Address: ${address || "Collect from seller"}\n` +
-
-    `Buyer Location: ${locationMessage}\n\n` +
-
-    `Payment Method: ${payment}\n` +
-
-    receivingMessage +
-
-    `Payment Status: ${paymentStatus}`;
-
-  document.getElementById("successReference").textContent =
-    "Order Reference: " + reference;
-
-  document.getElementById("successPaymentStatus").textContent =
-    paymentStatus;
-
-  closeModal("orderModal");
-
-  document.getElementById("successModal").style.display = "block";
-
-  window.open(
-    `https://wa.me/${PLATFORM_PHONE}?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
-
-  this.reset();
-
-  showPaymentDetails();
-  showDeliveryFields();
-
-});
-
-// CLOSE MODALS
-function closeModal(id) {
-
-  document.getElementById(id).style.display = "none";
-
-}
-
-// CLOSE MODAL WHEN CLICKING OUTSIDE
-window.addEventListener("click", function(event) {
-
-  ["productModal", "serviceModal", "orderModal", "successModal"].forEach(id => {
-
-    const modal = document.getElementById(id);
-
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-
-  });
-
-});
-
-// LOAD CATEGORY CARDS WHEN WEBSITE OPENS
-createCategories();
-
-</script>
-=======
-<script src="script.js"></script>
->>>>>>> 5e9f4c83da7673f179a4b59fa067a24898bfe312
+    <!-- CONNECT THE JAVASCRIPT FILE -->
+    <script src="script.js"></script>
 
 </body>
 </html>
-
-
