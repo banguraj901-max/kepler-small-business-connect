@@ -31,13 +31,13 @@ const productData = [
     icon: "👗",
     description: "Clothes, tailoring and fashion items.",
     items: [
-      ["Ladies Dress", 250, "Freetown", "images/ladies-dress.png"],
+      ["Ladies Dress", 250, "Freetown", "images/woman-dress1.png"],
       ["Men's Shirt", 180, "Bo", "images/mens-shirt.png"],
       ["School Uniform", 220, "Makeni", "images/school-uniform.png"],
       ["African Print Dress", 300, "Kenema", "images/african-print-dress.png"],
       ["Men's Traditional Wear", 350, "Freetown", "images/mens-traditional-wear.png"],
       ["Ladies Skirt", 150, "Mile 91", "images/ladies-skirt.png"],
-      ["Children's Clothes", 120, "Bo", "images/childrens-clothes.png"],
+      ["Children's Clothes", 120, "Bo", "images/children-clothes.png"],
       ["Tailoring Service", 200, "Freetown", "images/tailoring-service.png"],
       ["Ladies Blouse", 180, "Makeni", "images/ladies-blouse.png"],
       ["Traditional Outfit", 400, "Kenema", "images/traditional-outfit.png"]
@@ -199,10 +199,10 @@ const productData = [
       ["Computer Keyboard", 180, "Makeni","images/computer-keyboard.png"],
       ["Printer", 1600, "Freetown","images/printer.png"],
       ["Laptop Charger", 250, "Bo","images/laptop-charger.png"],
-      ["USB Flash Drive", 100, "Mile 91","images/flash-drive.png"],
-      ["Computer Monitor", 1200, "Kenema","images/monitor.png"],
-      ["Office Chair", 800, "Makeni","images/chair.png"],
-      ["Printer Paper", 90, "Freetown","images/paper.png"]
+      ["USB Flash Drive", 100, "Mile 91","images/usb-flash-drive.png"],
+      ["Computer Monitor", 1200, "Kenema","images/computer-monitor.png"],
+      ["Office Chair", 800, "Makeni","images/office-chair.png"],
+      ["Printer Paper", 90, "Freetown","images/printer-paper.png"]
     ]
   }
 
@@ -251,14 +251,12 @@ productData.forEach(group => {
 
   group.items.forEach(item => {
 
-    const slug = item[0].toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-");
-
     products.push({
       id: productNumber++,
       name: item[0],
       price: item[1],
-      location: item[3],
+      location: item[2],
+      image: item[3],
       category: group.category,
       seller: "Sample Seller",
       phone: PLATFORM_PHONE,
@@ -498,28 +496,15 @@ const serviceData = [
   ["Transport Services", "🚕", "Makeni", "Local transport and delivery services."]
 ];
 
-// const services = serviceData.map((item, index) => ({
-//   id: index + 1,
-//   name: item[0],
-//   price: item[1],
-//   location: item[2],
-//   image: item[3],
-//   category: group.category,
-//   seller: "sample seller",
-//   phone: PLATFORM_PHONE,
-//   description:'contact the seller for more information about ' + item[0]
-// }));
-products.push({
-  id: productNumber++,
+const services = serviceData.map((item, index) => ({
+  id: index + 1,
   name: item[0],
-  price: item[1],
+  icon: item[1],
   location: item[2],
-  image: item[3],
-  category: group.category,
-  seller: "Sample Seller",
-  phone: PLATFORM_PHONE,
-  description: `Contact the seller for more information about ${item[0]}.`
-});
+  description: item[3],
+  provider: "Sample Service Provider",
+  phone: PLATFORM_PHONE
+}));
 // OPEN SERVICES PAGE
 function showServices() {
 
