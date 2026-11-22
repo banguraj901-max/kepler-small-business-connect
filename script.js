@@ -1091,6 +1091,39 @@ window.addEventListener("click", function(event) {
 
 });
 
+let installPrompt = null;
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  installPrompt = event;
+  const installButton = document.getElementById("installAppButton");
+  if (installButton) installButton.hidden = false;
+});
+
+document.getElementById("installAppButton")?.addEventListener("click", async () => {
+  if (!installPrompt) {
+    alert("Open this site in Chrome or Edge on your phone, then choose “Add to Home Screen”.");
+    return;
+  }
+
+  installPrompt.prompt();
+  await installPrompt.userChoice;
+  installPrompt = null;
+  document.getElementById("installAppButton").hidden = true;
+});
+
+window.addEventListener("appinstalled", () => {
+  installPrompt = null;
+  const installButton = document.getElementById("installAppButton");
+  if (installButton) installButton.hidden = true;
+});
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  });
+}
+
 // LOAD CATEGORY CARDS WHEN WEBSITE OPENS
 createCategories();
 

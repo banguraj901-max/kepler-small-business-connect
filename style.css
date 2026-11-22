@@ -35,6 +35,13 @@ nav a {
   font-weight: bold;
 }
 
+.install-app-button {
+  background: #fff;
+  color: #075c3b;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 .hero {
   background: #e1f3e9;
   text-align: center;
@@ -341,18 +348,46 @@ footer {
 }
 
 @media (max-width: 600px) {
+  body {
+    min-width: 320px;
+  }
+
+  header {
+    padding: 16px 10px;
+  }
+
+  header h1 {
+    font-size: 21px;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
   nav a {
     display: inline-block;
-    margin: 6px;
+    margin: 5px 6px;
+  }
+
+  .install-app-button {
+    width: calc(100% - 20px);
+    margin: 4px 10px 2px;
   }
 
   .products {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .product-card img {
-    height: 135px;
+    height: 210px;
   }
 
   .product-info {
@@ -365,6 +400,21 @@ footer {
 
   .price {
     font-size: 16px;
+  }
+
+  .modal {
+    padding: 0;
+  }
+
+  .modal-content {
+    min-height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .search-area input,
+  .search-area select {
+    flex-basis: 100%;
   }
 }
 
