@@ -1,6 +1,12 @@
 
 // PLATFORM CONTACT NUMBER
 const PLATFORM_PHONE = "23299619224";
+const ASSET_VERSION = "20261122";
+
+function versionedAsset(path) {
+  if (!path) return path;
+  return `${path}?v=${ASSET_VERSION}`;
+}
 
 // PAYMENT RECEIVING NUMBERS
 // Replace these placeholders with your confirmed numbers.
@@ -350,7 +356,7 @@ function displayProducts() {
     card.className = "product-card";
 
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}"
+      <img src="${versionedAsset(product.image)}" alt="${product.name}"
         onerror="this.src='https://placehold.co/600x400?text=Product+Photo'">
 
       <div class="product-info">
@@ -410,7 +416,7 @@ function showProduct(id) {
     <h2>${product.name}</h2>
 
     <img class="product-large"
-      src="${product.image}"
+      src="${versionedAsset(product.image)}"
       alt="${product.name}"
       onerror="this.src='https://placehold.co/600x400?text=Product+Photo'">
 
