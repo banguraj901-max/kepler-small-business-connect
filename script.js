@@ -28,25 +28,34 @@ let buyerLatitude = "";
 let buyerLongitude = "";
 
 // CATEGORY INFORMATION AND PRODUCTS
-// Each category contains exactly 10 sample products.
 
 const productData = [
 
   {
     category: "Fashion & Tailoring",
     icon: "👗",
-    description: "Clothes, tailoring and fashion items.",
+    description: "Men's, women's and children's clothing, traditional styles and tailoring services.",
     items: [
-      ["Ladies Dress", 250, "Freetown", "images/woman-dress1.png"],
-      ["Men's Shirt", 180, "Bo", "images/mens-shirt.png"],
-      ["School Uniform", 220, "Makeni", "images/school-uniform.png"],
-      ["African Print Dress", 300, "Kenema", "images/african-print-dress.png"],
-      ["Men's Traditional Wear", 350, "Freetown", "images/mens-traditional-wear.png"],
-      ["Ladies Skirt", 150, "Mile 91", "images/ladies-skirt.png"],
-      ["Children's Clothes", 120, "Bo", "images/children-clothes.png"],
-      ["Tailoring Service", 200, "Freetown", "images/tailoring-service.png"],
-      ["Ladies Blouse", 180, "Makeni", "images/ladies-blouse.png"],
-      ["Traditional Outfit", 400, "Kenema", "images/traditional-outfit.png"]
+      ["Ladies Dress", 250, "Freetown", "images/woman-dress1.png", "Everyday and occasion dresses. Ask the seller about available sizes and colours."],
+      ["Men's Shirt", 180, "Bo", "images/mens-shirt.png", "Smart-casual shirts. Confirm the available sizes and fabric options with the seller."],
+      ["School Uniform", 220, "Makeni", "images/school-uniform.png", "School uniforms. Confirm the school style, size and measurements with the seller."],
+      ["African Print Dress", 300, "Kenema", "images/african-print-dress.png", "African-print dresses. Ask the seller about fabric choices and custom sizing."],
+      ["Men's Traditional Wear", 350, "Freetown", "images/mens-traditional-wear.png", "Traditional men's outfits. Confirm fabric, size and made-to-measure options."],
+      ["Ladies Skirt", 150, "Mile 91", "images/ladies-skirt.png", "Ladies' skirts in a range of styles. Ask the seller about sizes and colours."],
+      ["Children's Clothes", 120, "Bo", "images/children-clothes.png", "Children's everyday clothing. Confirm sizes and available styles with the seller."],
+      ["Tailoring Service", 200, "Freetown", "images/tailoring-service.png", "Tailoring for custom clothing. Contact the tailor to discuss measurements, fabric and pricing."],
+      ["Ladies Blouse", 180, "Makeni", "images/ladies-blouse.png", "Ladies' blouses for work or everyday wear. Ask the seller about sizes and colours."],
+      ["Traditional Outfit", 400, "Kenema", "images/traditional-outfit.png", "Traditional outfits for special occasions. Confirm fabric and sizing with the seller."],
+      ["Men's Two-Piece Suit", 1600, "Freetown", "images/mens-traditional-wear.png", "A coordinated men's suit set. Ask the seller about fit, fabric and alteration options."],
+      ["Men's Kaftan", 650, "Bo", "images/mens-traditional-wear.png", "A traditional kaftan style for everyday or special occasions. Confirm sizes and fabric choices."],
+      ["Men's Polo Shirt", 300, "Makeni", "images/mens-shirt.png", "Casual men's polo shirts. Ask the seller about available sizes and colours."],
+      ["Men's Tailored Trousers", 450, "Kenema", "images/mens-shirt.png", "Men's trousers with tailoring options. Contact the seller to confirm measurements and fit."],
+      ["Ladies' Evening Gown", 950, "Freetown", "images/woman-dress1.png", "An evening gown for special occasions. Ask the seller about fabric, sizing and custom orders."],
+      ["African Print Skirt and Blouse", 500, "Bo", "images/african-print-dress.png", "A matching African-print skirt and blouse set. Confirm fabric and sizing with the seller."],
+      ["Ladies' Two-Piece Set", 600, "Makeni", "images/ladies-blouse.png", "A matching ladies' outfit set. Ask about available designs, sizes and colours."],
+      ["Children's Party Outfit", 280, "Kenema", "images/children-clothes.png", "Children's occasion wear. Confirm the child's measurements and available designs."],
+      ["Custom-Made Suit", 1200, "Freetown", "images/tailoring-service.png", "A suit made to your measurements. Contact the tailor to discuss fabric, fittings and delivery time."],
+      ["Clothing Alterations", 100, "Mile 91", "images/tailoring-service.png", "Alterations and clothing repairs. Contact the tailor to describe the work and confirm the price."]
     ]
   },
 
@@ -249,7 +258,7 @@ function createCategories() {
 
 }
 
-// GENERATE THE 100 PRODUCTS
+// GENERATE PRODUCTS
 const products = [];
 let productNumber = 1;
 
@@ -266,7 +275,7 @@ productData.forEach(group => {
       category: group.category,
       seller: "Sample Seller",
       phone: PLATFORM_PHONE,
-      description: `Contact the seller for more information about ${item[0]}.`
+      description: item[4] || `Contact the seller for more information about ${item[0]}.`
     });
 
   });
