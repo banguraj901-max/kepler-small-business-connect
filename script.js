@@ -608,7 +608,8 @@ const serviceData = [
   ["Carpentry", "🪚", "Mile 91", "Furniture making and wood repairs."],
   ["Solar and Inverter Installation", "☀️", "Makeni", "Solar panel and backup power installation."],
   ["Laundry and Ironing", "👕", "Freetown", "Clothes washing, folding and ironing."],
-  ["Mobile Barber", "✂️", "Bo", "Haircuts and grooming at home or in the shop."]
+  ["Mobile Barber", "✂️", "Bo", "Haircuts and grooming at home or in the shop."],
+  ["Welding Services", "🛠️", "Kenema", "Metal fabrication, gates and welding repairs."]
 ];
 
 const services = serviceData.map((item, index) => ({

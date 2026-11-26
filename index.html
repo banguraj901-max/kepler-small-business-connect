@@ -4,35 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Kepler Small Business Connect SL</title>
-    <meta name="theme-color" content="#075c3b">
+
+<meta name="theme-color" content="#075c3b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Kepler SL">
-
-    <!-- Connect the CSS file -->
-    <link rel="stylesheet" href="style.css?v=20261122pwa2">
+    <link rel="stylesheet" href="style.css?v=20261126catalog">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
 
 <body>
 
-    <!-- WEBSITE HEADER -->
-    <header>
+        <header>
         <div class="moving-text">
-            <marquee behavior="scroll" direction="left" scrollamount="10">
-                Welcome to Kepler Small Business Connect SL we are here to help - Connecting buyers and sellers across Sierra Leone!
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                Welcome to Kepler Small Business Connect SL - Connecting buyers and sellers across Sierra Leone!
             </marquee>
         </div>
-
         <h1>Kepler Small Business Connect SL</h1>
         <p>Connecting buyers and sellers across Sierra Leone</p>
     </header>
 
-    <!-- NAVIGATION -->
-    <nav>
+        <nav>
         <a href="#home" onclick="showCategories()">Home</a>
         <a href="#categories" onclick="showCategories()">Categories</a>
         <a href="#services" onclick="showServices()">Services</a>
@@ -42,48 +37,35 @@
         </button>
     </nav>
 
-    <!-- HOMEPAGE -->
-    <section class="hero" id="home">
+        <section class="hero" id="home">
         <h2>Welcome to Kepler Small Business Connect SL</h2>
-
-        <p>
-            Find products and services from businesses across Sierra Leone.
-        </p>
-
-        <p>
-            Buy local. Support local businesses.
-        </p>
+        <p>            Find products and services from businesses across Sierra Leone.        </p>
+        <p>Buy local. Support local businesses.</p>
     </section>
 
-    <!-- PRODUCT CATEGORY PAGE -->
+    <!-- MAIN CATEGORY PAGE -->
     <section id="categoryPage">
 
         <h2 class="section-title" id="categories">
             Explore Our Product Categories
         </h2>
 
-        <!-- JavaScript will display category cards here -->
-        <div class="categories" id="categoryContainer"></div>
+                <div class="categories" id="categoryContainer"></div>
 
-        <!-- SERVICES BANNER -->
-        <div class="services-banner">
-
+                <div class="services-banner">
             <h2>Looking for a Service?</h2>
-
             <p>
                 Find skilled people offering services in your community.
                 Mechanics, electricians, plumbers, photographers and more.
             </p>
-
             <button class="primary-btn" onclick="showServices()">
                 Explore Services
             </button>
-
         </div>
 
     </section>
 
-    <!-- PRODUCT SHOP PAGE -->
+    <!-- PRODUCT SHOP -->
     <section id="shopPage" class="shop-area hidden">
 
         <button class="back-btn" onclick="showCategories()">
@@ -95,9 +77,7 @@
             <p id="categoryDescription"></p>
         </div>
 
-        <!-- PRODUCT SEARCH AND LOCATION FILTER -->
-        <div class="search-area">
-
+                <div class="search-area">
             <input
                 type="text"
                 id="searchInput"
@@ -114,11 +94,9 @@
                 <option value="Mile 91">Mile 91</option>
                 <option value="Kono">Kono</option>
             </select>
-
         </div>
 
-        <!-- JavaScript will display products here -->
-        <div class="products" id="productContainer"></div>
+                <div class="products" id="productContainer"></div>
 
         <button class="back-btn" onclick="showCategories()">
             ← Back to Categories
@@ -126,94 +104,62 @@
 
     </section>
 
-    <!-- SERVICES PAGE -->
-    <section id="servicesPage" class="shop-area hidden">
+<section id="servicesPage" class="shop-area hidden">
+    <button class="back-btn" onclick="showCategories()">
+        ← Back to Categories
+    </button>
 
-        <button class="back-btn" onclick="showCategories()">
-            ← Back to Categories
-        </button>
-
-        <div class="shop-heading">
-            <h2>Services Across Sierra Leone</h2>
-
-            <p>
-                Find skilled workers and people offering services
-                in your community.
-            </p>
-        </div>
-
-        <!-- SERVICE SEARCH AND LOCATION FILTER -->
-        <div class="search-area">
-
-            <input
-                type="text"
-                id="serviceSearch"
-                placeholder="Search for a service..."
-                oninput="displayServices()"
-            >
-
-            <select
-                id="serviceLocationFilter"
-                onchange="displayServices()"
-            >
-                <option value="">All locations</option>
-                <option value="Freetown">Freetown</option>
-                <option value="Bo">Bo</option>
-                <option value="Kenema">Kenema</option>
-                <option value="Makeni">Makeni</option>
-                <option value="Mile 91">Mile 91</option>
-                <option value="Kono">Kono</option>
-            </select>
-
-        </div>
-
-        <!-- JavaScript will display services here -->
-        <div class="products" id="serviceContainer"></div>
-
-        <button class="back-btn" onclick="showCategories()">
-            ← Back to Categories
-        </button>
-
-    </section>
-
-    <!-- PRODUCT DETAILS MODAL -->
-    <div class="modal" id="productModal">
-
-        <div class="modal-content">
-
-            <span class="close" onclick="closeModal('productModal')">
-                &times;
-            </span>
-
-            <div id="productDetails"></div>
-
-        </div>
-
+    <div class="shop-heading">
+        <h2>Services Across Sierra Leone</h2>
+        <p>Find skilled service providers in your community.</p>
     </div>
 
-    <!-- SERVICE DETAILS MODAL -->
-    <div class="modal" id="serviceModal">
-
-        <div class="modal-content">
-
-            <span class="close" onclick="closeModal('serviceModal')">
-                &times;
-            </span>
-
-            <div id="serviceDetails"></div>
-
-        </div>
-
+    <div class="search-area">
+        <input
+            type="text"
+            id="serviceSearch"
+            placeholder="Search for a service..."
+            oninput="displayServices()"
+        >
+        <select id="serviceLocationFilter" onchange="displayServices()">
+            <option value="">All locations</option>
+            <option value="Freetown">Freetown</option>
+            <option value="Bo">Bo</option>
+            <option value="Kenema">Kenema</option>
+            <option value="Makeni">Makeni</option>
+            <option value="Mile 91">Mile 91</option>
+            <option value="Kono">Kono</option>
+        </select>
     </div>
 
-    <!-- ORDER FORM MODAL -->
-    <div class="modal" id="orderModal">
+    <div class="products" id="serviceContainer"></div>
 
+    <button class="back-btn" onclick="showCategories()">
+        ← Back to Categories
+    </button>
+</section>
+
+<!-- PRODUCT DETAILS -->
+<div class="modal" id="productModal">
         <div class="modal-content">
+            <span class="close" onclick="closeModal('productModal')">&times;</span>
+    <div id="productDetails"></div>
+  </div>
+</div>
 
-            <span class="close" onclick="closeModal('orderModal')">
-                &times;
-            </span>
+<!-- SERVICE DETAILS -->
+<div class="modal" id="serviceModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('serviceModal')">&times;</span>
+    <div id="serviceDetails"></div>
+  </div>
+</div>
+
+<!-- ORDER FORM -->
+<div class="modal" id="orderModal">
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal('orderModal')">&times;</span>
 
             <h2>Place Your Order</h2>
 
@@ -221,152 +167,76 @@
 
                 <div id="selectedProductInfo" class="seller-box"></div>
 
-                <label for="buyerName">Your Full Name</label>
+                <label>Your Full Name</label>
+                <input                     type="text"                     id="buyerName"                     required                     placeholder="Enter your name"                >
 
-                <input
-                    type="text"
-                    id="buyerName"
-                    required
-                    placeholder="Enter your name"
-                >
+                <label>Your Phone Number</label>
+                <input                     type="tel"                     id="buyerPhone"                     required                     placeholder="+232..."                >
 
-                <label for="buyerPhone">Your Phone Number</label>
+                <label>Quantity</label>
+                <input                     type="number"                     id="quantity"                     min="1"                     value="1"
+                    required                     oninput="updateTotal()"                >
 
-                <input
-                    type="tel"
-                    id="buyerPhone"
-                    required
-                    placeholder="+232..."
-                >
+                <p class="price" id="orderTotal">                    Total: NLe 0                </p>
 
-                <label for="quantity">Quantity</label>
-
-                <input
-                    type="number"
-                    id="quantity"
-                    min="1"
-                    value="1"
-                    required
-                    oninput="updateTotal()"
-                >
-
-                <p class="price" id="orderTotal">
-                    Total: NLe 0
-                </p>
-
-                <!-- DELIVERY OPTIONS -->
-                <label for="deliveryOption">Delivery Option</label>
-
-                <select
-                    id="deliveryOption"
-                    required
-                    onchange="showDeliveryFields()"
-                >
+                                <label>Delivery Option</label>
+                <select                     id="deliveryOption"                     required                     onchange="showDeliveryFields()"                >
                     <option value="">Choose delivery option</option>
-                    <option value="Collect from seller">
-                        Collect from seller
-                    </option>
-                    <option value="Doorstep delivery">
-                        Doorstep delivery
-                    </option>
-                    <option value="Agreed pickup location">
-                        Agreed pickup location
-                    </option>
+                    <option value="Collect from seller">                        Collect from seller                    </option>
+                    <option value="Doorstep delivery">                        Doorstep delivery                    </option>
+                    <option value="Agreed pickup location">                        Agreed pickup location                    </option>
                 </select>
 
                 <div id="addressFields" class="hidden">
-
-                    <label for="deliveryAddress">
-                        Delivery or Pickup Address
-                    </label>
-
-                    <textarea
-                        id="deliveryAddress"
-                        rows="3"
-                        placeholder="Enter your address or agreed pickup location"
-                    ></textarea>
-
+                    <label>                        Delivery or Pickup Address                    </label>
+                    <textarea                         id="deliveryAddress"                         rows="3"
+                        placeholder="Enter your address or agreed pickup location"                    ></textarea>
                 </div>
 
-                <!-- BUYER LOCATION -->
-                <div id="locationFields" class="hidden">
-
+                                <div id="locationFields" class="hidden">
                     <label>Your Location</label>
 
-                    <button
-                        type="button"
-                        class="call-btn"
-                        onclick="getBuyerLocation()"
-                    >
+                    <button                         type="button"                         class="call-btn"
+                        onclick="getBuyerLocation()"                    >
                         Share My Current Location
                     </button>
 
                     <p id="locationStatus" class="small-detail">
                         Location has not been shared.
                     </p>
-
                 </div>
 
-                <!-- PAYMENT METHOD -->
-                <label for="paymentMethod">Payment Method</label>
+                                <label>Payment Method</label>
 
-                <select
-                    id="paymentMethod"
-                    required
-                    onchange="showPaymentDetails()"
-                >
+                <select                     id="paymentMethod"                     required                     onchange="showPaymentDetails()"                >
                     <option value="">Choose payment method</option>
                     <option value="Afrimoney">Afrimoney</option>
                     <option value="Orange Money">Orange Money</option>
                     <option value="Cash">Cash</option>
                 </select>
 
-                <div
-                    id="receivingDetails"
-                    class="payment-box hidden"
-                ></div>
+                <div                     id="receivingDetails"                     class="payment-box hidden"                ></div>
 
-                <!-- SENDER PAYMENT NUMBER -->
-                <div id="senderNumberFields" class="hidden">
-
-                    <label for="senderNumber">
-                        Your Payment Number (Sender Number)
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="senderNumber"
-                        placeholder="Enter the number you used to pay"
-                    >
-
+                                <div id="senderNumberFields" class="hidden">
+                    <label>                        Your Payment Number (Sender Number)                    </label>
+                    <input                         type="tel"                         id="senderNumber"
+                        placeholder="Enter the number you used to pay">
                 </div>
 
-                <!-- PAYMENT SCREENSHOT -->
-                <div id="screenshotFields" class="hidden">
+                                <div id="screenshotFields" class="hidden">
+                    <label>                        Upload Payment Screenshot                    </label>
 
-                    <label for="paymentScreenshot">
-                        Upload Payment Screenshot
-                    </label>
-
-                    <input
-                        type="file"
-                        id="paymentScreenshot"
+                    <input                         type="file"                         id="paymentScreenshot"
                         accept="image/png,image/jpeg,image/webp"
-                        onchange="previewScreenshot()"
-                    >
+                        onchange="previewScreenshot()"                    >
 
-                    <img
-                        id="screenshotPreview"
-                        class="preview-image"
-                        alt="Payment screenshot preview"
-                    >
+                    <img                         id="screenshotPreview"                         class="preview-image"
+                        alt="Payment screenshot preview"                    >
 
                     <p class="notice">
-                        Upload your transaction screenshot.
-                        Your order will remain pending verification
-                        until payment is checked.
+                        Upload your transaction screenshot.                         Your order will remain
+pending verification                         until payment is checked.
                     </p>
-
                 </div>
 
                 <button type="submit" class="primary-btn">
@@ -374,61 +244,42 @@
                 </button>
 
             </form>
-
         </div>
-
     </div>
 
-    <!-- ORDER SUCCESS MODAL -->
+    <!-- ORDER SUCCESS -->
     <div class="modal" id="successModal">
-
         <div class="modal-content">
 
             <h2>Order Submitted!</h2>
 
             <div class="success-box">
-
                 <h3>Thank you for your order.</h3>
-
                 <p id="successReference"></p>
-
                 <p id="successPaymentStatus"></p>
 
                 <p class="notice">
-                    This confirms submission only. It does not mean
-                    payment has been received or verified.
+                    This confirms submission only. It does not mean                     payment has
+been received or verified.
                 </p>
-
             </div>
 
-            <button
-                class="primary-btn"
-                onclick="closeModal('successModal')"
-            >
+            <button                 class="primary-btn"                 onclick="closeModal('successModal')"            >
                 Continue Shopping
             </button>
 
         </div>
-
     </div>
 
-    <!-- WEBSITE FOOTER -->
-    <footer id="contact">
-
+        <footer id="contact">
         <h2>Kepler Small Business Connect SL</h2>
-
         <p>Connecting buyers and sellers across Sierra Leone.</p>
-
         <p>Platform Contact: +232 996 19224</p>
-
         <p>WhatsApp: +232 996 19224</p>
-
         <p>&copy; 2026 Kepler Small Business Connect SL</p>
-
     </footer>
 
-    <!-- CONNECT THE JAVASCRIPT FILE -->
-    <script src="script.js?v=20261125fashion"></script>
+    <script src="script.js?v=20261126catalog"></script>
 
 </body>
 </html>
