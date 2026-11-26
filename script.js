@@ -73,7 +73,17 @@ const productData = [
       ["Cocoa", 300, "Kenema","images/cocoa.png"],
       ["Fresh Tomatoes", 70, "Mile 91","images/fresh-tomatoes.png"],
       ["Gari", 100, "Bo","images/gari.png"],
-      ["Fresh Vegetables", 60, "Freetown","images/fresh-vegetables.png"]
+      ["Fresh Vegetables", 60, "Freetown","images/fresh-vegetables.png"],
+      ["Corn Flour", 130, "Makeni","images/fresh-rice.png"],
+      ["Red Onions", 150, "Mile 91","images/onions.png"],
+      ["Plantain", 60, "Bo","images/cassava.png"],
+      ["Dried Fish", 220, "Freetown","images/fresh-fish.png"],
+      ["Smoked Fish", 280, "Kenema","images/fresh-fish.png"],
+      ["Pounded Yam", 180, "Bo","images/fresh-sweet-potatoes.png"],
+      ["Fresh Maize", 75, "Makeni","images/fresh-vegetables.png"],
+      ["Okra", 55, "Freetown","images/fresh-vegetables.png"],
+      ["Green Beans", 70, "Kenema","images/fresh-vegetables.png"],
+      ["Dry Cassava Leaves", 90, "Mile 91","images/cassava.png"]
     ]
   },
 
@@ -91,7 +101,17 @@ const productData = [
       ["Memory Card", 150, "Mile 91","images/memory-card.png"],
       ["USB Cable", 60, "Makeni","images/usb-cable.png"],
       ["Smart Watch", 500, "Freetown","images/smart-watch.png"],
-      ["Phone Screen Protector", 50, "Kenema","images/phone-screen-protector.png"]
+      ["Phone Screen Protector", 50, "Kenema","images/phone-screen-protector.png"],
+      ["Feature Phone", 650, "Bo","images/android-smartphone.png"],
+      ["Fast Charger", 220, "Makeni","images/phone-charger.png"],
+      ["Wireless Earphones", 300, "Freetown","images/phone-earphones.png"],
+      ["Portable Radio", 450, "Kenema","images/bluetooth-speaker.png"],
+      ["Tablet", 2800, "Freetown","images/android-smartphone.png"],
+      ["Phone Stand", 90, "Mile 91","images/phone-cover.png"],
+      ["Selfie Stick", 180, "Bo","images/phone-cover.png"],
+      ["OTG Adapter", 70, "Makeni","images/usb-cable.png"],
+      ["Phone Battery", 380, "Kenema","images/power-bank.png"],
+      ["Phone Repair Service", 250, "Freetown","images/android-smartphone.png"]
     ]
   },
 
@@ -109,7 +129,17 @@ const productData = [
       ["Short-Stay Room", 500, "Bo","images/short-stay-room.png"],
       ["Lodge Room", 900, "Makeni","images/lodge-room.png"],
       ["One-Bedroom Apartment", 2000, "Kenema","images/one-bedroom-apartment.png"],
-      ["Guest House Apartment", 2500, "Freetown","images/guest-house-apartment.png"]
+      ["Guest House Apartment", 2500, "Freetown","images/guest-house-apartment.png"],
+      ["Three-Bedroom Apartment", 4500, "Freetown","images/family-apartment.png"],
+      ["Mini Flat", 2200, "Bo","images/one-bedroom-apartment.png"],
+      ["Room and Parlour", 1800, "Makeni","images/self-contained-room.png"],
+      ["Shared Student Room", 550, "Mile 91","images/student-accommodation.png"],
+      ["Executive Lodge Room", 1200, "Kenema","images/lodge-room.png"],
+      ["Long-Stay Apartment", 3000, "Freetown","images/two-bedroom-apartment.png"],
+      ["Beachside Guest House", 1000, "Freetown","images/guest-house-room.png"],
+      ["Office Accommodation", 2500, "Bo","images/guest-house-apartment.png"],
+      ["Serviced Apartment", 3800, "Makeni","images/family-apartment.png"],
+      ["Staff Bungalow", 3300, "Kenema","images/guest-house-apartment.png"]
     ]
   },
 
@@ -127,7 +157,17 @@ const productData = [
       ["Milk Powder", 150, "Bo", "images/milk-powder.png"],
       ["Eggs", 120, "Kenema", "images/eggs.png"],
       ["Spaghetti", 90, "Makeni", "images/spaghetti.png"],
-      ["Tomato Paste", 70, "Mile 91", "images/tomato-paste.png"]
+      ["Tomato Paste", 70, "Mile 91", "images/tomato-paste.png"],
+      ["Bread", 35, "Freetown", "images/bag-of-rice.png"],
+      ["Beans", 95, "Bo", "images/gari.png"],
+      ["Tea", 75, "Makeni", "images/milk-powder.png"],
+      ["Corned Beef", 110, "Kenema", "images/frozen-chicken.png"],
+      ["Tin Fish", 130, "Mile 91", "images/fresh-fish.png"],
+      ["Salt", 20, "Freetown", "images/tomato-paste.png"],
+      ["Seasoning Cubes", 25, "Bo", "images/tomato-paste.png"],
+      ["Bottled Water", 20, "Makeni", "images/cooking-oil.png"],
+      ["Soft Drinks", 30, "Kenema", "images/cooking-oil.png"],
+      ["Breakfast Cereal", 180, "Freetown", "images/milk-powder.png"]
     ]
   },
 
@@ -145,7 +185,17 @@ const productData = [
       ["Hair Attachment", 180, "Mile 91","images/hair-attachment.png"],
       ["Bathing Soap", 40, "Kenema","images/bathing-soap.png"],
       ["Hair Dryer", 450, "Makeni","images/hair-dryer.png"],
-      ["Skin Care Set", 350, "Freetown","images/skin-care-set.png"]
+      ["Skin Care Set", 350, "Freetown","images/skin-care-set.png"],
+      ["Lipstick", 80, "Bo","images/makeup-kit.png"],
+      ["Powder Makeup", 150, "Makeni","images/makeup-kit.png"],
+      ["Bar Soap", 50, "Kenema","images/bathing-soap.png"],
+      ["Deodorant", 100, "Freetown","images/perfume.png"],
+      ["Hair Oil", 130, "Mile 91","images/hair-shampoo.png"],
+      ["Beard Trimmer", 500, "Bo","images/hair-dryer.png"],
+      ["Nail Polish", 60, "Makeni","images/makeup-kit.png"],
+      ["Facial Wash", 140, "Freetown","images/face-cream.png"],
+      ["Sunscreen", 160, "Kenema","images/skin-care-set.png"],
+      ["Hair Relaxer", 180, "Bo","images/hair-shampoo.png"]
     ]
   },
 
@@ -163,7 +213,17 @@ const productData = [
       ["Refrigerator", 4500, "Makeni","images/refrigerator.png"],
       ["Wardrobe", 1800, "Kenema","images/wardrobe.png"],
       ["Television Stand", 700, "Mile 91","images/television-stand.png"],
-      ["Dining Table", 1500, "Freetown","images/dining-table.png"]
+      ["Dining Table", 1500, "Freetown","images/dining-table.png"],
+      ["Office Desk", 850, "Bo","images/wooden-table.png"],
+      ["Sofa Set", 3500, "Freetown","images/dining-table.png"],
+      ["Chest of Drawers", 1400, "Makeni","images/wardrobe.png"],
+      ["Dining Chair", 220, "Kenema","images/plastic-chair.png"],
+      ["Wall Shelf", 350, "Mile 91","images/television-stand.png"],
+      ["Rice Cooker", 650, "Freetown","images/electric-kettle.png"],
+      ["Blender", 550, "Bo","images/electric-kettle.png"],
+      ["Gas Cooker", 2200, "Makeni","images/electric-kettle.png"],
+      ["Ceiling Fan", 750, "Kenema","images/standing-fan.png"],
+      ["Deep Freezer", 5200, "Freetown","images/refrigerator.png"]
     ]
   },
 
@@ -181,7 +241,17 @@ const productData = [
       ["Floor Tiles", 300, "Bo","images/floor-tiles.png"],
       ["Plumbing Pipes", 120, "Kenema","images/plumbing-pipes.png"],
       ["Nails", 50, "Makeni","images/nails.png"],
-      ["Electrical Wires", 200, "Freetown","images/electrical-wires.png"]
+      ["Electrical Wires", 200, "Freetown","images/electrical-wires.png"],
+      ["Door Lock", 180, "Bo","images/building-blocks.png"],
+      ["Window Frame", 650, "Makeni","images/ceiling-boards.png"],
+      ["PVC Pipe", 150, "Kenema","images/plumbing-pipes.png"],
+      ["Water Tank", 1800, "Freetown","images/plumbing-pipes.png"],
+      ["Gravel", 300, "Mile 91","images/building-blocks.png"],
+      ["Sand", 250, "Bo","images/building-blocks.png"],
+      ["Stone Blocks", 20, "Makeni","images/building-blocks.png"],
+      ["Ceiling Paint", 400, "Kenema","images/wall-paint.png"],
+      ["Electrical Switch", 80, "Freetown","images/electrical-wires.png"],
+      ["Roofing Nails", 90, "Mile 91","images/nails.png"]
     ]
   },
 
@@ -199,7 +269,17 @@ const productData = [
       ["Brake Pads", 300, "Bo","images/brake-pads.png"],
       ["Motorcycle Chain", 220, "Kenema","images/motorcycle-chain.png"],
       ["Car Headlight", 450, "Makeni","images/car-headlight.png"],
-      ["Motorcycle Spare Parts", 400, "Freetown","images/motorcycle-spare-parts.png"]
+      ["Motorcycle Spare Parts", 400, "Freetown","images/motorcycle-spare-parts.png"],
+      ["Motorcycle Disc Brake", 280, "Bo","images/brake-pads.png"],
+      ["Car Side Mirror", 550, "Kenema","images/car-headlight.png"],
+      ["Car Air Filter", 240, "Makeni","images/engine-oil.png"],
+      ["Motorcycle Spark Plug", 90, "Mile 91","images/motorcycle-spare-parts.png"],
+      ["Car Oil Filter", 300, "Freetown","images/engine-oil.png"],
+      ["Car Windshield Wiper", 220, "Bo","images/car-headlight.png"],
+      ["Motorcycle Indicator", 180, "Kenema","images/motorcycle-spare-parts.png"],
+      ["Car Shock Absorber", 850, "Makeni","images/car-tyre.png"],
+      ["Motorcycle Clutch Cable", 150, "Mile 91","images/motorcycle-chain.png"],
+      ["Vehicle Tool Kit", 650, "Freetown","images/motorcycle-spare-parts.png"]
     ]
   },
 
@@ -217,7 +297,17 @@ const productData = [
       ["USB Flash Drive", 100, "Mile 91","images/usb-flash-drive.png"],
       ["Computer Monitor", 1200, "Kenema","images/computer-monitor.png"],
       ["Office Chair", 800, "Makeni","images/office-chair.png"],
-      ["Printer Paper", 90, "Freetown","images/printer-paper.png"]
+      ["Printer Paper", 90, "Freetown","images/printer-paper.png"],
+      ["External Hard Drive", 950, "Freetown","images/usb-flash-drive.png"],
+      ["Wireless Mouse", 200, "Bo","images/computer-mouse.png"],
+      ["Mechanical Keyboard", 600, "Kenema","images/computer-keyboard.png"],
+      ["Ink Cartridge", 350, "Makeni","images/printer.png"],
+      ["Laptop Cooling Pad", 300, "Mile 91","images/laptop-computer.png"],
+      ["Office Filing Cabinet", 1400, "Freetown","images/office-chair.png"],
+      ["Projector", 2800, "Bo","images/computer-monitor.png"],
+      ["Computer UPS", 900, "Kenema","images/desktop-computer.png"],
+      ["Laptop Bag", 250, "Makeni","images/laptop-charger.png"],
+      ["Network Router", 700, "Freetown","images/usb-cable.png"]
     ]
   }
 
@@ -508,7 +598,17 @@ const serviceData = [
   ["Hairdressing", "💇", "Bo", "Hair styling, braiding and hair treatment."],
   ["Cleaning Services", "🧹", "Freetown", "Home and office cleaning services."],
   ["Construction Services", "🏗️", "Kenema", "Building and construction work."],
-  ["Transport Services", "🚕", "Makeni", "Local transport and delivery services."]
+  ["Transport Services", "🚕", "Makeni", "Local transport and delivery services."],
+  ["Tailoring and Alterations", "🧵", "Freetown", "Custom clothing, repairs and fittings."],
+  ["Computer Repair", "💻", "Bo", "Laptop, desktop and software support."],
+  ["Phone Repair", "📱", "Makeni", "Smartphone repairs and accessory fitting."],
+  ["Painting and Decorating", "🖌️", "Kenema", "Interior and exterior painting."],
+  ["Catering Services", "🍲", "Freetown", "Event catering and food preparation."],
+  ["Event Planning", "🎉", "Bo", "Planning and coordination for special events."],
+  ["Carpentry", "🪚", "Mile 91", "Furniture making and wood repairs."],
+  ["Solar and Inverter Installation", "☀️", "Makeni", "Solar panel and backup power installation."],
+  ["Laundry and Ironing", "👕", "Freetown", "Clothes washing, folding and ironing."],
+  ["Mobile Barber", "✂️", "Bo", "Haircuts and grooming at home or in the shop."]
 ];
 
 const services = serviceData.map((item, index) => ({
